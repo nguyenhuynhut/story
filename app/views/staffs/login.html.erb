@@ -1,0 +1,33 @@
+<p/>
+<% if flash[:notice] %>
+<div style="font-family:'Trebuchet MS'; color:#FF0000; font-size:14px;">
+<%= flash[:notice] %>
+</div>
+<% end %>
+<script type="text/javascript">
+
+  function checkAdmin() {
+    if ($("staff_form_userid").getValue() != 'admin') {
+      alert ("You should be the admin");
+      return false;
+    }
+
+    return true;
+
+
+  }
+</script>
+<!--creates form, exectues the authenticate method when the submit button is clicked-->
+<%= form_tag :action=>'authenticate' %>
+User name:
+<br/>
+<%= text_field("staff_form", "userid",:size=>"20" ) %>
+<br/>
+Password:
+<br/>
+<%= password_field("staff_form", "password",:size=>"20" )
+%>
+<br/>
+<%= link_to 'Forgot password' ,:controller => "staffs", :action => "forgot" %>
+<br/>
+<input type="submit" value=" LOGIN " onclick =" return checkAdmin();" />

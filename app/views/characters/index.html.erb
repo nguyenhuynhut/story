@@ -1,0 +1,63 @@
+<h1>Listing characters</h1>
+<%= form_for :character, :remote => true, :html => { :method => :get} do |f| %>
+  <table>
+    <tr>
+      <td>
+        <%= f.label :salutation %>
+      </td>
+      <td>
+        <%= f.text_field :salutation, :value => params[:character] ? params[:character][:salutation] : '' %>
+      </td>
+      <td>
+        <%= f.label :first_name %>
+      </td>
+      <td>
+        <%= f.text_field :first_name, :value => params[:character] ? params[:character][:first_name] : '' %>
+      </td>
+      <td>
+        <%= f.label :last_name %>
+      </td>
+      <td>
+        <%= f.text_field :last_name, :value => params[:character] ? params[:character][:last_name] : '' %>
+      </td>
+
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :address %>
+      </td>
+      <td>
+        <%= f.text_field :address, :value => params[:character] ? params[:character][:address] : '' %>
+      </td>
+      <td>
+        <%= f.label :city %>
+      </td>
+      <td>
+        <%= f.text_field :city, :value => params[:character] ? params[:character][:city] : '' %>
+      </td>
+      <td>
+        <%= f.label :state %>
+      </td>
+      <td>
+        <%= f.text_field :state, :value => params[:character] ? params[:character][:state] : '' %>
+      </td>
+
+    </tr>
+    <tr>
+      <td>  <%= f.label :zip %></td>
+      <td>   <%= f.text_field :zip, :value => params[:character] ? params[:character][:zip] : '' %></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+ <%= render "search_results" %>
+  Display <%= f.select(:record_number, [[10,10], [20, 20], [50, 50], [100, 100]] , :selected => params[:character] ? params[:character][:record_number] : 10) %> records
+  <br />
+  <%= submit_tag("Search") %>
+  <br/>
+
+  <%= link_to 'New Character', new_character_path %>
+  <%= link_to 'Back', stories_path(:story =>{:approved => 1}) %>
+<% end %>

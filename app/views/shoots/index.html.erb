@@ -1,0 +1,19 @@
+<h1>Listing shoots</h1>
+<%= form_for :shoot, :remote => true, :html => { :method => :get} do |f| %>
+  <%= f.label :crew_requirements  %>
+  <%= f.text_field :crew_requirements, :value => params[:shoot] ? params[:shoot][:crew_requirements] : '' %>
+  <%= f.label :location  %>
+  <%= f.text_field :location, :value => params[:shoot] ? params[:shoot][:location] : '' %>
+  <%= f.label :cameraperson %>
+  <%= f.select(:cameraperson_id, Staff.find(:all, :order => 'userid asc').collect {|c| [c.userid, c.id ] },  :selected  => params[:shoot] ? params[:shoot][:cameraperson_id] : '', :include_blank => true) %>
+  <%= render "search_results" %>
+  Display <%= f.select(:record_number, [[10,10], [20, 20], [50, 50], [100, 100]] , :selected => params[:shoot] ? params[:shoot][:record_number] : 10) %> records
+
+  <br />
+  <%= submit_tag("Search") %>
+  <br/>
+  <%= link_to 'New Shoot', new_shoot_path %>
+  <%= link_to 'Back', stories_path(:story =>{:approved => 1}) %>
+
+
+<% end %>

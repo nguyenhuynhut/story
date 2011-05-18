@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+
+    <p>
+      My Username : <%= html_escape(@staff.userid) %>
+
+    </p>
+
+    <% if @staff.first_name  %>
+      <p>
+        My Real Name : <%= html_escape(@staff.first_name + ' ' + @staff.last_name) %>
+      </p>
+    <% end %>
+    <p>
+      <%= @message %>
+    </p>
+    <p>
+      Best Regards
+    </p 
+    <% if @staff.first_name  %>
+      <p>
+        <%= html_escape(@staff.first_name + ' ' + @staff.last_name) %>
+      </p>
+    <% end %>
+  </body>
+</html>

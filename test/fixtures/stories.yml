@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  outline: MyText
+  graphics_collateral: MyText
+  script: MyString
+  approved: false
+
+two:
+  name: MyString
+  outline: MyText
+  graphics_collateral: MyText
+  script: MyString
+  approved: false

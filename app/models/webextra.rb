@@ -1,0 +1,4 @@
+class Webextra < ActiveRecord::Base
+   validates :title  ,:presence => true
+  belongs_to :stories
+end

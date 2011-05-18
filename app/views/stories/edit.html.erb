@@ -1,0 +1,9 @@
+<% if session[:approved] == true %>
+<h1>Editing story</h1>
+<% else %>
+<h1>Editing pitch</h1>
+<% end %>
+<%= render 'form' %>
+
+<%= link_to 'Show', @story %> |
+<%= link_to 'Back', stories_path %>

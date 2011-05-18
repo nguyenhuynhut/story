@@ -1,0 +1,18 @@
+<h1>Listing webextras</h1>
+<%= form_for :webextra,:remote => true, :html => { :method => :get} do |f| %>
+  <%= f.label :title  %>
+  <%= f.text_field :title, :value => params[:webextra] ? params[:webextra][:title] : '' %>
+  <%= f.label :summary  %>
+  <%= f.text_field :summary, :value => params[:webextra] ? params[:webextra][:summary] : '' %>
+<%= render "search_results" %>
+  Display <%= f.select(:record_number, [[10,10], [20, 20], [50, 50], [100, 100]] , :selected => params[:webextra] ? params[:webextra][:record_number] : 10) %> records
+  <br />
+
+
+    <%= submit_tag("Search",  :class => 'pagination ajax' ) %>
+  <br />
+
+  <%= link_to 'New Webextra', new_webextra_path %>
+  <%= link_to 'Back', stories_path(:story =>{:approved => 1}) %>
+
+<% end %>

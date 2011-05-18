@@ -1,0 +1,59 @@
+<%= form_for(@shoot) do |f| %>
+  <% if @shoot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shoot.errors.count, "error") %> prohibited this shoot from being saved:</h2>
+
+      <ul>
+        <% @shoot.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :crew_requirements %><br />
+    <%= f.text_area :crew_requirements %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_area :location %>
+  </div>
+  <% if @valid_staff %>
+    <% if @valid_staff.is_senior_producer == true %>
+      <div class="field">
+        <%= f.label :senior_approval %><br />
+        <%= f.check_box :senior_approval %>
+      </div>
+    <% end %>
+  <% end %>
+  <% if @valid_staff %>
+    <% if @valid_staff.is_assignment_editor == true %>
+      <div class="field">
+        <%= f.label :assigned %><br />
+        <%= f.check_box :assigned %>
+      </div>
+    <% end %>
+  <% end %>
+  <div class="field">
+    <%= f.label :cameraperson %><br />
+
+    <%= f.select(:cameraperson_id, Staff.find(:all, :order => 'userid asc').collect {|c| [c.userid, c.id ] }) %>
+
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :preshow_tease %><br />
+    <%= f.text_area :preshow_tease %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

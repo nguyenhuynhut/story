@@ -1,0 +1,29 @@
+<%= form_for(@webextra ,:html => { :multipart => true}) do |f| %>
+  <% if @webextra.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@webextra.errors.count, "error") %> prohibited this webextra from being saved:</h2>
+
+      <ul>
+      <% @webextra.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :summary %><br />
+    <%= f.text_area :summary %>
+  </div>
+  <div class="field">
+    <%= f.label 'Video' %><br />
+        <%= file_field_tag "video" %><br />
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

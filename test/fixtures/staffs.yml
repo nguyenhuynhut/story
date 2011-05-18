@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  userid: MyString
+  password: MyString
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  title: MyString
+  avatar: MyString
+  phone: MyString
+  is_senior_producer: false
+  is_assignment_editor: false
+  is_producer: false
+
+two:
+  userid: MyString
+  password: MyString
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  title: MyString
+  avatar: MyString
+  phone: MyString
+  is_senior_producer: false
+  is_assignment_editor: false
+  is_producer: false

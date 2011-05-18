@@ -1,0 +1,53 @@
+<h1>Listing staffs</h1>
+<%= form_for :staff, :remote => true, :html => { :method => :get} do |f| %>
+  <table>
+    <tr>
+      <td>
+        <%= f.label :userid %>
+      </td>
+      <td>
+        <%= f.text_field :userid, :value => params[:staff] ? params[:staff][:userid] : '' %>
+      </td>
+      <td>
+        <%= f.label :first_name %>
+      </td>
+      <td>
+        <%= f.text_field :first_name, :value => params[:staff] ? params[:staff][:first_name] : '' %>
+      </td>
+      <td>
+        <%= f.label :last_name %>
+      </td>
+      <td>
+        <%= f.text_field :last_name, :value => params[:staff] ? params[:staff][:last_name] : '' %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :email %>
+      </td>
+      <td>
+        <%= f.text_field :email, :value => params[:staff] ? params[:staff][:email] : '' %>
+      </td>
+      <td>
+        <%= f.label :title %>
+      </td>
+      <td>
+        <%= f.text_field :title, :value => params[:staff] ? params[:staff][:title] : '' %>
+      </td>
+      <td>
+        <%= f.label :phone %>
+      </td>
+      <td>
+        <%= f.text_field :phone, :value => params[:staff] ? params[:staff][:phone] : '' %>
+      </td>
+    </tr>
+  </table>
+  <%= render "search_results" %>
+  <br />
+  Display <%= f.select(:record_number, [[10,10], [20, 20], [50, 50], [100, 100]] , :selected => params[:staff] ? params[:staff][:record_number] : 10) %> records
+
+  <br />
+  <%= submit_tag("Search") %>
+  <br/>
+  <%= link_to 'New Staff', new_staff_path %>
+<% end %>

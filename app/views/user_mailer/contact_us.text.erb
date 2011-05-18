@@ -1,0 +1,11 @@
+My Username : <%= html_escape(@staff.userid) %>
+
+<% if @staff.first_name  %>
+  My Real Name : <%= html_escape(@staff.first_name + ' ' + @staff.last_name) %>
+<% end %>
+<%= @message %>
+Best Regards
+
+<% if @staff.first_name  %>
+  <%= html_escape(@staff.first_name + ' ' + @staff.last_name) %>
+<% end %>

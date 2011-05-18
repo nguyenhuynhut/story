@@ -1,0 +1,54 @@
+<% if params[:story] and params[:story][:approved] == '1' %>
+  <h1>Listing Stories</h1>
+<% else %>
+  <h1>Listing Pitches</h1>
+<% end %>
+<%= form_for :story, :remote => true, :html => { :method => :get} do |f| %>
+  <%= f.hidden_field :approved , :value =>params[:story] ? params[:story][:approved] : '0'  %>
+  <table>
+    <tr>
+      <td>
+        <%= f.label :name %>
+      </td>
+      <td>
+        <%= f.text_field :name, :value => params[:story] ? params[:story][:name] : '' %>
+      </td>
+      <td>
+        <%= f.label :outline %>
+      </td>
+      <td>
+        <%= f.text_field :outline, :value => params[:story] ? params[:story][:outline] : '' %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :graphics_collateral %>
+      </td>
+      <td>
+        <%= f.text_field :graphics_collateral, :value => params[:story] ? params[:story][:graphics_collateral] : '' %>
+      </td>
+      <td>
+        <%= f.label :script %>
+      </td>
+      <td>
+        <%= f.text_field :script, :value => params[:story] ? params[:story][:script] : '' %>
+      </td>
+    </tr>
+  </table>
+  <%= f.label :producer %>
+  <%= f.select(:producer_id, Staff.find(:all, :order => 'userid asc').collect {|c| [c.userid, c.id ] },  :selected  => params[:story] ? params[:story][:producer_id] : '', :include_blank => true) %>
+  <%= f.label :correspondent %>
+  <%= f.select(:correspondent_id, Staff.find(:all, :order => 'userid asc').collect {|c| [c.userid, c.id ] },  :selected  => params[:story] ? params[:story][:correspondent_id] : '', :include_blank => true) %>
+  <%= f.label :editor %>
+  <%= f.select(:editor_id, Staff.find(:all, :order => 'userid asc').collect {|c| [c.userid, c.id ] },  :selected  => params[:story] ? params[:story][:editor_id] : '', :include_blank => true) %>
+<%= render "search_results" %>
+  Display <%= f.select(:record_number, [[10,10], [20, 20], [50, 50], [100, 100]] , :selected => params[:story] ? params[:story][:record_number] : 10) %> records
+  <br />
+  <%= submit_tag("Search") %>
+  <br/>
+  <% if params[:story] and params[:story][:approved] == '1' %>
+  <%= link_to 'New Story', new_story_path %>
+  <% else %>
+    <%= link_to 'New Pitch', new_story_path %>
+  <% end %>
+<% end %>

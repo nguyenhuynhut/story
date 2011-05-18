@@ -1,0 +1,17 @@
+<h1>Welcome</h1>
+<p id="notice"><%= notice %></p>
+<% if session[:userid] == nil or Staff.find_by_userid(session[:userid]) == nil %>
+  <%= link_to "Login",:controller => "staffs", :action => "login" %>
+  |   <%= link_to "Login through Google Apps",:controller => "home", :action => "sign_in_google" %>
+<% else %>
+  Hello <strong><%=session[:userid]%></strong>.
+  <%= image_tag @valid_staff ? (@valid_staff.avatar ? @valid_staff.avatar : 'logo.jpg')  : 'logo.jpg', :size => "60x60" %>
+  <% if session[:userid] != nil and Staff.find_by_userid(session[:userid]).userid == 'admin' %>
+    |   <%= link_to 'Staffs', staffs_path %>
+  <% end %>
+  | <%= link_to 'Profile', @valid_staff %>
+  | <%= link_to 'Stories', stories_path(:story =>{:approved => 1}) %> |
+  <%= link_to 'Pitches', stories_path %>
+  |<%= link_to "Logout",:controller => "staffs", :action => "logout" %>
+  <%= link_to "Contact Us",:controller => "staffs", :action => "contact_us" %>
+<% end %>

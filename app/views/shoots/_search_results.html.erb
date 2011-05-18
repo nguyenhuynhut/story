@@ -1,0 +1,67 @@
+<div id="results">
+ <table>
+    <tr>
+      <%= sortable_table_header :name => "Date",   :sort => "date" ,:class => 'pagination ajax' %>
+      <%= sortable_table_header :name => "Crew requirements",   :sort => "crew_requirements" ,:class => 'pagination ajax' %>
+      <%= sortable_table_header :name => "Location",   :sort => "location" ,:class => 'pagination ajax' %>
+      <th>Camera Person</th>
+      <% if @valid_staff %>
+        <% if @valid_staff.is_senior_producer == true %>
+          <th>Senior approval</th>
+        <% end %>
+      <% end %>
+      <% if @valid_staff %>
+        <% if @valid_staff.is_assignment_editor  == true %>
+          <th>Assigned</th>
+        <% end %>
+      <% end %>
+      <th>Notes</th>
+      <th>Preshow tease</th>
+      <th></th>
+      <% if @valid_staff %>
+        <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
+          <th></th>
+        <% end %>
+      <% end %>
+
+      <% if @valid_staff %>
+        <% if @valid_staff.is_senior_producer == true or @valid_staff.is_producer == true or @valid_staff.userid == 'admin' %>
+          <th></th>
+        <% end %>
+      <% end %>
+    </tr>
+
+    <% @shoots.each do |shoot| %>
+      <tr>
+        <td><%= shoot.date %></td>
+        <td><%= html_escape(shoot.crew_requirements) %></td>
+        <td><%= html_escape(shoot.location) %></td>
+        <td> <%= shoot.cameraperson ? html_escape(shoot.cameraperson.userid) : "" %> </td>
+        <% if @valid_staff %>
+          <% if @valid_staff.is_senior_producer == true %>
+            <td><%= shoot.senior_approval %></td>
+          <% end %>
+        <% end %>
+        <% if @valid_staff %>
+          <% if @valid_staff.is_assignment_editor  == true %>
+            <td><%= shoot.assigned %></td>
+          <% end %>
+        <% end %>
+        <td><%= html_escape(shoot.notes) %></td>
+        <td><%= html_escape(shoot.preshow_tease) %></td>
+        <td><%= link_to 'Show', shoot %></td>
+        <% if @valid_staff %>
+          <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
+            <td><%= link_to 'Edit', edit_shoot_path(shoot) %></td>
+          <% end %>
+        <% end %>
+        <% if @valid_staff %>
+          <% if @valid_staff.is_senior_producer == true or @valid_staff.is_producer == true or @valid_staff.userid == 'admin' %>
+            <td><%= link_to 'Destroy', shoot, :confirm => 'Are you sure?', :method => :delete %></td>
+          <% end %>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+    <%= will_paginate  @shoots, :class => 'pagination ajax' %>
+  </div>

@@ -1,0 +1,78 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Salutation:</b>
+  <%= html_escape(@character.salutation) %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= html_escape(@character.first_name) %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= html_escape(@character.last_name) %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= html_escape(@character.address) %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= html_escape(@character.city) %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= html_escape(@character.state) %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= html_escape(@character.zip) %>
+</p>
+
+<p>
+  <b>Phone 1:</b>
+  <%= html_escape(@character.phone_1) %>
+</p>
+
+<p>
+  <b>Phone 2:</b>
+  <%= html_escape(@character.phone_2) %>
+</p>
+
+<p>
+  <b>Phone 3:</b>
+  <%= html_escape(@character.phone_3) %>
+</p>
+
+<p>
+  <b>Email 1:</b>
+  <%= html_escape(@character.email_1) %>
+</p>
+
+<p>
+  <b>Email 2:</b>
+  <%= html_escape(@character.email_2) %>
+</p>
+
+<p>
+  <b>Representative:</b>
+  <%= html_escape(@character.representative) %>
+</p>
+
+<p>
+  <b>Rep address:</b>
+  <%= html_escape(@character.rep_address) %>
+</p>
+
+<% if @valid_staff %>
+  <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
+    <%= link_to 'Edit', edit_character_path(@character) %> |
+  <% end %>
+<% end %>
+<%= link_to 'Back', url_for(:back) %>

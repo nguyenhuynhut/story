@@ -1,0 +1,36 @@
+<div id="results">
+  <table>
+    <tr>
+      <%= sortable_table_header :name => "Title",   :sort => "title" ,:class => 'pagination ajax' %>
+      <%= sortable_table_header :name => "Summary",   :sort => "summary" ,:class => 'pagination ajax' %>
+      <th> </th>
+      <% if @valid_staff %>
+        <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
+          <th></th>
+        <% end %>
+      <% end %>
+      <% if session[:userid] != nil and Staff.find_by_userid(session[:userid]).userid == 'admin' %>
+        <th></th>
+      <% end %>
+
+    </tr>
+
+    <% @webextras.each do |webextra| %>
+      <tr>
+        <td><%= webextra.title %></td>
+        <td><%= webextra.summary %></td>
+        <td><%= link_to 'Show', webextra %></td>
+        <% if @valid_staff %>
+          <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
+            <td><%= link_to 'Edit', edit_webextra_path(webextra) %></td>
+          <% end %>
+        <% end %>
+        <% if session[:userid] != nil and Staff.find_by_userid(session[:userid]).userid == 'admin' %>
+          <td><%= link_to 'Destroy', webextra, :confirm => 'Are you sure?', :method => :delete %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+    <%= will_paginate @webextras, :class => 'pagination ajax' %>
+
+  </div>

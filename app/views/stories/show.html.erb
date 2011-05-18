@@ -1,0 +1,246 @@
+<p id="notice"><%= notice %></p>
+<% if @story.approved == true %>
+  <p>
+    <%= link_to 'Airdates List', airdates_path %> |
+    <%= link_to 'Shoots Search', shoots_path %> |
+    <%= link_to 'Characters Search', characters_path %>
+    <%= link_to 'Webextras Search', webextras_path %>
+  </p>
+<% end %>
+<p>
+  <b>Name:</b>
+  <%= html_escape(@story.name) %>
+</p>
+
+<p>
+  <b>Outline:</b>
+  <%= html_escape(@story.outline) %>
+</p>
+
+<p>
+  <b>Graphics collateral:</b>
+  <%= html_escape(@story.graphics_collateral) %>
+</p>
+
+<p>
+  <b>Script:</b>
+  <a href="<%= html_escape(@story.script)%>" >
+    <%= html_escape(@story.script)%>
+  </a>
+</p>
+
+<p>
+  <b>Approved:</b>
+  <%= @story.approved %>
+</p>
+<% if @story.approved == true %>
+
+<% end %>
+<% if @valid_staff %>
+  <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
+    <%= link_to 'Edit', edit_story_path(@story) %> |
+  <% end %>
+<% end %>
+<%= link_to 'Back', stories_path(:story =>{:approved => @story.approved ? 1 : 0}) %>
+<% if @shoots.length != 0 %>
+  <h1>Listing shoots</h1>
+  <table>
+    <tr>
+
+      <th>Date</th>
+      <th>Crew requirements</th>
+      <th>Location</th>
+      <th>Camera Person</th>
+      <% if @valid_staff %>
+        <% if @valid_staff.is_senior_producer == true %>
+          <th>Senior approval</th>
+        <% end %>
+      <% end %>
+      <% if @valid_staff %>
+        <% if @valid_staff.is_assignment_editor  == true %>
+          <th>Assigned</th>
+        <% end %>
+      <% end %>
+      <th>Notes</th>
+      <th>Preshow tease</th>
+      <th></th>
+      <% if @valid_staff %>
+        <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
+          <th></th>
+        <% end %>
+      <% end %>
+      <% if @valid_staff %>
+        <% if @valid_staff.is_senior_producer == true or @valid_staff.is_producer == true or @valid_staff.userid == 'admin' %>
+          <th></th>
+        <% end %>
+      <% end %>
+    </tr>
+
+    <% @shoots.each do |shoot| %>
+      <tr>
+        <td><%= shoot.date %></td>
+        <td><%= html_escape(shoot.crew_requirements) %></td>
+        <td><%= html_escape(shoot.location) %></td>
+        <td> <%= shoot.cameraperson ? shoot.cameraperson.userid : "" %> </td>
+        <% if @valid_staff %>
+          <% if @valid_staff.is_senior_producer == true %>
+            <td><%= shoot.senior_approval %></td>
+          <% end %>
+        <% end %>
+        <% if @valid_staff %>
+          <% if @valid_staff.is_assignment_editor  == true %>
+            <td><%= shoot.assigned %></td>
+          <% end %>
+        <% end %>
+        <td><%= html_escape(shoot.notes) %></td>
+        <td><%= html_escape(shoot.preshow_tease) %></td>
+        <td><%= link_to 'Show', shoot %></td>
+        <% if @valid_staff %>
+          <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
+            <td><%= link_to 'Edit', edit_shoot_path(shoot) %></td>
+          <% end %>
+        <% end %>
+        <% if @valid_staff %>
+          <% if @valid_staff.is_senior_producer == true or @valid_staff.is_producer == true or @valid_staff.userid == 'admin' %>
+            <td><%= link_to 'Destroy', shoot, :confirm => 'Are you sure?', :method => :delete %></td>
+          <% end %>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+
+<% end %>
+<%= link_to 'New Shoot', new_shoot_path %>
+<% if  @characters.length != 0 %>
+  <h1>Listing characters</h1>
+  <table>
+    <tr>
+      <th>Salutation</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+
+      <th>Phone 1</th>
+      <th>Phone 2</th>
+      <th>Phone 3</th>
+      <th>Email 1</th>
+      <th>Email 2</th>
+
+      <th>Representative</th>
+      <th>Rep address</th>
+      <th></th>
+      <% if @valid_staff %>
+        <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
+          <th></th>
+        <% end %>
+      <% end %>
+      <% if session[:userid] != nil or Staff.find_by_userid(session[:userid]).userid == 'admin' %>
+        <th></th>
+      <% end %>
+    </tr>
+
+    <% @characters.each do |character| %>
+      <tr>
+        <td><%= html_escape(character.salutation) %></td>
+        <td><%= html_escape(character.first_name) %></td>
+        <td><%= html_escape(character.last_name) %></td>
+        <td><%= html_escape(character.address) %></td>
+        <td><%= html_escape(character.city) %></td>
+        <td><%= html_escape(character.state) %></td>
+        <td><%= html_escape(character.zip) %></td>
+        <td><%= html_escape(character.phone_1) %></td>
+        <td><%= html_escape(character.phone_2) %></td>
+        <td><%= html_escape(character.phone_3) %></td>
+        <td><%= html_escape(character.email_1) %></td>
+        <td><%= html_escape(character.email_2) %></td>
+        <td><%= html_escape(character.representative) %></td>
+        <td><%= html_escape(character.rep_address) %></td>
+        <td><%= link_to 'Show', character %></td>
+        <% if @valid_staff %>
+          <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
+            <td><%= link_to 'Edit', edit_character_path(character) %></td>
+          <% end %>
+        <% end %>
+        <% if session[:userid] != nil and Staff.find_by_userid(session[:userid]).userid == 'admin' %>
+          <td><%= link_to 'Destroy', character, :confirm => 'Are you sure?', :method => :delete %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+
+<% end %>
+<%= link_to 'New Character', new_character_path %>
+<% if @webextras.length != 0 %>
+  <h1>Listing webextras</h1>
+  <table>
+    <tr>
+
+      <th>Title </th>
+      <th>Summary</th>
+      <th> </th>
+      <% if @valid_staff %>
+        <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
+          <th></th>
+        <% end %>
+      <% end %>
+      <% if session[:userid] != nil and Staff.find_by_userid(session[:userid]).userid == 'admin' %>
+        <th></th>
+      <% end %>
+
+    </tr>
+
+    <% @webextras.each do |webextra| %>
+      <tr>
+        <td><%= html_escape(webextra.title) %></td>
+        <td><%= html_escape(webextra.summary) %></td>
+        <td><%= link_to 'Show', webextra %></td>
+        <% if @valid_staff %>
+          <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
+            <td><%= link_to 'Edit', edit_webextra_path(webextra) %></td>
+          <% end %>
+        <% end %>
+        <% if session[:userid] != nil and Staff.find_by_userid(session[:userid]).userid == 'admin' %>
+          <td><%= link_to 'Destroy', webextra, :confirm => 'Are you sure?', :method => :delete %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+<%= link_to 'New Webextra', new_webextra_path %>
+<% if  @airdates.length != 0 %>
+  <h1>Listing airdates</h1>
+
+  <table>
+    <tr>
+      <th>Airdate</th>
+      <th></th>
+      <% if @valid_staff %>
+        <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
+          <th></th>
+        <% end %>
+      <% end %>
+      <% if session[:userid] != nil and Staff.find_by_userid(session[:userid]).userid == 'admin' %>
+        <th></th>
+      <% end %>
+    </tr>
+
+    <% @airdates.each do |airdate| %>
+      <tr>
+        <td><%= airdate.airdate %></td>
+        <td><%= link_to 'Show', airdate %></td>
+        <% if @valid_staff %>
+          <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
+            <td><%= link_to 'Edit', edit_airdate_path(airdate) %></td>
+          <% end %>
+        <% end %>
+        <% if session[:userid] != nil and Staff.find_by_userid(session[:userid]).userid == 'admin' %>
+          <td><%= link_to 'Destroy', airdate, :confirm => 'Are you sure?', :method => :delete %></td>
+        <% end %>
+      </tr>
+<% end %>
+    </table>
+  <% end %>
+  <%= link_to 'New Airdate', new_airdate_path %>

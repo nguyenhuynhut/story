@@ -1,0 +1,45 @@
+
+<% if params[:contact_staff] %>
+  <% if params[:contact_staff][:error] %>
+  <div style="font-family:'Trebuchet MS'; color:#FF0000; font-size:14px;">
+  
+    <%= params[:contact_staff][:error] %>
+  </div>
+<% end %>
+<% end %>
+
+<!--creates form, exectues the authenticate method when the submit button is clicked-->
+<%= form_tag :action=>'send_contact_staff' %>
+
+<p>
+  <b>Subject:</b> <br/>
+  <%= text_field("contact_staff", "subject",:size=>"53" , :maxlength => '255', :value => params[:contact_staff] ? params[:contact_staff][:subject] : '') %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <b</b><br/>
+  <%= text_area("contact_staff" ,"message", :size => "40x10", :value => params[:contact_staff] ? params[:contact_staff][:message] : '') %>
+</p>
+<script type="text/javascript">
+
+  function checkValidate() {
+    if ($("contact_staff_subject").getValue() == null || $("contact_staff_subject").getValue() == '') {
+      alert ("Please type in Subject");
+      return false;
+    }
+    if ($("contact_staff_message").getValue() == null || $("contact_staff_message").getValue() == '') {
+      alert ("Please type in Message");
+      return false;
+    }
+
+    return true;
+
+ 
+  }
+</script>
+<%= recaptcha_tags %>
+  <%= hidden_field("contact_staff" , "id" , :value =>params[:contact_staff] ? params[:contact_staff][:id] : '')  %>
+<input type="submit" value=" Send " onclick=" return checkValidate();"/>
+<br/>
+<%= link_to 'Back', url_for(:back) %>

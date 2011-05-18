@@ -1,0 +1,44 @@
+<div id="results">
+  <table>
+    <tr>
+      <%= sortable_table_header :name => "Userid",   :sort => "userid" ,:class => 'pagination ajax'  %>
+      <%= sortable_table_header :name => "First name",   :sort => "first_name" ,:class => 'pagination ajax' %>
+      <%= sortable_table_header :name => "Last name",   :sort => "last_name" ,:class => 'pagination ajax' %>
+      <%= sortable_table_header :name => "Email",   :sort => "email" ,:class => 'pagination ajax' %>
+      <%= sortable_table_header :name => "Title",   :sort => "title" ,:class => 'pagination ajax' %>
+      <th>Avatar</th>
+      <%= sortable_table_header :name => "Phone",   :sort => "phone" ,:class => 'pagination ajax' %>
+      <th>Is senior producer</th>
+      <th>Is assignment editor</th>
+      <th>Is producer</th>
+      <th></th>
+      <% if session[:userid] != nil and Staff.find_by_userid(session[:userid]).userid == 'admin' %>
+        <th></th>
+      <% end %>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% @staffs.each do |staff| %>
+      <tr>
+        <td><%= html_escape(staff.userid) %></td>
+        <td><%= html_escape(staff.first_name) %></td>
+        <td><%= html_escape(staff.last_name) %></td>
+        <td><%= html_escape(staff.email) %></td>
+        <td><%= html_escape(staff.title) %></td>
+        <td>  <%= image_tag staff ? (staff.avatar ? staff.avatar : 'logo.jpg')  : 'logo.jpg', :size => "60x60" %></td>
+        <td><%= html_escape(staff.phone) %></td>
+        <td><%= staff.is_senior_producer %></td>
+        <td><%= staff.is_assignment_editor %></td>
+        <td><%= staff.is_producer %></td>
+        <td><%= link_to 'Show', staff %></td>
+        <% if session[:userid] != nil and Staff.find_by_userid(session[:userid]).userid == 'admin' %>
+          <td><%= link_to 'Edit', edit_staff_path(staff) %></td>
+        <% end %>
+        <td><%= link_to 'Destroy', staff, :confirm => 'Are you sure?', :method => :delete %></td>
+        <td> <%= link_to "Contact Us",:controller => "staffs", :action => "contact_staff", :contact_staff =>{:id => staff.id  } %></td>
+      </tr>
+    <% end %>
+  </table>
+    <%= will_paginate  @staffs, :class => 'pagination ajax' %>
+  </div>

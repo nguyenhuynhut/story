@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date: 2011-04-28
+  crew_requirements: MyText
+  location: MyText
+  senior_approval: false
+  assigned: false
+  notes: MyText
+  preshow_tease: MyText
+
+two:
+  date: 2011-04-28
+  crew_requirements: MyText
+  location: MyText
+  senior_approval: false
+  assigned: false
+  notes: MyText
+  preshow_tease: MyText

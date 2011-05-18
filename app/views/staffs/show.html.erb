@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Userid:</b>
+  <%= html_escape(@staff.userid) %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= html_escape(@staff.first_name) %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= html_escape(@staff.last_name) %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= html_escape(@staff.email) %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= html_escape(@staff.title) %>
+</p>
+
+<p>
+  <b>Avatar:</b>
+  <%= image_tag @staff.avatar ? @staff.avatar : 'logo.jpg', :size => "60x60" %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= html_escape(@staff.phone) %>
+</p>
+
+<p>
+  <% if @staff.is_senior_producer == true %>
+    <b>Senior Producer</b>
+  <% end %>
+</p>
+
+<p>
+  <% if @staff.is_assignment_editor == true %>
+    <b>Assignment Editor</b>
+  <% end %>
+</p>
+
+<p>
+  <% if @staff.is_producer == true %>
+    <b>Producer</b>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_staff_path(@staff) %> |
+
+<%= link_to 'Back', url_for(:back) %>

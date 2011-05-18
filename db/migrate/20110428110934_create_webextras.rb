@@ -1,0 +1,15 @@
+class CreateWebextras < ActiveRecord::Migration
+  def self.up
+    create_table :webextras do |t|
+      t.string :title
+      t.text :summary
+      t.string :videourl
+      t.references :story
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :webextras
+  end
+end

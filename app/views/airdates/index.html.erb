@@ -1,0 +1,31 @@
+<h1>Listing airdates</h1>
+
+<table>
+  <tr>
+    <th>Airdate</th>
+    <th></th>
+    <% if @valid_staff %>
+      <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
+        <th></th>
+      <% end %>
+    <% end %>
+    <th></th>
+  </tr>
+
+  <% @airdates.each do |airdate| %>
+    <tr>
+      <td><%= airdate.airdate %></td>
+      <td><%= link_to 'Show', airdate %></td>
+      <% if @valid_staff %>
+        <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
+          <td><%= link_to 'Edit', edit_airdate_path(airdate) %></td>
+        <% end %>
+      <% end %>
+    </tr>
+  <% end %>
+  </table>
+
+  <br />
+
+  <%= link_to 'New Airdate', new_airdate_path %>
+  <%= link_to 'Back', stories_path(:story =>{:approved => 1}) %>

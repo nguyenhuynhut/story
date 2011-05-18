@@ -1,0 +1,2 @@
+module WebextrasHelper
+end

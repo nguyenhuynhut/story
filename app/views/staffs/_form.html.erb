@@ -15,7 +15,7 @@
     <%= f.label :userid %><br />
     <%= f.text_field :userid %>
   </div>
-  <% if @staff and @staff.token == nil %>
+  <% if @staff and @staff.token != nil %>
     <div class="field">
       <%= f.label :password %><br />
       <%= f.password_field :password ,:value => ''%>

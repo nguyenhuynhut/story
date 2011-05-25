@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(:version => 20110428111532) do
     t.boolean  "approved"
     t.integer  "producer_id"
     t.integer  "correspondent_id"
+    t.integer  "staff_id"
     t.integer  "editor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -97,6 +98,7 @@ ActiveRecord::Schema.define(:version => 20110428111532) do
     t.boolean  "check"
     t.string   "videourl"
     t.integer  "story_id"
+    t.integer  "staff_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

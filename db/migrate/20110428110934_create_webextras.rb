@@ -6,6 +6,7 @@ class CreateWebextras < ActiveRecord::Migration
       t.boolean :check
       t.string :videourl
       t.references :story
+       t.references :staff
       t.timestamps
     end
   end

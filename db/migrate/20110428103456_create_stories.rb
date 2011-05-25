@@ -10,6 +10,7 @@ class CreateStories < ActiveRecord::Migration
       t.boolean :approved
       t.references :producer
       t.references :correspondent
+           t.references :staff
       t.references :editor 
       t.timestamps
     end

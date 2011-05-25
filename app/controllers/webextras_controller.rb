@@ -69,7 +69,7 @@ class WebextrasController < ApplicationController
   def create
     @webextra = Webextra.new(params[:webextra])
     @webextra.story_id = session[:story_id]
-    @webextra.check = false
+    @webextra.check_mail = false
     if session[:userid] != nil and session[:userid] != ''
       @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])
     end
@@ -106,7 +106,7 @@ class WebextrasController < ApplicationController
   # PUT /webextras/1.xml
   def update
     @webextra = Webextra.find(params[:id])
-    params[:webextra][:check] = false
+    params[:webextra][:check_mail] = false
     if session[:userid] != nil and session[:userid] != ''
       @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])
     end

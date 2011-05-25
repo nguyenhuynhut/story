@@ -1,0 +1,33 @@
+
+My Username : <%= html_escape(@staff.userid) %>
+
+Date:
+<%= @shoot.date %>
+
+
+Crew requirements:
+<%= html_escape(@shoot.crew_requirements) %>
+
+Location:
+<%= html_escape(@shoot.location) %>
+
+Cameraperson:
+<%= @shoot.cameraperson ? @shoot.cameraperson.userid : "" %>
+
+Senior approval:
+<%= @shoot.senior_approval %>
+
+Assigned:
+<%= @shoot.assigned %>
+Notes:
+<%= html_escape(@shoot.notes) %>
+Preshow tease:
+<%= html_escape(@shoot.preshow_tease) %>
+
+Best Regards
+
+<% if @staff.first_name  %>
+
+  <%= html_escape(@staff.first_name + ' ' + @staff.last_name) %>
+
+<% end %>

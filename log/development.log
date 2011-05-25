@@ -40059,3 +40059,2878 @@ Started GET "/stories/1" for 127.0.0.1 at 2011-05-25 10:10:50 +0700
   [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
 Rendered stories/show.html.erb within layouts/application (38.1ms)
 Completed 200 OK in 168ms (Views: 43.1ms | ActiveRecord: 3.2ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mShoot Load (0.5ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mStory Load (0.3ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0
+  [1m[36mShoot Load (0.4ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mWebextra Load (0.3ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0[0m
+  [1m[35mShoot Load (0.7ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mStory Load (0.6ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0[0m
+  [1m[35mShoot Load (0.5ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mWebextra Load (0.5ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+  [1m[35mStory Load (0.6ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0
+  [1m[36mShoot Load (0.6ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mStory Load (0.5ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0
+  [1m[36mShoot Load (0.5ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mWebextra Load (0.4ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+  [1m[36mStory Load (0.5ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0[0m
+  [1m[35mShoot Load (0.4ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mStory Load (0.5ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0[0m
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 11:10:12 +0700
+
+Mysql::Error (Can't connect to local MySQL server through socket '/opt/lampp/var/mysql/mysql.sock' (2)):
+  
+
+Rendered /home/huynhut/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/gems/1.9.1/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+Rendered /home/huynhut/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/gems/1.9.1/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.9ms)
+Rendered /home/huynhut/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/gems/1.9.1/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.6ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 11:11:13 +0700
+
+Mysql::Error (Can't connect to local MySQL server through socket '/opt/lampp/var/mysql/mysql.sock' (2)):
+  
+
+Rendered /home/huynhut/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/gems/1.9.1/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/huynhut/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/gems/1.9.1/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.2ms)
+Rendered /home/huynhut/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/gems/1.9.1/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.8ms)
+  [1m[36mSQL (79.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mStory Load (1.3ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 11:13:05 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staffs/login" for 127.0.0.1 at 2011-05-25 11:13:08 +0700
+  Processing by StaffsController#login as HTML
+Rendered staffs/login.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+  [1m[36mStory Load (0.7ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0[0m
+  [1m[35mWebextra Load (0.5ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+
+
+Started POST "/staffs/authenticate" for 127.0.0.1 at 2011-05-25 11:13:14 +0700
+  Processing by StaffsController#authenticate as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"32Ref0R63TU3tJJXEuOkS0chygBVaxVfrtUZULznOvE=", "staff_form"=>{"userid"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[36mStaff Load (0.8ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' and password = '7c4a8d09ca3762af61e59520943dc26494f8941b') LIMIT 1[0m
+Redirected to http://localhost:3001/staffs/login
+Completed 302 Found in 149ms
+
+
+Started GET "/staffs/login" for 127.0.0.1 at 2011-05-25 11:13:15 +0700
+  Processing by StaffsController#login as HTML
+Rendered staffs/login.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/staffs/authenticate" for 127.0.0.1 at 2011-05-25 11:13:20 +0700
+  Processing by StaffsController#authenticate as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"32Ref0R63TU3tJJXEuOkS0chygBVaxVfrtUZULznOvE=", "staff_form"=>{"userid"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' and password = '7c4a8d09ca3762af61e59520943dc26494f8941b') LIMIT 1
+Redirected to http://localhost:3001/staffs/login
+Completed 302 Found in 38ms
+
+
+Started GET "/staffs/login" for 127.0.0.1 at 2011-05-25 11:13:21 +0700
+  Processing by StaffsController#login as HTML
+Rendered staffs/login.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-05-25 11:13:23 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/home/sign_in_google" for 127.0.0.1 at 2011-05-25 11:13:24 +0700
+  Processing by HomeController#sign_in_google as HTML
+http://localhost:3001/home/complete_sign_in_google
+ta
+Redirected to https://www.google.com/accounts/AuthSubRequest?scope=http://www.google.com/m8/feeds/contacts/default/full?max-results=0&session=1&secure=0&next=http://localhost:3001/home/complete_sign_in_google
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 11:13:37 +0700
+  Processing by HomeController#index as HTML
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/staffs/1" for 127.0.0.1 at 2011-05-25 11:13:40 +0700
+  Processing by StaffsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStaff Load (0.4ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1
+Rendered staffs/show.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 76ms (Views: 51.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/staffs/1/edit" for 127.0.0.1 at 2011-05-25 11:13:42 +0700
+  Processing by StaffsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+  [1m[35mStaff Load (0.3ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Rendered staffs/_form.html.erb (101.8ms)
+Rendered staffs/edit.html.erb within layouts/application (131.3ms)
+Completed 200 OK in 205ms (Views: 164.9ms | ActiveRecord: 1.5ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mStory Load (0.6ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0[0m
+  [1m[35mShoot Load (0.8ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mStory Load (0.5ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0[0m
+  [1m[35mStory Load (0.8ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0
+  [1m[36mShoot Load (0.5ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mWebextra Load (0.6ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+  [1m[35mWebextra Load (0.4ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+  [1m[36mShoot Load (0.2ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mStory Load (0.3ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0
+  [1m[36mStory Load (0.7ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0[0m
+  [1m[35mShoot Load (0.7ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mStory Load (0.7ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0[0m
+  [1m[35mShoot Load (0.5ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mWebextra Load (0.6ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+  [1m[35mShoot Load (0.5ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mStory Load (0.6ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0[0m
+  [1m[36mStory Load (0.7ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0[0m
+  [1m[35mWebextra Load (0.5ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+  [1m[36mShoot Load (0.5ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mStory Load (0.7ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0
+  [1m[36mShoot Load (0.5ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mStory Load (0.7ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0
+  [1m[36mShoot Load (0.6ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mShoot Load (0.6ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mWebextra Load (0.4ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+  [1m[35mStory Load (0.5ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0
+  [1m[35mShoot Load (0.6ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mWebextra Load (0.5ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+  [1m[35mStory Load (0.5ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0
+  [1m[36mShoot Load (0.4ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mStory Load (0.3ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0
+  [1m[36mStory Load (0.6ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0[0m
+  [1m[35mShoot Load (0.4ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 11:20:30 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2011-05-25 11:20:30 +0700
+  Processing by StoriesController#new as HTML
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+Rendered stories/_form.html.erb (216.6ms)
+Rendered stories/new.html.erb within layouts/application (228.4ms)
+Completed 200 OK in 290ms (Views: 249.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/orcamentos/18/edit" for 127.0.0.1 at 2011-05-25 11:20:34 +0700
+
+ActionController::RoutingError (No route matches "/orcamentos/18/edit"):
+  
+
+Rendered /home/huynhut/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/gems/1.9.1/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/orcamentos/18/edit" for 127.0.0.1 at 2011-05-25 11:20:36 +0700
+
+ActionController::RoutingError (No route matches "/orcamentos/18/edit"):
+  
+
+Rendered /home/huynhut/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/gems/1.9.1/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 11:20:58 +0700
+  Processing by HomeController#index as HTML
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+Rendered home/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 52ms (Views: 29.5ms | ActiveRecord: 1.2ms)
+  [1m[36mWebextra Load (0.5ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+  [1m[35mStory Load (0.7ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0
+  [1m[36mShoot Load (0.5ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mShoot Load (0.7ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mStory Load (0.5ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0[0m
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 23:17:48 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 40ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/sign_in_google" for 127.0.0.1 at 2011-05-25 23:17:57 +0700
+  Processing by HomeController#sign_in_google as HTML
+http://localhost:3000/home/complete_sign_in_google
+ta
+Redirected to https://www.google.com/accounts/AuthSubRequest?scope=http://www.google.com/m8/feeds/contacts/default/full?max-results=0&session=1&secure=0&next=http://localhost:3000/home/complete_sign_in_google
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 23:18:19 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/sign_in_google" for 127.0.0.1 at 2011-05-25 23:18:21 +0700
+  Processing by HomeController#sign_in_google as HTML
+http://localhost:3000/home/complete_sign_in_google
+ta
+Redirected to https://www.google.com/accounts/AuthSubRequest?scope=http://www.google.com/m8/feeds/contacts/default/full?max-results=0&session=1&secure=0&next=http://localhost:3000/home/complete_sign_in_google
+Completed 302 Found in 1ms
+
+
+Started GET "/home/complete_sign_in_google?token=1%2FX55BPYZIu3yArPk_0LHUVg2Hqs6P-RM8ctdx96znHSM" for 127.0.0.1 at 2011-05-25 23:18:29 +0700
+  Processing by HomeController#complete_sign_in_google as HTML
+  Parameters: {"token"=>"1/X55BPYZIu3yArPk_0LHUVg2Hqs6P-RM8ctdx96znHSM"}
+<feed xmlns:batch='http://schemas.google.com/gdata/batch' gd:etag='W/&quot;CkQFQnc9fCp7ImA9WhZVE0k.&quot;' xmlns:gContact='http://schemas.google.com/contact/2008' xmlns:gd='http://schemas.google.com/g/2005' xmlns:openSearch='http://a9.com/-/spec/opensearch/1.1/' xmlns='http://www.w3.org/2005/Atom'><id>nguyenhuynhutsimple@gmail.com</id><updated>2011-05-25T16:18:33.964Z</updated><category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/contact/2008#contact'/><title>Huy Nhut's Contacts</title><link href='http://www.google.com/' rel='alternate' type='text/html'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full' rel='http://schemas.google.com/g/2005#feed' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full' rel='http://schemas.google.com/g/2005#post' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full/batch' rel='http://schemas.google.com/g/2005#batch' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full?max-results=0' rel='self' type='application/atom+xml'/><author><name>Huy Nhut</name><email>nguyenhuynhutsimple@gmail.com</email></author><generator uri='http://www.google.com/m8/feeds' version='1.0'>Contacts</generator><openSearch:totalResults>162</openSearch:totalResults><openSearch:startIndex>1</openSearch:startIndex><openSearch:itemsPerPage>0</openSearch:itemsPerPage></feed>
+Huy Nhut's Contacts
+Huy Nhut
+nguyenhuynhutsimple@gmail.com
+  [1m[36mSQL (37.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`email` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4904ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 23:18:34 +0700
+  Processing by HomeController#index as HTML
+  [1m[35mStaff Load (0.8ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+Rendered home/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 56ms (Views: 32.0ms | ActiveRecord: 1.3ms)
+  [1m[36mShoot Load (0.7ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mStory Load (32.2ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 23:19:22 +0700
+  Processing by HomeController#index as HTML
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mStaff Load (0.4ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2011-05-25 23:19:27 +0700
+  Processing by StoriesController#index as HTML
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStory Load (0.8ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (approved = 0 and deadline >= '2011-05-25') ORDER BY name desc[0m
+  [1m[35mStaff Load (0.8ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Rendered stories/_search_results.html.erb (12.2ms)
+Rendered stories/index.html.erb within layouts/application (139.7ms)
+Completed 200 OK in 197ms (Views: 149.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2011-05-25 23:19:31 +0700
+  Processing by StoriesController#new as HTML
+  [1m[35mStaff Load (1.9ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStaff Load (0.8ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+Rendered stories/_form.html.erb (91.3ms)
+Rendered stories/new.html.erb within layouts/application (103.4ms)
+Completed 200 OK in 198ms (Views: 115.0ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2011-05-25 23:19:39 +0700
+  Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"leEveSg3DTqM135V75HnMKfb/tiVscvkiqJ3CA9aQh0=", "story"=>{"approved"=>"0", "deadline(1i)"=>"2011", "deadline(2i)"=>"5", "deadline(3i)"=>"25", "name"=>"222", "outline"=>"222", "graphics_collateral"=>"", "script"=>"222", "producer_id"=>"1", "correspondent_id"=>"1", "editor_id"=>"1"}, "commit"=>"Submit"}
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+Rendered stories/_form.html.erb (17.5ms)
+Rendered stories/new.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 144ms (Views: 27.6ms | ActiveRecord: 1.6ms)
+  [1m[35mShoot Load (0.4ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mStory Load (0.6ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0[0m
+  [1m[35mWebextra Load (0.3ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+
+
+Started POST "/stories" for 127.0.0.1 at 2011-05-25 23:19:54 +0700
+  Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"leEveSg3DTqM135V75HnMKfb/tiVscvkiqJ3CA9aQh0=", "story"=>{"approved"=>"0", "deadline(1i)"=>"2011", "deadline(2i)"=>"9", "deadline(3i)"=>"25", "name"=>"222", "outline"=>"222", "graphics_collateral"=>"222", "script"=>"222", "producer_id"=>"1", "correspondent_id"=>"1", "editor_id"=>"1"}, "commit"=>"Submit"}
+  [1m[36mStaff Load (0.8ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.9ms)[0m  [1mdescribe `stories`[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO `stories` (`name`, `outline`, `graphics_collateral`, `script`, `deadline`, `check`, `approved`, `producer_id`, `correspondent_id`, `staff_id`, `editor_id`, `created_at`, `updated_at`) VALUES ('222', '222', '222', '222', '2011-09-25', 0, 0, 1, 1, 1, 1, '2011-05-25 16:19:54', '2011-05-25 16:19:54')
+  [1m[36mSQL (130.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/stories/2
+Completed 302 Found in 206ms
+
+
+Started GET "/stories/2" for 127.0.0.1 at 2011-05-25 23:19:54 +0700
+  Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mStory Load (0.4ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`id` = 2 LIMIT 1
+  [1m[36mShoot Load (0.5ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (story_id = '2') ORDER BY created_at LIMIT 20[0m
+  [1m[35mWebextra Load (0.5ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE (story_id = '2') ORDER BY created_at LIMIT 20
+  [1m[36mCharacter Load (57.7ms)[0m  [1mSELECT `characters`.* FROM `characters` WHERE (story_id = '2') ORDER BY created_at LIMIT 20[0m
+  [1m[35mAirdate Load (15.0ms)[0m  SELECT `airdates`.* FROM `airdates` WHERE (story_id = '2') ORDER BY created_at LIMIT 20
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+Rendered stories/show.html.erb within layouts/application (60.9ms)
+Completed 200 OK in 295ms (Views: 75.0ms | ActiveRecord: 74.6ms)
+  [1m[35mShoot Load (0.6ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mStory Load (0.6ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0[0m
+  [1m[35mStaff Load (0.3ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`is_senior_producer` = 1
+  [1m[36mShoot Load (0.6ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mStory Load (0.6ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`check` = 0 AND `stories`.`approved` = 0
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`is_senior_producer` = 1[0m
+  [1m[35mWebextra Load (0.5ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 23:27:56 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mShoot Load (0.4ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mWebextra Load (0.4ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+  [1m[35mShoot Load (0.7ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mShoot Load (0.6ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mShoot Load (0.6ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mWebextra Load (0.4ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+  [1m[35mShoot Load (0.6ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mWebextra Load (0.6ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+  [1m[35mShoot Load (0.6ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mShoot Load (0.6ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mShoot Load (0.4ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mWebextra Load (0.3ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+  [1m[35mShoot Load (0.4ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mWebextra Load (0.4ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+  [1m[35mShoot Load (0.5ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mShoot Load (0.6ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mShoot Load (0.6ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mWebextra Load (0.5ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+  [1m[36mShoot Load (0.6ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mShoot Load (0.3ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mWebextra Load (0.2ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+  [1m[35mShoot Load (0.7ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mShoot Load (0.6ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mWebextra Load (0.6ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+  [1m[35mShoot Load (0.5ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mShoot Load (0.5ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mShoot Load (0.6ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mWebextra Load (0.5ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+  [1m[35mShoot Load (0.7ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mWebextra Load (0.7ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+  [1m[35mShoot Load (0.5ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mShoot Load (0.6ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mWebextra Load (0.6ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+  [1m[36mShoot Load (0.5ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mShoot Load (0.4ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mWebextra Load (0.4ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+  [1m[35mWebextra Load (0.4ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+  [1m[36mShoot Load (0.4ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mShoot Load (0.2ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mShoot Load (0.4ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mShoot Load (0.5ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mShoot Load (0.7ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mShoot Load (0.3ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mWebextra Load (0.5ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+  [1m[36mShoot Load (0.6ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mWebextra Load (0.5ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+  [1m[36mShoot Load (0.5ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mShoot Load (0.5ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mShoot Load (0.6ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mWebextra Load (0.4ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mStory Load (0.3ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check = 0 and approved = 0)
+  [1m[36mShoot Load (0.4ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 and approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 and approved = 0)
+  [1m[35mShoot Load (0.6ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mWebextra Load (0.6ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+  [1m[35mStory Load (0.3ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check = 0 and approved = 0)
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 and approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 and approved = 0)
+  [1m[36mShoot Load (0.5ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mStory Load (0.3ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check = 0 and approved = 0)
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 and approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 and approved = 0)
+  [1m[36mStory Load (0.4ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (check = 0 and approved = 0)[0m
+  [1m[35mWebextra Load (0.5ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 and approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 and approved = 0)
+  [1m[36mShoot Load (0.5ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mShoot Load (0.5ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mStory Load (0.4ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (check = 0 and approved = 0)[0m
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 and approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 and approved = 0)
+  [1m[35mShoot Load (0.4ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (check = 0 and approved = 0)[0m
+  [1m[35mWebextra Load (0.5ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 and approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 and approved = 0)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mStory Load (0.4ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[36mShoot Load (0.5ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[35mStory Load (0.4ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[36mWebextra Load (0.5ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+  [1m[35mShoot Load (0.5ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[36mShoot Load (0.6ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mStory Load (0.4ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[36mShoot Load (0.6ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mStory Load (0.3ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[36mWebextra Load (0.4ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+  [1m[35mShoot Load (0.4ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)[0m
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateStaffs (20110428025521)
+Migrating to CreateShoots (20110428100230)
+Migrating to CreateStories (20110428103456)
+Migrating to CreateAirdates (20110428105100)
+Migrating to CreateWebextras (20110428110934)
+Migrating to CreateCharacters (20110428111532)
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `airdates`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `airdates`
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `characters`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `characters`
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `shoots`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `shoots`
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `staffs`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `staffs`
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `stories`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `stories`
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `webextras`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `webextras`
+  [1m[35mWebextra Load (0.5ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+  [1m[36mShoot Load (0.4ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mStory Load (0.3ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+Mysql::Error: Table 'story_development.webextras' doesn't exist: SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+Mysql::Error: Table 'story_development.shoots' doesn't exist: SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 00:09:31 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (231.7ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (356.6ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateStaffs (20110428025521)
+  [1m[35mSQL (158.6ms)[0m  CREATE TABLE `staffs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `userid` varchar(255), `password` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `title` varchar(255), `avatar` varchar(255), `phone` varchar(255), `token` varchar(255), `is_senior_producer` tinyint(1), `is_assignment_editor` tinyint(1), `is_producer` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (65.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110428025521')[0m
+Migrating to CreateShoots (20110428100230)
+  [1m[35mSQL (152.7ms)[0m  CREATE TABLE `shoots` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `date` date, `crew_requirements` text, `location` text, `senior_approval` tinyint(1), `assigned` tinyint(1), `notes` text, `preshow_tease` text, `check_mail` tinyint(1), `cameraperson_id` int(11), `approver_id` int(11), `story_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (65.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110428100230')[0m
+Migrating to CreateStories (20110428103456)
+  [1m[35mSQL (170.9ms)[0m  CREATE TABLE `stories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `outline` text, `graphics_collateral` text, `script` varchar(255), `deadline` date, `check_mail` tinyint(1), `approved` tinyint(1), `producer_id` int(11), `correspondent_id` int(11), `staff_id` int(11), `editor_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (65.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110428103456')[0m
+Migrating to CreateAirdates (20110428105100)
+  [1m[35mSQL (143.4ms)[0m  CREATE TABLE `airdates` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `airdate` datetime, `story_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (54.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110428105100')[0m
+Migrating to CreateWebextras (20110428110934)
+  [1m[35mSQL (151.0ms)[0m  CREATE TABLE `webextras` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `summary` text, `check_mail` tinyint(1), `videourl` varchar(255), `story_id` int(11), `staff_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (64.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110428110934')[0m
+Migrating to CreateCharacters (20110428111532)
+  [1m[35mSQL (163.2ms)[0m  CREATE TABLE `characters` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `salutation` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `address` varchar(255), `city` varchar(255), `state` varchar(255), `zip` varchar(255), `phone_1` varchar(255), `phone_2` varchar(255), `phone_3` varchar(255), `email_1` varchar(255), `email_2` varchar(255), `notes` text, `avatar` varchar(255), `rep_phone` varchar(255), `rep_email` varchar(255), `representative` varchar(255), `rep_address` varchar(255), `story_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (54.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110428111532')[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `airdates`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `airdates`
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `characters`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `characters`
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `shoots`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `shoots`
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `staffs`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `staffs`
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `stories`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `stories`
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `webextras`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `webextras`
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-05-26 00:10:09 +0700
+  Processing by HomeController#index as HTML
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+Rendered home/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 39ms (Views: 15.7ms | ActiveRecord: 1.1ms)
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)[0m
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[35mShoot Load (0.5ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+Mysql::Error: Unknown column 'shoots.check' in 'where clause': SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+
+
+Started GET "/staffs/login" for 127.0.0.1 at 2011-05-26 00:10:19 +0700
+  Processing by StaffsController#login as HTML
+Rendered staffs/login.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-05-26 00:10:29 +0700
+  Processing by HomeController#index as HTML
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+Rendered home/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 39ms (Views: 15.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/home/sign_in_google" for 127.0.0.1 at 2011-05-26 00:10:33 +0700
+  Processing by HomeController#sign_in_google as HTML
+http://localhost:3000/home/complete_sign_in_google
+ta
+Redirected to https://www.google.com/accounts/AuthSubRequest?scope=http://www.google.com/m8/feeds/contacts/default/full?max-results=0&session=1&secure=0&next=http://localhost:3000/home/complete_sign_in_google
+Completed 302 Found in 1ms
+
+
+Started GET "/home/complete_sign_in_google?token=1%2FZIDrIg5nFjE6xW1-J46EbFev3497wA4MvRfFVRuI-UA" for 127.0.0.1 at 2011-05-26 00:10:42 +0700
+  Processing by HomeController#complete_sign_in_google as HTML
+  Parameters: {"token"=>"1/ZIDrIg5nFjE6xW1-J46EbFev3497wA4MvRfFVRuI-UA"}
+<feed xmlns:batch='http://schemas.google.com/gdata/batch' gd:etag='W/&quot;CUcAR3c9fCp7ImA9WhZVE0k.&quot;' xmlns:gContact='http://schemas.google.com/contact/2008' xmlns:gd='http://schemas.google.com/g/2005' xmlns:openSearch='http://a9.com/-/spec/opensearch/1.1/' xmlns='http://www.w3.org/2005/Atom'><id>nguyenhuynhutsimple@gmail.com</id><updated>2011-05-25T17:04:06.964Z</updated><category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/contact/2008#contact'/><title>Huy Nhut's Contacts</title><link href='http://www.google.com/' rel='alternate' type='text/html'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full' rel='http://schemas.google.com/g/2005#feed' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full' rel='http://schemas.google.com/g/2005#post' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full/batch' rel='http://schemas.google.com/g/2005#batch' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full?max-results=0' rel='self' type='application/atom+xml'/><author><name>Huy Nhut</name><email>nguyenhuynhutsimple@gmail.com</email></author><generator uri='http://www.google.com/m8/feeds' version='1.0'>Contacts</generator><openSearch:totalResults>162</openSearch:totalResults><openSearch:startIndex>1</openSearch:startIndex><openSearch:itemsPerPage>0</openSearch:itemsPerPage></feed>
+Huy Nhut's Contacts
+Huy Nhut
+nguyenhuynhutsimple@gmail.com
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`email` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT 1 FROM `staffs` WHERE (`staffs`.`email` = BINARY 'nguyenhuynhutsimple@gmail.com') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM `staffs` WHERE (`staffs`.`userid` = BINARY 'nguyenhuynhutsimple@gmail.com') LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  describe `staffs`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `staffs` (`userid`, `password`, `first_name`, `last_name`, `email`, `title`, `avatar`, `phone`, `token`, `is_senior_producer`, `is_assignment_editor`, `is_producer`, `created_at`, `updated_at`) VALUES ('nguyenhuynhutsimple@gmail.com', '8c6fc446983609fc98a087948308a7d0eba39de5', 'Huy Nhut', '-', 'nguyenhuynhutsimple@gmail.com', 'Huy Nhut\'s Contacts', NULL, '-', '1/ZIDrIg5nFjE6xW1-J46EbFev3497wA4MvRfFVRuI-UA', NULL, NULL, NULL, '2011-05-25 17:10:47', '2011-05-25 17:10:47')[0m
+  [1m[35mSQL (87.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 5397ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 00:10:47 +0700
+  Processing by HomeController#index as HTML
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mStaff Load (0.4ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 60ms (Views: 36.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/staffs/1" for 127.0.0.1 at 2011-05-26 00:10:50 +0700
+  Processing by StaffsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStaff Load (0.3ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1
+Rendered staffs/show.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 85ms (Views: 53.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/staffs/1/edit" for 127.0.0.1 at 2011-05-26 00:10:53 +0700
+  Processing by StaffsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Rendered staffs/_form.html.erb (100.8ms)
+Rendered staffs/edit.html.erb within layouts/application (120.7ms)
+Completed 200 OK in 227ms (Views: 150.9ms | ActiveRecord: 1.7ms)
+  [1m[35mStory Load (0.4ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[36mWebextra Load (0.4ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+Mysql::Error: Unknown column 'webextras.check' in 'where clause': SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+
+
+Started GET "/staffs/1/edit" for 127.0.0.1 at 2011-05-26 00:11:49 +0700
+  Processing by StaffsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+Rendered staffs/_form.html.erb (11.2ms)
+Rendered staffs/edit.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 36ms (Views: 20.2ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/staffs/1" for 127.0.0.1 at 2011-05-26 00:12:00 +0700
+  Processing by StaffsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"leEveSg3DTqM135V75HnMKfb/tiVscvkiqJ3CA9aQh0=", "staff"=>{"userid"=>"admin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Huy Nhut", "last_name"=>"-", "email"=>"nguyenhuynhutsimple@gmail.com", "title"=>"Huy Nhut's Contacts", "phone"=>"-"}, "commit"=>"Update Staff", "id"=>"1"}
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT 1 FROM `staffs` WHERE (`staffs`.`email` = BINARY 'nguyenhuynhutsimple@gmail.com') AND (`staffs`.id <> 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT 1 FROM `staffs` WHERE (`staffs`.`userid` = BINARY 'admin') AND (`staffs`.id <> 1) LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `staffs` SET `userid` = 'admin', `password` = '7c4a8d09ca3762af61e59520943dc26494f8941b', `updated_at` = '2011-05-25 17:12:00' WHERE `staffs`.`id` = 1[0m
+  [1m[35mSQL (79.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/staffs/1
+Completed 302 Found in 136ms
+
+
+Started GET "/staffs/1" for 127.0.0.1 at 2011-05-26 00:12:00 +0700
+  Processing by StaffsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+Rendered staffs/show.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 94ms (Views: 26.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-05-26 00:12:10 +0700
+  Processing by HomeController#index as HTML
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 40ms (Views: 17.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/home/sign_in_google" for 127.0.0.1 at 2011-05-26 00:12:12 +0700
+  Processing by HomeController#sign_in_google as HTML
+http://localhost:3000/home/complete_sign_in_google
+ta
+Redirected to https://www.google.com/accounts/AuthSubRequest?scope=http://www.google.com/m8/feeds/contacts/default/full?max-results=0&session=1&secure=0&next=http://localhost:3000/home/complete_sign_in_google
+Completed 302 Found in 1ms
+  [1m[35mShoot Load (0.5ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)[0m
+Mysql::Error: Unknown column 'shoots.check' in 'where clause': SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+
+
+Started GET "/staffs/login" for 127.0.0.1 at 2011-05-26 00:12:19 +0700
+  Processing by StaffsController#login as HTML
+Rendered staffs/login.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/staffs/authenticate" for 127.0.0.1 at 2011-05-26 00:12:26 +0700
+  Processing by StaffsController#authenticate as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"leEveSg3DTqM135V75HnMKfb/tiVscvkiqJ3CA9aQh0=", "staff_form"=>{"userid"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' and password = '7c4a8d09ca3762af61e59520943dc26494f8941b') LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 37ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 00:12:26 +0700
+  Processing by HomeController#index as HTML
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' ) LIMIT 1[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 90ms (Views: 30.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/staffs/1" for 127.0.0.1 at 2011-05-26 00:12:28 +0700
+  Processing by StaffsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1
+Rendered staffs/show.html.erb within layouts/application (57.7ms)
+Completed 200 OK in 87ms (Views: 62.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/staffs/1/edit" for 127.0.0.1 at 2011-05-26 00:12:30 +0700
+  Processing by StaffsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+  [1m[35mStaff Load (1.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1
+Rendered staffs/_form.html.erb (71.2ms)
+Rendered staffs/edit.html.erb within layouts/application (76.4ms)
+Completed 200 OK in 107ms (Views: 80.3ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/staffs/1" for 127.0.0.1 at 2011-05-26 00:13:01 +0700
+  Processing by StaffsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"leEveSg3DTqM135V75HnMKfb/tiVscvkiqJ3CA9aQh0=", "staff"=>{"userid"=>"admin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Huy Nhut", "last_name"=>"-", "email"=>"nhut2020@yahoo.com", "title"=>"Huy Nhut's Contacts", "phone"=>"-", "is_senior_producer"=>"1", "is_assignment_editor"=>"1", "is_producer"=>"1"}, "commit"=>"Update Staff", "id"=>"1"}
+  [1m[36mStaff Load (0.4ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT 1 FROM `staffs` WHERE (`staffs`.`email` = BINARY 'nhut2020@yahoo.com') AND (`staffs`.id <> 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT 1 FROM `staffs` WHERE (`staffs`.`userid` = BINARY 'admin') AND (`staffs`.id <> 1) LIMIT 1
+  [1m[36mAREL (0.6ms)[0m  [1mUPDATE `staffs` SET `email` = 'nhut2020@yahoo.com', `is_senior_producer` = 1, `is_assignment_editor` = 1, `is_producer` = 1, `updated_at` = '2011-05-25 17:13:01' WHERE `staffs`.`id` = 1[0m
+  [1m[35mSQL (80.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/staffs/1
+Completed 302 Found in 132ms
+
+
+Started GET "/staffs/1" for 127.0.0.1 at 2011-05-26 00:13:01 +0700
+  Processing by StaffsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+Rendered staffs/show.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 57ms (Views: 31.4ms | ActiveRecord: 82.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-05-26 00:13:04 +0700
+  Processing by HomeController#index as HTML
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' ) LIMIT 1
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1
+Rendered home/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 95ms (Views: 33.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/staffs/logout" for 127.0.0.1 at 2011-05-26 00:13:08 +0700
+  Processing by StaffsController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 00:13:08 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/sign_in_google" for 127.0.0.1 at 2011-05-26 00:13:10 +0700
+  Processing by HomeController#sign_in_google as HTML
+http://localhost:3000/home/complete_sign_in_google
+ta
+Redirected to https://www.google.com/accounts/AuthSubRequest?scope=http://www.google.com/m8/feeds/contacts/default/full?max-results=0&session=1&secure=0&next=http://localhost:3000/home/complete_sign_in_google
+Completed 302 Found in 1ms
+
+
+Started GET "/home/complete_sign_in_google?token=1%2FrFAfkkJQo_uroBh6wX7fM_R3HrkW3tT0g5wJyzS2J-U" for 127.0.0.1 at 2011-05-26 00:13:16 +0700
+  Processing by HomeController#complete_sign_in_google as HTML
+  Parameters: {"token"=>"1/rFAfkkJQo_uroBh6wX7fM_R3HrkW3tT0g5wJyzS2J-U"}
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)[0m
+  [1m[35mWebextra Load (0.5ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[36mShoot Load (0.2ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+Mysql::Error: Unknown column 'webextras.check' in 'where clause': SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+Mysql::Error: Unknown column 'shoots.check' in 'where clause': SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+<feed xmlns:batch='http://schemas.google.com/gdata/batch' gd:etag='W/&quot;CUUEQXszeCp7ImA9WhZVE0k.&quot;' xmlns:gContact='http://schemas.google.com/contact/2008' xmlns:gd='http://schemas.google.com/g/2005' xmlns:openSearch='http://a9.com/-/spec/opensearch/1.1/' xmlns='http://www.w3.org/2005/Atom'><id>nguyenhuynhutsimple@gmail.com</id><updated>2011-05-25T17:06:40.580Z</updated><category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/contact/2008#contact'/><title>Huy Nhut's Contacts</title><link href='http://www.google.com/' rel='alternate' type='text/html'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full' rel='http://schemas.google.com/g/2005#feed' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full' rel='http://schemas.google.com/g/2005#post' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full/batch' rel='http://schemas.google.com/g/2005#batch' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full?max-results=0' rel='self' type='application/atom+xml'/><author><name>Huy Nhut</name><email>nguyenhuynhutsimple@gmail.com</email></author><generator uri='http://www.google.com/m8/feeds' version='1.0'>Contacts</generator><openSearch:totalResults>162</openSearch:totalResults><openSearch:startIndex>1</openSearch:startIndex><openSearch:itemsPerPage>0</openSearch:itemsPerPage></feed>
+Huy Nhut's Contacts
+Huy Nhut
+nguyenhuynhutsimple@gmail.com
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`email` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT 1 FROM `staffs` WHERE (`staffs`.`email` = BINARY 'nguyenhuynhutsimple@gmail.com') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT 1 FROM `staffs` WHERE (`staffs`.`userid` = BINARY 'nguyenhuynhutsimple@gmail.com') LIMIT 1
+  [1m[36mSQL (1.9ms)[0m  [1mdescribe `staffs`[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO `staffs` (`userid`, `password`, `first_name`, `last_name`, `email`, `title`, `avatar`, `phone`, `token`, `is_senior_producer`, `is_assignment_editor`, `is_producer`, `created_at`, `updated_at`) VALUES ('nguyenhuynhutsimple@gmail.com', 'bdf4c471568b0e6d1934ade70a506480bd12b439', 'Huy Nhut', '-', 'nguyenhuynhutsimple@gmail.com', 'Huy Nhut\'s Contacts', NULL, '-', '1/rFAfkkJQo_uroBh6wX7fM_R3HrkW3tT0g5wJyzS2J-U', NULL, NULL, NULL, '2011-05-25 17:13:21', '2011-05-25 17:13:21')
+  [1m[36mSQL (97.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4692ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 00:13:21 +0700
+  Processing by HomeController#index as HTML
+  [1m[35mStaff Load (0.8ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStaff Load (0.4ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+Rendered home/index.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 69ms (Views: 45.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2011-05-26 00:13:24 +0700
+  Processing by StoriesController#index as HTML
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mStory Load (0.7ms)[0m  SELECT `stories`.* FROM `stories` WHERE (approved = 0 and deadline >= '2011-05-26') ORDER BY name desc
+  [1m[36mStaff Load (0.4ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+Rendered stories/_search_results.html.erb (7.9ms)
+Rendered stories/index.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 97ms (Views: 46.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2011-05-26 00:13:27 +0700
+  Processing by StoriesController#new as HTML
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mStaff Load (0.9ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+Rendered stories/_form.html.erb (81.1ms)
+Rendered stories/new.html.erb within layouts/application (85.8ms)
+Completed 200 OK in 139ms (Views: 89.7ms | ActiveRecord: 103.6ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2011-05-26 00:13:34 +0700
+  Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4WnATX/QzCdxErmIVI6IqK6LkVpw4aB2UQooMmqHjRw=", "story"=>{"approved"=>"0", "deadline(1i)"=>"2011", "deadline(2i)"=>"5", "deadline(3i)"=>"25", "name"=>"2", "outline"=>"2", "graphics_collateral"=>"2", "script"=>"", "producer_id"=>"1", "correspondent_id"=>"1", "editor_id"=>"1"}, "commit"=>"Submit"}
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+Completed   in 99ms
+
+NoMethodError (undefined method `check=' for #<Story:0xaaaeee8>):
+  app/controllers/stories_controller.rb:125:in `create'
+
+Rendered /home/huynhut/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/gems/1.9.1/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/huynhut/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/gems/1.9.1/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (23.4ms)
+Rendered /home/huynhut/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/gems/1.9.1/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.2ms)
+  [1m[35mStory Load (0.3ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[36mShoot Load (0.6ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+Mysql::Error: Unknown column 'shoots.check' in 'where clause': SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[35mStory Load (0.3ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[36mShoot Load (0.4ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+Mysql::Error: Unknown column 'shoots.check' in 'where clause': SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[35mWebextra Load (0.4ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+Mysql::Error: Unknown column 'webextras.check' in 'where clause': SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+
+
+Started POST "/stories" for 127.0.0.1 at 2011-05-26 00:15:38 +0700
+  Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4WnATX/QzCdxErmIVI6IqK6LkVpw4aB2UQooMmqHjRw=", "story"=>{"approved"=>"0", "deadline(1i)"=>"2011", "deadline(2i)"=>"5", "deadline(3i)"=>"25", "name"=>"2", "outline"=>"2", "graphics_collateral"=>"2", "script"=>"", "producer_id"=>"1", "correspondent_id"=>"1", "editor_id"=>"1"}, "commit"=>"Submit"}
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `stories`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `stories` (`name`, `outline`, `graphics_collateral`, `script`, `deadline`, `check_mail`, `approved`, `producer_id`, `correspondent_id`, `staff_id`, `editor_id`, `created_at`, `updated_at`) VALUES ('2', '2', '2', '', '2011-05-25', 0, 0, 1, 1, 2, 1, '2011-05-25 17:15:38', '2011-05-25 17:15:38')
+  [1m[36mSQL (77.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/stories/1
+Completed 302 Found in 122ms
+
+
+Started GET "/stories/1" for 127.0.0.1 at 2011-05-26 00:15:38 +0700
+  Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStory Load (0.3ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`id` = 1 LIMIT 1
+  [1m[36mShoot Load (0.4ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (story_id = '1') ORDER BY created_at LIMIT 20[0m
+  [1m[35mWebextra Load (0.4ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE (story_id = '1') ORDER BY created_at LIMIT 20
+  [1m[36mCharacter Load (0.7ms)[0m  [1mSELECT `characters`.* FROM `characters` WHERE (story_id = '1') ORDER BY created_at LIMIT 20[0m
+  [1m[35mAirdate Load (0.5ms)[0m  SELECT `airdates`.* FROM `airdates` WHERE (story_id = '1') ORDER BY created_at LIMIT 20
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+Rendered stories/show.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 185ms (Views: 47.0ms | ActiveRecord: 82.6ms)
+  [1m[35mShoot Load (0.4ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+Mysql::Error: Unknown column 'shoots.check' in 'where clause': SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)[0m
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[35mShoot Load (0.5ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mWebextra Load (0.4ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+Mysql::Error: Unknown column 'shoots.check' in 'where clause': SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[35mStory Load (0.4ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+Mysql::Error: Unknown column 'webextras.check' in 'where clause': SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[36mShoot Load (0.5ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+Mysql::Error: Unknown column 'shoots.check' in 'where clause': SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[35mStory Load (0.4ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[36mShoot Load (0.4ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mWebextra Load (0.2ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+Mysql::Error: Unknown column 'shoots.check' in 'where clause': SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)[0m
+Mysql::Error: Unknown column 'webextras.check' in 'where clause': SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[35mShoot Load (0.5ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)[0m
+Mysql::Error: Unknown column 'shoots.check' in 'where clause': SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[35mShoot Load (0.6ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[36mWebextra Load (0.5ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0[0m
+Mysql::Error: Unknown column 'webextras.check' in 'where clause': SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+Mysql::Error: Unknown column 'shoots.check' in 'where clause': SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[35mStory Load (0.4ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[36mShoot Load (0.5ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mStory Load (0.3ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+Mysql::Error: Unknown column 'shoots.check' in 'where clause': SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[36mShoot Load (0.5ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+  [1m[35mWebextra Load (0.5ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+Mysql::Error: Unknown column 'shoots.check' in 'where clause': SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+Mysql::Error: Unknown column 'webextras.check' in 'where clause': SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`check` = 0
+  [1m[36mShoot Load (0.5ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0[0m
+Mysql::Error: Unknown column 'shoots.check' in 'where clause': SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`check` = 0
+  [1m[35mStory Load (0.3ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)[0m
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'check = 0 AND approved = 0)' at line 1: SELECT `stories`.* FROM `stories` WHERE (check = 0 AND approved = 0)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mStory Load (0.8ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check_mail = 0 AND approved = 0)
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 0)[0m
+  [1m[35mStory Load (0.7ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check_mail = 0 AND approved = 0)
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 0)[0m
+  [1m[35mStory Load (0.6ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check_mail = 0 AND approved = 0)
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 0)[0m
+  [1m[35mStory Load (0.7ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check_mail = 0 AND approved = 0)
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 0)[0m
+  [1m[35mStory Load (0.5ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check_mail = 0 AND approved = 0)
+  [1m[36mStaff Load (0.2ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 0)[0m
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 00:38:03 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+  [1m[36mStory Load (0.6ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (check_mail = 0 AND approved = 0)[0m
+  [1m[35mStaff Load (0.4ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 0)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+  [1m[36mStory Load (1.0ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (check_mail = 0 AND approved = 0)[0m
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 0)
+  [1m[36mStory Load (0.7ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (check_mail = 0 AND approved = 0)[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 0)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 00:46:25 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+  [1m[36mStory Load (0.8ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (check_mail = 0 AND approved = 0)[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 0)
+  [1m[36mStory Load (0.5ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (check_mail = 0 AND approved = 0)[0m
+  [1m[35mStaff Load (0.4ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 0)
+  [1m[36mStory Load (0.6ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (check_mail = 0 AND approved = 0)[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 0)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 00:54:33 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+  [1m[36mStory Load (0.6ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (check_mail = 0 AND approved = 0)[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mStaff Load (0.4ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 2 LIMIT 1
+Rendered user_mailer/send_pitch.html.erb (1.2ms)
+Rendered user_mailer/send_pitch.text.erb (1.0ms)
+
+Sent mail to nhut2020@yahoo.com (9861ms)
+Date: Thu, 26 May 2011 00:57:12 +0700
+From: benbo.nguyen@gmail.com
+To: nhut2020@yahoo.com
+Message-ID: <4ddd42f88819b_11b14f6a6a457a8@huynhut-Inspiron-N5010.mail>
+Subject: Pitch
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_4ddd42f86fe73_11b14f6a6a454ea";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+
+----==_mimepart_4ddd42f86fe73_11b14f6a6a454ea
+Date: Thu, 26 May 2011 00:57:12 +0700
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <4ddd42f87ec02_11b14f6a6a455c0@huynhut-Inspiron-N5010.mail>
+
+
+My Username : nguyenhuynhutsimple@gmail.com
+
+Deadline:
+2011-05-25
+
+Name:
+2
+
+Outline:
+2
+
+Graphics collateral:
+2
+
+Script:
+
+
+
+
+
+Approved:
+false
+
+Best Regards
+
+
+  Huy Nhut -
+
+
+
+----==_mimepart_4ddd42f86fe73_11b14f6a6a454ea
+Date: Thu, 26 May 2011 00:57:12 +0700
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <4ddd42f882d10_11b14f6a6a45628@huynhut-Inspiron-N5010.mail>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+
+    <p>
+      My Username : nguyenhuynhutsimple@gmail.com
+
+    </p>
+<p>
+  <b>Deadline:</b>
+  2011-05-25
+</p>
+
+<p>
+  <b>Name:</b>
+  2
+</p>
+
+<p>
+  <b>Outline:</b>
+  2
+</p>
+
+<p>
+  <b>Graphics collateral:</b>
+  2
+</p>
+
+<p>
+  <b>Script:</b>
+  <a href="" >
+    
+  </a>
+</p>
+
+<p>
+  <b>Approved:</b>
+  false
+</p>
+    <p>
+      Best Regards
+    </p 
+      <p>
+        Huy Nhut -
+      </p>
+  </body>
+</html>
+
+----==_mimepart_4ddd42f86fe73_11b14f6a6a454ea--
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.6ms)[0m  UPDATE `stories` SET `check_mail` = 1, `updated_at` = '2011-05-25 17:57:22' WHERE `stories`.`id` = 1
+  [1m[36mSQL (68.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mStory Load (0.7ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check_mail = 0 AND approved = 0)
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1)[0m
+  [1m[35mStory Load (0.7ms)[0m  SELECT `stories`.* FROM `stories` WHERE (check_mail = 0 AND approved = 0)
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1)[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 01:02:05 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-05-26 01:02:30 +0700
+  Processing by HomeController#index as HTML
+  [1m[36mStaff Load (0.8ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mStaff Load (3.1ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+Rendered home/index.html.erb within layouts/application (71.7ms)
+Completed 200 OK in 167ms (Views: 72.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/stories?story[approved]=1" for 127.0.0.1 at 2011-05-26 01:02:34 +0700
+  Processing by StoriesController#index as HTML
+  Parameters: {"story"=>{"approved"=>"1"}}
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mStory Load (0.7ms)[0m  SELECT `stories`.* FROM `stories` WHERE (approved = 1 and deadline >= '2011-05-26') ORDER BY name desc
+  [1m[36mStaff Load (0.8ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+Rendered stories/_search_results.html.erb (7.8ms)
+Rendered stories/index.html.erb within layouts/application (101.0ms)
+Completed 200 OK in 214ms (Views: 104.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2011-05-26 01:02:37 +0700
+  Processing by StoriesController#new as HTML
+  [1m[36mStaff Load (0.4ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mStaff Load (0.8ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+Rendered stories/_form.html.erb (83.5ms)
+Rendered stories/new.html.erb within layouts/application (88.5ms)
+Completed 200 OK in 139ms (Views: 92.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2011-05-26 01:02:47 +0700
+  Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4WnATX/QzCdxErmIVI6IqK6LkVpw4aB2UQooMmqHjRw=", "story"=>{"deadline(1i)"=>"2011", "deadline(2i)"=>"5", "deadline(3i)"=>"25", "name"=>"22", "outline"=>"22", "graphics_collateral"=>"22", "script"=>"22", "producer_id"=>"1", "correspondent_id"=>"1", "editor_id"=>"1"}, "commit"=>"Submit"}
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `stories`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `stories` (`name`, `outline`, `graphics_collateral`, `script`, `deadline`, `check_mail`, `approved`, `producer_id`, `correspondent_id`, `staff_id`, `editor_id`, `created_at`, `updated_at`) VALUES ('22', '22', '22', '22', '2011-05-25', 0, 1, 1, 1, 2, 1, '2011-05-25 18:02:47', '2011-05-25 18:02:47')
+  [1m[36mSQL (125.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/stories/2
+Completed 302 Found in 248ms
+
+
+Started GET "/stories/2" for 127.0.0.1 at 2011-05-26 01:02:47 +0700
+  Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mStory Load (0.5ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`id` = 2 LIMIT 1
+  [1m[36mShoot Load (0.7ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (story_id = '2') ORDER BY created_at LIMIT 20[0m
+  [1m[35mWebextra Load (0.6ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE (story_id = '2') ORDER BY created_at LIMIT 20
+  [1m[36mCharacter Load (0.6ms)[0m  [1mSELECT `characters`.* FROM `characters` WHERE (story_id = '2') ORDER BY created_at LIMIT 20[0m
+  [1m[35mAirdate Load (0.6ms)[0m  SELECT `airdates`.* FROM `airdates` WHERE (story_id = '2') ORDER BY created_at LIMIT 20
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+Rendered stories/show.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 198ms (Views: 51.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/shoots/new" for 127.0.0.1 at 2011-05-26 01:02:50 +0700
+  Processing by ShootsController#new as HTML
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStaff Load (1.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+Rendered shoots/_form.html.erb (74.6ms)
+Rendered shoots/new.html.erb within layouts/application (87.3ms)
+Completed 200 OK in 158ms (Views: 119.9ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/shoots" for 127.0.0.1 at 2011-05-26 01:03:02 +0700
+  Processing by ShootsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4WnATX/QzCdxErmIVI6IqK6LkVpw4aB2UQooMmqHjRw=", "shoot"=>{"date(1i)"=>"2011", "date(2i)"=>"5", "date(3i)"=>"25", "crew_requirements"=>"222", "location"=>"222", "cameraperson_id"=>"1", "notes"=>"22", "preshow_tease"=>"22"}, "commit"=>"Create Shoot"}
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  describe `shoots`
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO `shoots` (`date`, `crew_requirements`, `location`, `senior_approval`, `assigned`, `notes`, `preshow_tease`, `check_mail`, `cameraperson_id`, `approver_id`, `story_id`, `created_at`, `updated_at`) VALUES ('2011-05-25', '222', '222', NULL, NULL, '22', '22', 0, 1, NULL, 2, '2011-05-25 18:03:02', '2011-05-25 18:03:02')[0m
+  [1m[35mSQL (113.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/shoots/1
+Completed 302 Found in 220ms
+
+
+Started GET "/shoots/1" for 127.0.0.1 at 2011-05-26 01:03:02 +0700
+  Processing by ShootsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShoot Load (0.4ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE `shoots`.`id` = 1 LIMIT 1[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1
+Rendered shoots/show.html.erb within layouts/application (80.2ms)
+Completed 200 OK in 120ms (Views: 103.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 01:03:44 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 01:07:22 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+  [1m[36mShoot Load (0.5ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)
+Rendered user_mailer/send_shoot.html.erb (35.1ms)
+  [1m[36mShoot Load (0.4ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)[0m
+  [1m[35mStaff Load (0.3ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)
+Rendered user_mailer/send_shoot.html.erb (1.1ms)
+  [1m[36mShoot Load (0.6ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)[0m
+  [1m[35mStaff Load (0.8ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)
+Rendered user_mailer/send_shoot.html.erb (1.0ms)
+  [1m[36mShoot Load (0.7ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)
+Rendered user_mailer/send_shoot.html.erb (1.0ms)
+  [1m[36mShoot Load (0.7ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)
+Rendered user_mailer/send_shoot.html.erb (1.1ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 01:12:37 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+  [1m[36mShoot Load (0.9ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)
+Rendered user_mailer/send_shoot.html.erb (29.3ms)
+  [1m[36mShoot Load (0.6ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)
+Rendered user_mailer/send_shoot.html.erb (1.0ms)
+  [1m[36mShoot Load (0.4ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)[0m
+  [1m[35mStaff Load (0.3ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)
+Rendered user_mailer/send_shoot.html.erb (1.1ms)
+  [1m[36mShoot Load (0.6ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)
+Rendered user_mailer/send_shoot.html.erb (1.3ms)
+  [1m[36mShoot Load (0.7ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)
+Rendered user_mailer/send_shoot.html.erb (1.0ms)
+  [1m[36mShoot Load (0.7ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)
+Rendered user_mailer/send_shoot.html.erb (1.1ms)
+  [1m[36mShoot Load (0.4ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)[0m
+  [1m[35mStaff Load (0.3ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mStaff Load (0.4ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1
+Rendered user_mailer/send_shoot.html.erb (8.2ms)
+  [1m[36mShoot Load (0.7ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+Rendered user_mailer/send_shoot.html.erb (3.1ms)
+  [1m[35mShoot Load (0.7ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)[0m
+  [1m[35mStaff Load (0.4ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1
+Rendered user_mailer/send_shoot.html.erb (2.5ms)
+  [1m[36mShoot Load (0.7ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+Rendered user_mailer/send_shoot.html.erb (2.8ms)
+  [1m[35mShoot Load (0.5ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)[0m
+Rendered user_mailer/send_shoot.html.erb (1.0ms)
+  [1m[35mShoot Load (3.3ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)[0m
+Rendered user_mailer/send_shoot.html.erb (1.1ms)
+  [1m[35mShoot Load (0.7ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)[0m
+Rendered user_mailer/send_shoot.html.erb (1.1ms)
+  [1m[35mShoot Load (0.6ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)[0m
+Rendered user_mailer/send_shoot.html.erb (1.0ms)
+  [1m[35mShoot Load (0.4ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)
+  [1m[36mStaff Load (0.3ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)[0m
+Rendered user_mailer/send_shoot.html.erb (1.1ms)
+  [1m[35mShoot Load (0.6ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)[0m
+Rendered user_mailer/send_shoot.html.erb (2.1ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (239.6ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (278.5ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateStaffs (20110428025521)
+  [1m[35mSQL (224.4ms)[0m  CREATE TABLE `staffs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `userid` varchar(255), `password` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `title` varchar(255), `avatar` varchar(255), `phone` varchar(255), `token` varchar(255), `is_senior_producer` tinyint(1), `is_assignment_editor` tinyint(1), `is_producer` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (65.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110428025521')[0m
+Migrating to CreateShoots (20110428100230)
+  [1m[35mSQL (160.2ms)[0m  CREATE TABLE `shoots` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `date` date, `crew_requirements` text, `location` text, `senior_approval` tinyint(1), `assigned` tinyint(1), `notes` text, `preshow_tease` text, `check_mail` tinyint(1), `cameraperson_id` int(11), `approver_id` int(11), `story_id` int(11), `staff_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (76.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110428100230')[0m
+Migrating to CreateStories (20110428103456)
+  [1m[35mSQL (160.6ms)[0m  CREATE TABLE `stories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `outline` text, `graphics_collateral` text, `script` varchar(255), `deadline` date, `check_mail` tinyint(1), `approved` tinyint(1), `producer_id` int(11), `correspondent_id` int(11), `staff_id` int(11), `editor_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (65.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110428103456')[0m
+Migrating to CreateAirdates (20110428105100)
+  [1m[35mSQL (160.3ms)[0m  CREATE TABLE `airdates` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `airdate` datetime, `story_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (78.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110428105100')[0m
+Migrating to CreateWebextras (20110428110934)
+  [1m[35mSQL (159.8ms)[0m  CREATE TABLE `webextras` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `summary` text, `check_mail` tinyint(1), `videourl` varchar(255), `story_id` int(11), `staff_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (64.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110428110934')[0m
+Migrating to CreateCharacters (20110428111532)
+  [1m[35mSQL (148.4ms)[0m  CREATE TABLE `characters` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `salutation` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `address` varchar(255), `city` varchar(255), `state` varchar(255), `zip` varchar(255), `phone_1` varchar(255), `phone_2` varchar(255), `phone_3` varchar(255), `email_1` varchar(255), `email_2` varchar(255), `notes` text, `avatar` varchar(255), `rep_phone` varchar(255), `rep_email` varchar(255), `representative` varchar(255), `rep_address` varchar(255), `story_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (65.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110428111532')[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `airdates`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `airdates`
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `characters`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `characters`
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `shoots`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `shoots`
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `staffs`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `staffs`
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `stories`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `stories`
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `webextras`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `webextras`
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 01:03:55 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 01:04:02 +0700
+  Processing by HomeController#index as HTML
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 44ms (Views: 21.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home/sign_in_google" for 127.0.0.1 at 2011-05-26 01:04:04 +0700
+  Processing by HomeController#sign_in_google as HTML
+http://localhost:3000/home/complete_sign_in_google
+ta
+Redirected to https://www.google.com/accounts/AuthSubRequest?scope=http://www.google.com/m8/feeds/contacts/default/full?max-results=0&session=1&secure=0&next=http://localhost:3000/home/complete_sign_in_google
+Completed 302 Found in 1ms
+
+
+Started GET "/home/complete_sign_in_google?token=1%2Fzprk5ois6frBdyu8OIIEk4P190R_cTimd5uv-_r8iPw" for 127.0.0.1 at 2011-05-26 01:04:11 +0700
+  Processing by HomeController#complete_sign_in_google as HTML
+  Parameters: {"token"=>"1/zprk5ois6frBdyu8OIIEk4P190R_cTimd5uv-_r8iPw"}
+<feed xmlns:batch='http://schemas.google.com/gdata/batch' gd:etag='W/&quot;DEEBRHk_fSp7ImA9WhZVE0k.&quot;' xmlns:gContact='http://schemas.google.com/contact/2008' xmlns:gd='http://schemas.google.com/g/2005' xmlns:openSearch='http://a9.com/-/spec/opensearch/1.1/' xmlns='http://www.w3.org/2005/Atom'><id>nguyenhuynhutsimple@gmail.com</id><updated>2011-05-25T18:04:15.745Z</updated><category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/contact/2008#contact'/><title>Huy Nhut's Contacts</title><link href='http://www.google.com/' rel='alternate' type='text/html'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full' rel='http://schemas.google.com/g/2005#feed' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full' rel='http://schemas.google.com/g/2005#post' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full/batch' rel='http://schemas.google.com/g/2005#batch' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full?max-results=0' rel='self' type='application/atom+xml'/><author><name>Huy Nhut</name><email>nguyenhuynhutsimple@gmail.com</email></author><generator uri='http://www.google.com/m8/feeds' version='1.0'>Contacts</generator><openSearch:totalResults>162</openSearch:totalResults><openSearch:startIndex>1</openSearch:startIndex><openSearch:itemsPerPage>0</openSearch:itemsPerPage></feed>
+Huy Nhut's Contacts
+Huy Nhut
+nguyenhuynhutsimple@gmail.com
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`email` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+  [1m[36mStaff Load (0.4ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT 1 FROM `staffs` WHERE (`staffs`.`email` = BINARY 'nguyenhuynhutsimple@gmail.com') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM `staffs` WHERE (`staffs`.`userid` = BINARY 'nguyenhuynhutsimple@gmail.com') LIMIT 1
+  [1m[36mSQL (1.9ms)[0m  [1mdescribe `staffs`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `staffs` (`userid`, `password`, `first_name`, `last_name`, `email`, `title`, `avatar`, `phone`, `token`, `is_senior_producer`, `is_assignment_editor`, `is_producer`, `created_at`, `updated_at`) VALUES ('nguyenhuynhutsimple@gmail.com', '3bd05ab27cb12f8efa7f58b3de06443368cb7ca3', 'Huy Nhut', '-', 'nguyenhuynhutsimple@gmail.com', 'Huy Nhut\'s Contacts', NULL, '-', '1/zprk5ois6frBdyu8OIIEk4P190R_cTimd5uv-_r8iPw', NULL, NULL, NULL, '2011-05-25 18:04:16', '2011-05-25 18:04:16')
+  [1m[36mSQL (137.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4479ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 01:04:16 +0700
+  Processing by HomeController#index as HTML
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+Rendered home/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 55ms (Views: 31.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/staffs/1" for 127.0.0.1 at 2011-05-26 01:04:18 +0700
+  Processing by StaffsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStaff Load (0.4ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+Rendered staffs/show.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 59ms (Views: 33.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/staffs/1/edit" for 127.0.0.1 at 2011-05-26 01:04:20 +0700
+  Processing by StaffsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+Rendered staffs/_form.html.erb (82.0ms)
+Rendered staffs/edit.html.erb within layouts/application (86.9ms)
+Completed 200 OK in 134ms (Views: 91.1ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/staffs/1" for 127.0.0.1 at 2011-05-26 01:04:37 +0700
+  Processing by StaffsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4WnATX/QzCdxErmIVI6IqK6LkVpw4aB2UQooMmqHjRw=", "staff"=>{"userid"=>"admin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Huy Nhut", "last_name"=>"-", "email"=>"nguyenhuynhutsimple@gmail.com", "title"=>"Huy Nhut's Contacts", "phone"=>"-"}, "commit"=>"Update Staff", "id"=>"1"}
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT 1 FROM `staffs` WHERE (`staffs`.`email` = BINARY 'nguyenhuynhutsimple@gmail.com') AND (`staffs`.id <> 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT 1 FROM `staffs` WHERE (`staffs`.`userid` = BINARY 'admin') AND (`staffs`.id <> 1) LIMIT 1
+  [1m[36mAREL (0.6ms)[0m  [1mUPDATE `staffs` SET `userid` = 'admin', `password` = '7c4a8d09ca3762af61e59520943dc26494f8941b', `updated_at` = '2011-05-25 18:04:37' WHERE `staffs`.`id` = 1[0m
+  [1m[35mSQL (70.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/staffs/1
+Completed 302 Found in 127ms
+
+
+Started GET "/staffs/1" for 127.0.0.1 at 2011-05-26 01:04:37 +0700
+  Processing by StaffsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+Rendered staffs/show.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 52ms (Views: 25.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-05-26 01:04:42 +0700
+  Processing by HomeController#index as HTML
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 76ms (Views: 15.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/staffs/login" for 127.0.0.1 at 2011-05-26 01:04:46 +0700
+  Processing by StaffsController#login as HTML
+Rendered staffs/login.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/staffs/authenticate" for 127.0.0.1 at 2011-05-26 01:04:50 +0700
+  Processing by StaffsController#authenticate as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4WnATX/QzCdxErmIVI6IqK6LkVpw4aB2UQooMmqHjRw=", "staff_form"=>{"userid"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' and password = '7c4a8d09ca3762af61e59520943dc26494f8941b') LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 38ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 01:04:50 +0700
+  Processing by HomeController#index as HTML
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' ) LIMIT 1[0m
+  [1m[35mStaff Load (0.3ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 55ms (Views: 31.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/staffs/1" for 127.0.0.1 at 2011-05-26 01:04:53 +0700
+  Processing by StaffsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStaff Load (0.3ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1
+Rendered staffs/show.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 49ms (Views: 25.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/staffs/1/edit" for 127.0.0.1 at 2011-05-26 01:04:57 +0700
+  Processing by StaffsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStaff Load (0.4ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1
+Rendered staffs/_form.html.erb (29.6ms)
+Rendered staffs/edit.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 70ms (Views: 44.7ms | ActiveRecord: 73.9ms)
+
+
+Started POST "/staffs/1" for 127.0.0.1 at 2011-05-26 01:05:02 +0700
+  Processing by StaffsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4WnATX/QzCdxErmIVI6IqK6LkVpw4aB2UQooMmqHjRw=", "staff"=>{"userid"=>"admin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Huy Nhut", "last_name"=>"-", "email"=>"nguyenhuynhutsimple@gmail.com", "title"=>"Huy Nhut's Contacts", "phone"=>"-", "is_senior_producer"=>"1", "is_assignment_editor"=>"1", "is_producer"=>"1"}, "commit"=>"Update Staff", "id"=>"1"}
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT 1 FROM `staffs` WHERE (`staffs`.`email` = BINARY 'nguyenhuynhutsimple@gmail.com') AND (`staffs`.id <> 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `staffs` WHERE (`staffs`.`userid` = BINARY 'admin') AND (`staffs`.id <> 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1
+Rendered staffs/_form.html.erb (15.4ms)
+Rendered staffs/edit.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 73ms (Views: 25.3ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/staffs/1" for 127.0.0.1 at 2011-05-26 01:05:14 +0700
+  Processing by StaffsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4WnATX/QzCdxErmIVI6IqK6LkVpw4aB2UQooMmqHjRw=", "staff"=>{"userid"=>"admin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Huy Nhut", "last_name"=>"-", "email"=>"nguyenhuynhutsimple@gmail.com", "title"=>"Huy Nhut's Contacts", "phone"=>"-", "is_senior_producer"=>"1", "is_assignment_editor"=>"1", "is_producer"=>"1"}, "commit"=>"Update Staff", "id"=>"1"}
+  [1m[36mStaff Load (0.4ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT 1 FROM `staffs` WHERE (`staffs`.`email` = BINARY 'nguyenhuynhutsimple@gmail.com') AND (`staffs`.id <> 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT 1 FROM `staffs` WHERE (`staffs`.`userid` = BINARY 'admin') AND (`staffs`.id <> 1) LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `staffs` SET `is_senior_producer` = 1, `is_assignment_editor` = 1, `is_producer` = 1, `updated_at` = '2011-05-25 18:05:14' WHERE `staffs`.`id` = 1[0m
+  [1m[35mSQL (118.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/staffs/1
+Completed 302 Found in 171ms
+
+
+Started GET "/staffs/1" for 127.0.0.1 at 2011-05-26 01:05:14 +0700
+  Processing by StaffsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+Rendered staffs/show.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 54ms (Views: 28.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-05-26 01:05:17 +0700
+  Processing by HomeController#index as HTML
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' ) LIMIT 1
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1
+Rendered home/index.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 94ms (Views: 33.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/staffs/logout" for 127.0.0.1 at 2011-05-26 01:05:48 +0700
+  Processing by StaffsController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 01:05:48 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/sign_in_google" for 127.0.0.1 at 2011-05-26 01:05:50 +0700
+  Processing by HomeController#sign_in_google as HTML
+http://localhost:3000/home/complete_sign_in_google
+ta
+Redirected to https://www.google.com/accounts/AuthSubRequest?scope=http://www.google.com/m8/feeds/contacts/default/full?max-results=0&session=1&secure=0&next=http://localhost:3000/home/complete_sign_in_google
+Completed 302 Found in 1ms
+
+
+Started GET "/staffs/login" for 127.0.0.1 at 2011-05-26 01:05:54 +0700
+  Processing by StaffsController#login as HTML
+Rendered staffs/login.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staffs/login" for 127.0.0.1 at 2011-05-26 01:06:00 +0700
+  Processing by StaffsController#login as HTML
+Rendered staffs/login.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/staffs/authenticate" for 127.0.0.1 at 2011-05-26 01:06:04 +0700
+  Processing by StaffsController#authenticate as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XE/qU1vAjTUBJMs8lelR6Rg7L3bMQhMj5r+mrBrJelc=", "staff_form"=>{"userid"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' and password = '7c4a8d09ca3762af61e59520943dc26494f8941b') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 75ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 01:06:04 +0700
+  Processing by HomeController#index as HTML
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' ) LIMIT 1
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1
+Rendered home/index.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 63ms (Views: 40.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/staffs" for 127.0.0.1 at 2011-05-26 01:06:09 +0700
+  Processing by StaffsController#index as HTML
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (created_at IS NOT NULL) ORDER BY userid desc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1
+Rendered staffs/_search_results.html.erb (6.7ms)
+Rendered staffs/index.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 89ms (Views: 46.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/staffs/1" for 127.0.0.1 at 2011-05-26 01:06:12 +0700
+  Processing by StaffsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+Rendered staffs/show.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 91ms (Views: 28.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/staffs/1/edit" for 127.0.0.1 at 2011-05-26 01:06:15 +0700
+  Processing by StaffsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1[0m
+Rendered staffs/_form.html.erb (63.7ms)
+Rendered staffs/edit.html.erb within layouts/application (68.5ms)
+Completed 200 OK in 96ms (Views: 72.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/staffs/logout" for 127.0.0.1 at 2011-05-26 01:06:22 +0700
+  Processing by StaffsController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 01:06:22 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/sign_in_google" for 127.0.0.1 at 2011-05-26 01:06:24 +0700
+  Processing by HomeController#sign_in_google as HTML
+http://localhost:3000/home/complete_sign_in_google
+ta
+Redirected to https://www.google.com/accounts/AuthSubRequest?scope=http://www.google.com/m8/feeds/contacts/default/full?max-results=0&session=1&secure=0&next=http://localhost:3000/home/complete_sign_in_google
+Completed 302 Found in 1ms
+
+
+Started GET "/home/complete_sign_in_google?token=1%2FaocigUifFJFz1zZwGslCQfjwDPGvBtB9sgBpUcefz3A" for 127.0.0.1 at 2011-05-26 01:06:29 +0700
+  Processing by HomeController#complete_sign_in_google as HTML
+  Parameters: {"token"=>"1/aocigUifFJFz1zZwGslCQfjwDPGvBtB9sgBpUcefz3A"}
+<feed xmlns:batch='http://schemas.google.com/gdata/batch' gd:etag='W/&quot;DEANRX4-eip7ImA9WhZVE0k.&quot;' xmlns:gContact='http://schemas.google.com/contact/2008' xmlns:gd='http://schemas.google.com/g/2005' xmlns:openSearch='http://a9.com/-/spec/opensearch/1.1/' xmlns='http://www.w3.org/2005/Atom'><id>nguyenhuynhutsimple@gmail.com</id><updated>2011-05-25T18:06:34.052Z</updated><category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/contact/2008#contact'/><title>Huy Nhut's Contacts</title><link href='http://www.google.com/' rel='alternate' type='text/html'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full' rel='http://schemas.google.com/g/2005#feed' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full' rel='http://schemas.google.com/g/2005#post' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full/batch' rel='http://schemas.google.com/g/2005#batch' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full?max-results=0' rel='self' type='application/atom+xml'/><author><name>Huy Nhut</name><email>nguyenhuynhutsimple@gmail.com</email></author><generator uri='http://www.google.com/m8/feeds' version='1.0'>Contacts</generator><openSearch:totalResults>162</openSearch:totalResults><openSearch:startIndex>1</openSearch:startIndex><openSearch:itemsPerPage>0</openSearch:itemsPerPage></feed>
+Huy Nhut's Contacts
+Huy Nhut
+nguyenhuynhutsimple@gmail.com
+  [1m[35mStaff Load (0.4ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`email` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+  [1m[36mStaff Load (0.3ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4932ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 01:06:34 +0700
+  Processing by HomeController#index as HTML
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' ) LIMIT 1
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1
+Rendered home/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 64ms (Views: 39.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stories?story[approved]=1" for 127.0.0.1 at 2011-05-26 01:06:40 +0700
+  Processing by StoriesController#index as HTML
+  Parameters: {"story"=>{"approved"=>"1"}}
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' ) LIMIT 1[0m
+  [1m[35mStory Load (0.7ms)[0m  SELECT `stories`.* FROM `stories` WHERE (approved = 1 and deadline >= '2011-05-26') ORDER BY name desc
+  [1m[36mStaff Load (0.4ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1
+Rendered stories/_search_results.html.erb (7.6ms)
+Rendered stories/index.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 83ms (Views: 34.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2011-05-26 01:06:43 +0700
+  Processing by StoriesController#new as HTML
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' ) LIMIT 1[0m
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+Rendered stories/_form.html.erb (76.6ms)
+Rendered stories/new.html.erb within layouts/application (81.2ms)
+Completed 200 OK in 131ms (Views: 85.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2011-05-26 01:06:54 +0700
+  Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/uY5OTb9uLHUDEpFNafsPtC6SIYA2aV+9oWoSUzpOGU=", "story"=>{"deadline(1i)"=>"2011", "deadline(2i)"=>"5", "deadline(3i)"=>"25", "name"=>"22", "outline"=>"22", "graphics_collateral"=>"2", "script"=>"22", "producer_id"=>"1", "correspondent_id"=>"1", "editor_id"=>"1"}, "commit"=>"Submit"}
+  [1m[36mStaff Load (0.4ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' ) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `stories`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `stories` (`name`, `outline`, `graphics_collateral`, `script`, `deadline`, `check_mail`, `approved`, `producer_id`, `correspondent_id`, `staff_id`, `editor_id`, `created_at`, `updated_at`) VALUES ('22', '22', '2', '22', '2011-05-25', 0, 1, 1, 1, 1, 1, '2011-05-25 18:06:54', '2011-05-25 18:06:54')
+  [1m[36mSQL (118.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/stories/1
+Completed 302 Found in 235ms
+
+
+Started GET "/stories/1" for 127.0.0.1 at 2011-05-26 01:06:55 +0700
+  Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStory Load (0.6ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`id` = 1 LIMIT 1
+  [1m[36mShoot Load (0.7ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (story_id = '1') ORDER BY created_at LIMIT 20[0m
+  [1m[35mWebextra Load (0.6ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE (story_id = '1') ORDER BY created_at LIMIT 20
+  [1m[36mCharacter Load (0.7ms)[0m  [1mSELECT `characters`.* FROM `characters` WHERE (story_id = '1') ORDER BY created_at LIMIT 20[0m
+  [1m[35mAirdate Load (0.6ms)[0m  SELECT `airdates`.* FROM `airdates` WHERE (story_id = '1') ORDER BY created_at LIMIT 20
+  [1m[36mStaff Load (0.4ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' ) LIMIT 1[0m
+Rendered stories/show.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 177ms (Views: 42.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/shoots" for 127.0.0.1 at 2011-05-26 01:07:03 +0700
+  Processing by ShootsController#index as HTML
+  [1m[35mStory Load (0.6ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`id` = 1 LIMIT 1
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' ) LIMIT 1[0m
+
+  [1m[35mShoot Load (0.7ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE (story_id = 1) ORDER BY date desc
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+Rendered shoots/_search_results.html.erb (8.4ms)
+Rendered shoots/index.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 198ms (Views: 116.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/shoots/new" for 127.0.0.1 at 2011-05-26 01:07:06 +0700
+  Processing by ShootsController#new as HTML
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' ) LIMIT 1
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+Rendered shoots/_form.html.erb (38.9ms)
+Rendered shoots/new.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 122ms (Views: 47.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-05-26 01:07:34 +0700
+  Processing by HomeController#index as HTML
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' ) LIMIT 1
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1
+Rendered home/index.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 93ms (Views: 31.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/staffs/logout" for 127.0.0.1 at 2011-05-26 01:07:37 +0700
+  Processing by StaffsController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 01:07:37 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/sign_in_google" for 127.0.0.1 at 2011-05-26 01:07:40 +0700
+  Processing by HomeController#sign_in_google as HTML
+http://localhost:3000/home/complete_sign_in_google
+ta
+Redirected to https://www.google.com/accounts/AuthSubRequest?scope=http://www.google.com/m8/feeds/contacts/default/full?max-results=0&session=1&secure=0&next=http://localhost:3000/home/complete_sign_in_google
+Completed 302 Found in 1ms
+
+
+Started GET "/home/complete_sign_in_google?token=1%2FZl1JOWa18dJMvE9yXVu0-KCVmprdH4kJWfR1Ciz5ZO8" for 127.0.0.1 at 2011-05-26 01:07:46 +0700
+  Processing by HomeController#complete_sign_in_google as HTML
+  Parameters: {"token"=>"1/Zl1JOWa18dJMvE9yXVu0-KCVmprdH4kJWfR1Ciz5ZO8"}
+<feed xmlns:batch='http://schemas.google.com/gdata/batch' gd:etag='W/&quot;DE8DQXc4eip7ImA9WhZVE0k.&quot;' xmlns:gContact='http://schemas.google.com/contact/2008' xmlns:gd='http://schemas.google.com/g/2005' xmlns:openSearch='http://a9.com/-/spec/opensearch/1.1/' xmlns='http://www.w3.org/2005/Atom'><id>nguyenhuynhutsimple@gmail.com</id><updated>2011-05-25T18:07:50.932Z</updated><category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/contact/2008#contact'/><title>Huy Nhut's Contacts</title><link href='http://www.google.com/' rel='alternate' type='text/html'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full' rel='http://schemas.google.com/g/2005#feed' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full' rel='http://schemas.google.com/g/2005#post' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full/batch' rel='http://schemas.google.com/g/2005#batch' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full?max-results=0' rel='self' type='application/atom+xml'/><author><name>Huy Nhut</name><email>nguyenhuynhutsimple@gmail.com</email></author><generator uri='http://www.google.com/m8/feeds' version='1.0'>Contacts</generator><openSearch:totalResults>162</openSearch:totalResults><openSearch:startIndex>1</openSearch:startIndex><openSearch:itemsPerPage>0</openSearch:itemsPerPage></feed>
+Huy Nhut's Contacts
+Huy Nhut
+nguyenhuynhutsimple@gmail.com
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`email` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+  [1m[35mStaff Load (0.4ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 5120ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 01:07:51 +0700
+  Processing by HomeController#index as HTML
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' ) LIMIT 1[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 59ms (Views: 32.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/staffs/1" for 127.0.0.1 at 2011-05-26 01:07:55 +0700
+  Processing by StaffsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStaff Load (0.4ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1
+Rendered staffs/show.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 56ms (Views: 30.8ms | ActiveRecord: 122.2ms)
+
+
+Started GET "/staffs/1/edit" for 127.0.0.1 at 2011-05-26 01:08:04 +0700
+  Processing by StaffsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1
+Rendered staffs/_form.html.erb (30.3ms)
+Rendered staffs/edit.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 105ms (Views: 39.7ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/staffs/1" for 127.0.0.1 at 2011-05-26 01:08:13 +0700
+  Processing by StaffsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SYbnzoHJmKaXcGAYwcn2QPhP8jbpkKKIunicDiFwICE=", "staff"=>{"userid"=>"admin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Huy Nhut", "last_name"=>"-", "email"=>"nhut2020@yahoo.com", "title"=>"Huy Nhut's Contacts", "phone"=>"-", "is_senior_producer"=>"1", "is_assignment_editor"=>"1", "is_producer"=>"1"}, "commit"=>"Update Staff", "id"=>"1"}
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT 1 FROM `staffs` WHERE (`staffs`.`email` = BINARY 'nhut2020@yahoo.com') AND (`staffs`.id <> 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT 1 FROM `staffs` WHERE (`staffs`.`userid` = BINARY 'admin') AND (`staffs`.id <> 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1
+Rendered staffs/_form.html.erb (15.0ms)
+Rendered staffs/edit.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 112ms (Views: 23.6ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/staffs/1" for 127.0.0.1 at 2011-05-26 01:08:27 +0700
+  Processing by StaffsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SYbnzoHJmKaXcGAYwcn2QPhP8jbpkKKIunicDiFwICE=", "staff"=>{"userid"=>"admin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Huy Nhut", "last_name"=>"-", "email"=>"nhut2020@yahoo.com", "title"=>"Huy Nhut's Contacts", "phone"=>"-", "is_senior_producer"=>"1", "is_assignment_editor"=>"1", "is_producer"=>"1"}, "commit"=>"Update Staff", "id"=>"1"}
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT 1 FROM `staffs` WHERE (`staffs`.`email` = BINARY 'nhut2020@yahoo.com') AND (`staffs`.id <> 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT 1 FROM `staffs` WHERE (`staffs`.`userid` = BINARY 'admin') AND (`staffs`.id <> 1) LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mUPDATE `staffs` SET `email` = 'nhut2020@yahoo.com', `updated_at` = '2011-05-25 18:08:27' WHERE `staffs`.`id` = 1[0m
+  [1m[35mSQL (112.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/staffs/1
+Completed 302 Found in 167ms
+
+
+Started GET "/staffs/1" for 127.0.0.1 at 2011-05-26 01:08:27 +0700
+  Processing by StaffsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+Rendered staffs/show.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 50ms (Views: 25.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-05-26 01:08:31 +0700
+  Processing by HomeController#index as HTML
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'admin' ) LIMIT 1
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'admin' LIMIT 1
+Rendered home/index.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 59ms (Views: 36.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/staffs/logout" for 127.0.0.1 at 2011-05-26 01:08:34 +0700
+  Processing by StaffsController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 01:08:34 +0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 114.8ms)
+
+
+Started GET "/home/sign_in_google" for 127.0.0.1 at 2011-05-26 01:08:36 +0700
+  Processing by HomeController#sign_in_google as HTML
+http://localhost:3000/home/complete_sign_in_google
+ta
+Redirected to https://www.google.com/accounts/AuthSubRequest?scope=http://www.google.com/m8/feeds/contacts/default/full?max-results=0&session=1&secure=0&next=http://localhost:3000/home/complete_sign_in_google
+Completed 302 Found in 1ms
+
+
+Started GET "/home/complete_sign_in_google?token=1%2F_6Dg1QGCR4mrwysmPXI2jrh7WcBqwuuhTiJvZlKWcT4" for 127.0.0.1 at 2011-05-26 01:08:42 +0700
+  Processing by HomeController#complete_sign_in_google as HTML
+  Parameters: {"token"=>"1/_6Dg1QGCR4mrwysmPXI2jrh7WcBqwuuhTiJvZlKWcT4"}
+<feed xmlns:batch='http://schemas.google.com/gdata/batch' gd:etag='W/&quot;DE4GR3s8cCp7ImA9WhZVE0k.&quot;' xmlns:gContact='http://schemas.google.com/contact/2008' xmlns:gd='http://schemas.google.com/g/2005' xmlns:openSearch='http://a9.com/-/spec/opensearch/1.1/' xmlns='http://www.w3.org/2005/Atom'><id>nguyenhuynhutsimple@gmail.com</id><updated>2011-05-25T18:08:46.578Z</updated><category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/contact/2008#contact'/><title>Huy Nhut's Contacts</title><link href='http://www.google.com/' rel='alternate' type='text/html'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full' rel='http://schemas.google.com/g/2005#feed' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full' rel='http://schemas.google.com/g/2005#post' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full/batch' rel='http://schemas.google.com/g/2005#batch' type='application/atom+xml'/><link href='http://www.google.com/m8/feeds/contacts/nguyenhuynhutsimple%40gmail.com/full?max-results=0' rel='self' type='application/atom+xml'/><author><name>Huy Nhut</name><email>nguyenhuynhutsimple@gmail.com</email></author><generator uri='http://www.google.com/m8/feeds' version='1.0'>Contacts</generator><openSearch:totalResults>162</openSearch:totalResults><openSearch:startIndex>1</openSearch:startIndex><openSearch:itemsPerPage>0</openSearch:itemsPerPage></feed>
+Huy Nhut's Contacts
+Huy Nhut
+nguyenhuynhutsimple@gmail.com
+  [1m[36mStaff Load (0.4ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`email` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+  [1m[35mStaff Load (0.3ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT 1 FROM `staffs` WHERE (`staffs`.`email` = BINARY 'nguyenhuynhutsimple@gmail.com') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM `staffs` WHERE (`staffs`.`userid` = BINARY 'nguyenhuynhutsimple@gmail.com') LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  describe `staffs`
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO `staffs` (`userid`, `password`, `first_name`, `last_name`, `email`, `title`, `avatar`, `phone`, `token`, `is_senior_producer`, `is_assignment_editor`, `is_producer`, `created_at`, `updated_at`) VALUES ('nguyenhuynhutsimple@gmail.com', '9d59ef5bc1ddd97b4de2a40e893c873d641730bb', 'Huy Nhut', '-', 'nguyenhuynhutsimple@gmail.com', 'Huy Nhut\'s Contacts', NULL, '-', '1/_6Dg1QGCR4mrwysmPXI2jrh7WcBqwuuhTiJvZlKWcT4', NULL, NULL, NULL, '2011-05-25 18:08:47', '2011-05-25 18:08:47')[0m
+  [1m[35mSQL (146.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 5059ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 01:08:47 +0700
+  Processing by HomeController#index as HTML
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 55ms (Views: 31.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stories?story[approved]=1" for 127.0.0.1 at 2011-05-26 01:08:50 +0700
+  Processing by StoriesController#index as HTML
+  Parameters: {"story"=>{"approved"=>"1"}}
+  [1m[35mStaff Load (0.4ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStory Load (0.5ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (approved = 1 and deadline >= '2011-05-26') ORDER BY name desc[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mStaff Load (0.4ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Rendered stories/_search_results.html.erb (8.1ms)
+Rendered stories/index.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 121ms (Views: 75.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2011-05-26 01:08:52 +0700
+  Processing by StoriesController#new as HTML
+  [1m[35mStaff Load (0.8ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+Rendered stories/_form.html.erb (43.2ms)
+Rendered stories/new.html.erb within layouts/application (48.1ms)
+Completed 200 OK in 133ms (Views: 52.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2011-05-26 01:09:06 +0700
+  Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7XlbTZmVRNjxDpuHMwOupoJA1wbhKIyFmY33aZpRKv0=", "story"=>{"deadline(1i)"=>"2011", "deadline(2i)"=>"5", "deadline(3i)"=>"25", "name"=>"2", "outline"=>"2", "graphics_collateral"=>"2", "script"=>"2", "producer_id"=>"1", "correspondent_id"=>"1", "editor_id"=>"1"}, "commit"=>"Submit"}
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  describe `stories`
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO `stories` (`name`, `outline`, `graphics_collateral`, `script`, `deadline`, `check_mail`, `approved`, `producer_id`, `correspondent_id`, `staff_id`, `editor_id`, `created_at`, `updated_at`) VALUES ('2', '2', '2', '2', '2011-05-25', 0, 1, 1, 1, 2, 1, '2011-05-25 18:09:06', '2011-05-25 18:09:06')[0m
+  [1m[35mSQL (83.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/stories/2
+Completed 302 Found in 227ms
+
+
+Started GET "/stories/2" for 127.0.0.1 at 2011-05-26 01:09:06 +0700
+  Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStory Load (0.5ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`id` = 2 LIMIT 1[0m
+  [1m[35mShoot Load (0.6ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE (story_id = '2') ORDER BY created_at LIMIT 20
+  [1m[36mWebextra Load (0.6ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE (story_id = '2') ORDER BY created_at LIMIT 20[0m
+  [1m[35mCharacter Load (0.4ms)[0m  SELECT `characters`.* FROM `characters` WHERE (story_id = '2') ORDER BY created_at LIMIT 20
+  [1m[36mAirdate Load (0.5ms)[0m  [1mSELECT `airdates`.* FROM `airdates` WHERE (story_id = '2') ORDER BY created_at LIMIT 20[0m
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+Rendered stories/show.html.erb within layouts/application (77.1ms)
+Completed 200 OK in 217ms (Views: 81.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/shoots" for 127.0.0.1 at 2011-05-26 01:09:09 +0700
+  Processing by ShootsController#index as HTML
+  [1m[36mStory Load (0.5ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`id` = 2 LIMIT 1[0m
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+
+  [1m[36mShoot Load (0.7ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (story_id = 2) ORDER BY date desc[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+Rendered shoots/_search_results.html.erb (3.5ms)
+Rendered shoots/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 150ms (Views: 31.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-05-26 01:09:20 +0700
+  Processing by HomeController#index as HTML
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 93ms (Views: 31.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/staffs/2" for 127.0.0.1 at 2011-05-26 01:09:22 +0700
+  Processing by StaffsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 2 LIMIT 1
+Rendered staffs/show.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 85ms (Views: 60.3ms | ActiveRecord: 236.1ms)
+
+
+Started GET "/staffs/2/edit" for 127.0.0.1 at 2011-05-26 01:09:25 +0700
+  Processing by StaffsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStaff Load (0.3ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 2 LIMIT 1[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStaff Load (1.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Rendered staffs/_form.html.erb (47.1ms)
+Rendered staffs/edit.html.erb within layouts/application (52.1ms)
+Completed 200 OK in 103ms (Views: 59.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2011-05-26 01:09:34 +0700
+  Processing by StoriesController#index as HTML
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStory Load (0.7ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (approved = 0 and deadline >= '2011-05-26') ORDER BY name desc[0m
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Rendered stories/_search_results.html.erb (8.4ms)
+Rendered stories/index.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 134ms (Views: 52.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/stories?story[approved]=1" for 127.0.0.1 at 2011-05-26 01:09:39 +0700
+  Processing by StoriesController#index as HTML
+  Parameters: {"story"=>{"approved"=>"1"}}
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStory Load (0.8ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (approved = 1 and deadline >= '2011-05-26') ORDER BY name desc[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Rendered stories/_search_results.html.erb (8.9ms)
+Rendered stories/index.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 125ms (Views: 38.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2011-05-26 01:09:42 +0700
+  Processing by StoriesController#new as HTML
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStaff Load (0.8ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+Rendered stories/_form.html.erb (38.3ms)
+Rendered stories/new.html.erb within layouts/application (42.9ms)
+Completed 200 OK in 131ms (Views: 46.7ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2011-05-26 01:09:54 +0700
+  Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7XlbTZmVRNjxDpuHMwOupoJA1wbhKIyFmY33aZpRKv0=", "story"=>{"deadline(1i)"=>"2011", "deadline(2i)"=>"6", "deadline(3i)"=>"25", "name"=>"22", "outline"=>"22", "graphics_collateral"=>"22", "script"=>"22", "producer_id"=>"1", "correspondent_id"=>"1", "editor_id"=>"1"}, "commit"=>"Submit"}
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  describe `stories`
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO `stories` (`name`, `outline`, `graphics_collateral`, `script`, `deadline`, `check_mail`, `approved`, `producer_id`, `correspondent_id`, `staff_id`, `editor_id`, `created_at`, `updated_at`) VALUES ('22', '22', '22', '22', '2011-06-25', 0, 1, 1, 1, 2, 1, '2011-05-25 18:09:54', '2011-05-25 18:09:54')[0m
+  [1m[35mSQL (97.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/stories/3
+Completed 302 Found in 182ms
+
+
+Started GET "/stories/3" for 127.0.0.1 at 2011-05-26 01:09:55 +0700
+  Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStory Load (0.5ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`id` = 3 LIMIT 1[0m
+  [1m[35mShoot Load (0.7ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE (story_id = '3') ORDER BY created_at LIMIT 20
+  [1m[36mWebextra Load (0.6ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE (story_id = '3') ORDER BY created_at LIMIT 20[0m
+  [1m[35mCharacter Load (0.4ms)[0m  SELECT `characters`.* FROM `characters` WHERE (story_id = '3') ORDER BY created_at LIMIT 20
+  [1m[36mAirdate Load (0.5ms)[0m  [1mSELECT `airdates`.* FROM `airdates` WHERE (story_id = '3') ORDER BY created_at LIMIT 20[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+Rendered stories/show.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 177ms (Views: 45.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/shoots" for 127.0.0.1 at 2011-05-26 01:09:57 +0700
+  Processing by ShootsController#index as HTML
+  [1m[36mStory Load (0.6ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`id` = 3 LIMIT 1[0m
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+
+  [1m[36mShoot Load (0.6ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (story_id = 3) ORDER BY date desc[0m
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+Rendered shoots/_search_results.html.erb (3.3ms)
+Rendered shoots/index.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 152ms (Views: 29.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/shoots/new" for 127.0.0.1 at 2011-05-26 01:10:01 +0700
+  Processing by ShootsController#new as HTML
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mStaff Load (0.8ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+Rendered shoots/_form.html.erb (44.6ms)
+Rendered shoots/new.html.erb within layouts/application (50.4ms)
+Completed 200 OK in 99ms (Views: 59.9ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/shoots" for 127.0.0.1 at 2011-05-26 01:10:10 +0700
+  Processing by ShootsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7XlbTZmVRNjxDpuHMwOupoJA1wbhKIyFmY33aZpRKv0=", "shoot"=>{"date(1i)"=>"2011", "date(2i)"=>"5", "date(3i)"=>"25", "crew_requirements"=>"222", "location"=>"22", "cameraperson_id"=>"1", "notes"=>"22", "preshow_tease"=>""}, "commit"=>"Create Shoot"}
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.9ms)[0m  [1mdescribe `shoots`[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO `shoots` (`date`, `crew_requirements`, `location`, `senior_approval`, `assigned`, `notes`, `preshow_tease`, `check_mail`, `cameraperson_id`, `approver_id`, `story_id`, `staff_id`, `created_at`, `updated_at`) VALUES ('2011-05-25', '222', '22', NULL, NULL, '22', '', 0, 1, NULL, 3, 2, '2011-05-25 18:10:10', '2011-05-25 18:10:10')
+  [1m[36mSQL (60.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/shoots/1
+Completed 302 Found in 139ms
+
+
+Started GET "/shoots/1" for 127.0.0.1 at 2011-05-26 01:10:10 +0700
+  Processing by ShootsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mShoot Load (0.4ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE `shoots`.`id` = 1 LIMIT 1
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+Rendered shoots/show.html.erb within layouts/application (64.4ms)
+Completed 200 OK in 86ms (Views: 69.0ms | ActiveRecord: 0.9ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+  [1m[36mShoot Load (0.8ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)[0m
+  [1m[35mStaff Load (0.3ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 2 LIMIT 1
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+Rendered user_mailer/send_shoot.html.erb (7.6ms)
+Rendered user_mailer/send_shoot.text.erb (1.4ms)
+
+Sent mail to nhut2020@yahoo.com (10721ms)
+Date: Thu, 26 May 2011 01:15:00 +0700
+From: benbo.nguyen@gmail.com
+To: nhut2020@yahoo.com
+Message-ID: <4ddd4724b0c07_14375abede8972de@huynhut-Inspiron-N5010.mail>
+Subject: Shoot
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_4ddd47249d328_14375abede8969bf";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+
+----==_mimepart_4ddd47249d328_14375abede8969bf
+Date: Thu, 26 May 2011 01:15:00 +0700
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <4ddd4724a9c85_14375abede897022@huynhut-Inspiron-N5010.mail>
+
+
+My Username : nguyenhuynhutsimple@gmail.com
+
+Date:
+2011-05-25
+
+
+Crew requirements:
+222
+
+Location:
+22
+
+Cameraperson:
+admin
+
+Senior approval:
+
+
+Assigned:
+
+Notes:
+22
+Preshow tease:
+
+
+Best Regards
+
+
+  Huy Nhut -
+
+
+
+----==_mimepart_4ddd47249d328_14375abede8969bf
+Date: Thu, 26 May 2011 01:15:00 +0700
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <4ddd4724acede_14375abede897171@huynhut-Inspiron-N5010.mail>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+
+    <p>
+      My Username : nguyenhuynhutsimple@gmail.com
+
+    </p>
+    <p>
+      <b>Date:</b>
+      2011-05-25
+    </p>
+
+    <p>
+      <b>Crew requirements:</b>
+      222
+    </p>
+
+    <p>
+      <b>Location:</b>
+      22
+    </p>
+    <p>
+      <b>Cameraperson:</b>
+      admin
+    </p>
+    <p>
+      <b>Senior approval:</b>
+      
+    </p>
+
+    <p>
+      <b>Assigned:</b>
+      
+    </p>
+
+    <p>
+      <b>Notes:</b>
+      22
+    </p>
+
+    <p>
+      <b>Preshow tease:</b>
+      
+    </p>
+    <p>
+      Best Regards
+    </p 
+      <p>
+        Huy Nhut -
+      </p>
+  </body>
+</html>
+
+----==_mimepart_4ddd47249d328_14375abede8969bf--
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mShoot Load (1.0ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 2 LIMIT 1
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+Rendered user_mailer/send_shoot.html.erb (2.6ms)
+Rendered user_mailer/send_shoot.text.erb (1.1ms)
+
+Sent mail to nhut2020@yahoo.com (8025ms)
+Date: Thu, 26 May 2011 01:15:55 +0700
+From: benbo.nguyen@gmail.com
+To: nhut2020@yahoo.com
+Message-ID: <4ddd475b73311_143759a527c97668@huynhut-Inspiron-N5010.mail>
+Subject: Shoot
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_4ddd475b6f656_143759a527c97343";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+
+----==_mimepart_4ddd475b6f656_143759a527c97343
+Date: Thu, 26 May 2011 01:15:55 +0700
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <4ddd475b71bb7_143759a527c9743e@huynhut-Inspiron-N5010.mail>
+
+
+My Username : nguyenhuynhutsimple@gmail.com
+
+Date:
+2011-05-25
+
+
+Crew requirements:
+222
+
+Location:
+22
+
+Cameraperson:
+admin
+
+Senior approval:
+
+
+Assigned:
+
+Notes:
+22
+Preshow tease:
+
+
+Best Regards
+
+
+  Huy Nhut -
+
+
+
+----==_mimepart_4ddd475b6f656_143759a527c97343
+Date: Thu, 26 May 2011 01:15:55 +0700
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <4ddd475b72957_143759a527c975d0@huynhut-Inspiron-N5010.mail>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+
+    <p>
+      My Username : nguyenhuynhutsimple@gmail.com
+
+    </p>
+    <p>
+      <b>Date:</b>
+      2011-05-25
+    </p>
+
+    <p>
+      <b>Crew requirements:</b>
+      222
+    </p>
+
+    <p>
+      <b>Location:</b>
+      22
+    </p>
+    <p>
+      <b>Cameraperson:</b>
+      admin
+    </p>
+    <p>
+      <b>Senior approval:</b>
+      
+    </p>
+
+    <p>
+      <b>Assigned:</b>
+      
+    </p>
+
+    <p>
+      <b>Notes:</b>
+      22
+    </p>
+
+    <p>
+      <b>Preshow tease:</b>
+      
+    </p>
+    <p>
+      Best Regards
+    </p 
+      <p>
+        Huy Nhut -
+      </p>
+  </body>
+</html>
+
+----==_mimepart_4ddd475b6f656_143759a527c97343--
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mShoot Load (0.7ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 2 LIMIT 1
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+Rendered user_mailer/send_shoot.html.erb (2.6ms)
+Rendered user_mailer/send_shoot.text.erb (1.0ms)
+
+Sent mail to nhut2020@yahoo.com (7734ms)
+Date: Thu, 26 May 2011 01:16:55 +0700
+From: benbo.nguyen@gmail.com
+To: nhut2020@yahoo.com
+Message-ID: <4ddd47978b176_1437557c65a980b0@huynhut-Inspiron-N5010.mail>
+Subject: Shoot
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_4ddd47978720d_1437557c65a9771f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+
+----==_mimepart_4ddd47978720d_1437557c65a9771f
+Date: Thu, 26 May 2011 01:16:55 +0700
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <4ddd479789870_1437557c65a97833@huynhut-Inspiron-N5010.mail>
+
+
+My Username : nguyenhuynhutsimple@gmail.com
+
+Date:
+2011-05-25
+
+
+Crew requirements:
+222
+
+Location:
+22
+
+Cameraperson:
+admin
+
+Senior approval:
+
+
+Assigned:
+
+Notes:
+22
+Preshow tease:
+
+
+Best Regards
+
+
+  Huy Nhut -
+
+
+
+----==_mimepart_4ddd47978720d_1437557c65a9771f
+Date: Thu, 26 May 2011 01:16:55 +0700
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <4ddd47978a732_1437557c65a979d2@huynhut-Inspiron-N5010.mail>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+
+    <p>
+      My Username : nguyenhuynhutsimple@gmail.com
+
+    </p>
+    <p>
+      <b>Date:</b>
+      2011-05-25
+    </p>
+
+    <p>
+      <b>Crew requirements:</b>
+      222
+    </p>
+
+    <p>
+      <b>Location:</b>
+      22
+    </p>
+    <p>
+      <b>Cameraperson:</b>
+      admin
+    </p>
+    <p>
+      <b>Senior approval:</b>
+      
+    </p>
+
+    <p>
+      <b>Assigned:</b>
+      
+    </p>
+
+    <p>
+      <b>Notes:</b>
+      22
+    </p>
+
+    <p>
+      <b>Preshow tease:</b>
+      
+    </p>
+    <p>
+      Best Regards
+    </p 
+      <p>
+        Huy Nhut -
+      </p>
+  </body>
+</html>
+
+----==_mimepart_4ddd47978720d_1437557c65a9771f--
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mShoot Load (0.7ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 2 LIMIT 1
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+Rendered user_mailer/send_shoot.html.erb (2.6ms)
+Rendered user_mailer/send_shoot.text.erb (1.1ms)
+
+Sent mail to nhut2020@yahoo.com (5797ms)
+Date: Thu, 26 May 2011 01:17:55 +0700
+From: benbo.nguyen@gmail.com
+To: nhut2020@yahoo.com
+Message-ID: <4ddd47d35ec56_143724c78bd698456@huynhut-Inspiron-N5010.mail>
+Subject: Shoot
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_4ddd47d350af6_143724c78bd698187";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+
+----==_mimepart_4ddd47d350af6_143724c78bd698187
+Date: Thu, 26 May 2011 01:17:55 +0700
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <4ddd47d35d489_143724c78bd698259@huynhut-Inspiron-N5010.mail>
+
+
+My Username : nguyenhuynhutsimple@gmail.com
+
+Date:
+2011-05-25
+
+
+Crew requirements:
+222
+
+Location:
+22
+
+Cameraperson:
+admin
+
+Senior approval:
+
+
+Assigned:
+
+Notes:
+22
+Preshow tease:
+
+
+Best Regards
+
+
+  Huy Nhut -
+
+
+
+----==_mimepart_4ddd47d350af6_143724c78bd698187
+Date: Thu, 26 May 2011 01:17:55 +0700
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <4ddd47d35e262_143724c78bd698328@huynhut-Inspiron-N5010.mail>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+
+    <p>
+      My Username : nguyenhuynhutsimple@gmail.com
+
+    </p>
+    <p>
+      <b>Date:</b>
+      2011-05-25
+    </p>
+
+    <p>
+      <b>Crew requirements:</b>
+      222
+    </p>
+
+    <p>
+      <b>Location:</b>
+      22
+    </p>
+    <p>
+      <b>Cameraperson:</b>
+      admin
+    </p>
+    <p>
+      <b>Senior approval:</b>
+      
+    </p>
+
+    <p>
+      <b>Assigned:</b>
+      
+    </p>
+
+    <p>
+      <b>Notes:</b>
+      22
+    </p>
+
+    <p>
+      <b>Preshow tease:</b>
+      
+    </p>
+    <p>
+      Best Regards
+    </p 
+      <p>
+        Huy Nhut -
+      </p>
+  </body>
+</html>
+
+----==_mimepart_4ddd47d350af6_143724c78bd698187--
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mShoot Load (0.7ms)[0m  SELECT `shoots`.* FROM `shoots` WHERE (check_mail = 0)
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (is_senior_producer = 1 or is_assignment_editor = 1)[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 2 LIMIT 1
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+Rendered user_mailer/send_shoot.html.erb (2.8ms)
+Rendered user_mailer/send_shoot.text.erb (1.1ms)
+
+Sent mail to nhut2020@yahoo.com (8659ms)
+Date: Thu, 26 May 2011 01:18:55 +0700
+From: benbo.nguyen@gmail.com
+To: nhut2020@yahoo.com
+Message-ID: <4ddd480f6cef0_14375aa7dfa988f1@huynhut-Inspiron-N5010.mail>
+Subject: Shoot
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_4ddd480f68f80_14375aa7dfa98535";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+
+----==_mimepart_4ddd480f68f80_14375aa7dfa98535
+Date: Thu, 26 May 2011 01:18:55 +0700
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <4ddd480f6b688_14375aa7dfa986a2@huynhut-Inspiron-N5010.mail>
+
+
+My Username : nguyenhuynhutsimple@gmail.com
+
+Date:
+2011-05-25
+
+
+Crew requirements:
+222
+
+Location:
+22
+
+Cameraperson:
+admin
+
+Senior approval:
+
+
+Assigned:
+
+Notes:
+22
+Preshow tease:
+
+
+Best Regards
+
+
+  Huy Nhut -
+
+
+
+----==_mimepart_4ddd480f68f80_14375aa7dfa98535
+Date: Thu, 26 May 2011 01:18:55 +0700
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <4ddd480f6c465_14375aa7dfa987b5@huynhut-Inspiron-N5010.mail>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+
+    <p>
+      My Username : nguyenhuynhutsimple@gmail.com
+
+    </p>
+    <p>
+      <b>Date:</b>
+      2011-05-25
+    </p>
+
+    <p>
+      <b>Crew requirements:</b>
+      222
+    </p>
+
+    <p>
+      <b>Location:</b>
+      22
+    </p>
+    <p>
+      <b>Cameraperson:</b>
+      admin
+    </p>
+    <p>
+      <b>Senior approval:</b>
+      
+    </p>
+
+    <p>
+      <b>Assigned:</b>
+      
+    </p>
+
+    <p>
+      <b>Notes:</b>
+      22
+    </p>
+
+    <p>
+      <b>Preshow tease:</b>
+      
+    </p>
+    <p>
+      Best Regards
+    </p 
+      <p>
+        Huy Nhut -
+      </p>
+  </body>
+</html>
+
+----==_mimepart_4ddd480f68f80_14375aa7dfa98535--
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/huynhut/story/vendor/plugins/sortable_table/rails/init.rb. (called from <top (required)> at /home/huynhut/story/config/environment.rb:5)
+  [1m[36mWebextra Load (0.5ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE (check_mail = 0)[0m
+
+
+Started GET "/shoots/new" for 127.0.0.1 at 2011-05-26 01:21:31 +0700
+  Processing by ShootsController#new as HTML
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStaff Load (0.8ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+Rendered shoots/_form.html.erb (112.2ms)
+Rendered shoots/new.html.erb within layouts/application (119.6ms)
+Completed 200 OK in 143ms (Views: 123.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/shoots/new" for 127.0.0.1 at 2011-05-26 01:21:32 +0700
+  Processing by ShootsController#new as HTML
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+Rendered shoots/_form.html.erb (73.9ms)
+Rendered shoots/new.html.erb within layouts/application (78.7ms)
+Completed 200 OK in 124ms (Views: 82.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-05-26 01:21:35 +0700
+  Processing by HomeController#index as HTML
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mStaff Load (0.4ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 101ms (Views: 42.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/stories?story[approved]=1" for 127.0.0.1 at 2011-05-26 01:21:37 +0700
+  Processing by StoriesController#index as HTML
+  Parameters: {"story"=>{"approved"=>"1"}}
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStory Load (0.9ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE (approved = 1 and deadline >= '2011-05-26') ORDER BY name desc[0m
+  [1m[35mStaff Load (0.8ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Rendered stories/_search_results.html.erb (44.3ms)
+Rendered stories/index.html.erb within layouts/application (74.4ms)
+Completed 200 OK in 162ms (Views: 77.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2011-05-26 01:21:42 +0700
+  Processing by StoriesController#new as HTML
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mStaff Load (0.8ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `staffs`.* FROM `staffs` ORDER BY userid asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `staffs`.* FROM `staffs` ORDER BY userid asc[0m
+Rendered stories/_form.html.erb (38.6ms)
+Rendered stories/new.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 94ms (Views: 46.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/stories/3" for 127.0.0.1 at 2011-05-26 01:21:45 +0700
+  Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStory Load (0.5ms)[0m  SELECT `stories`.* FROM `stories` WHERE `stories`.`id` = 3 LIMIT 1
+  [1m[36mShoot Load (0.8ms)[0m  [1mSELECT `shoots`.* FROM `shoots` WHERE (story_id = '3') ORDER BY created_at LIMIT 20[0m
+  [1m[35mWebextra Load (0.7ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE (story_id = '3') ORDER BY created_at LIMIT 20
+  [1m[36mCharacter Load (0.7ms)[0m  [1mSELECT `characters`.* FROM `characters` WHERE (story_id = '3') ORDER BY created_at LIMIT 20[0m
+  [1m[35mAirdate Load (0.5ms)[0m  SELECT `airdates`.* FROM `airdates` WHERE (story_id = '3') ORDER BY created_at LIMIT 20
+  [1m[36mStaff Load (0.7ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1[0m
+  [1m[35mStaff Load (0.6ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 1 LIMIT 1
+Rendered stories/show.html.erb within layouts/application (63.6ms)
+Completed 200 OK in 195ms (Views: 67.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/webextras" for 127.0.0.1 at 2011-05-26 01:21:50 +0700
+  Processing by WebextrasController#index as HTML
+  [1m[36mStory Load (0.5ms)[0m  [1mSELECT `stories`.* FROM `stories` WHERE `stories`.`id` = 3 LIMIT 1[0m
+  [1m[35mWebextra Load (0.6ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE (story_id = 3) ORDER BY title desc
+  [1m[36mStaff Load (0.5ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`userid` = 'nguyenhuynhutsimple@gmail.com' LIMIT 1[0m
+Rendered webextras/_search_results.html.erb (93.7ms)
+Rendered webextras/index.html.erb within layouts/application (112.0ms)
+Completed 200 OK in 197ms (Views: 142.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/webextras/new" for 127.0.0.1 at 2011-05-26 01:21:53 +0700
+  Processing by WebextrasController#new as HTML
+Rendered webextras/_form.html.erb (23.5ms)
+Rendered webextras/new.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 101ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/webextras" for 127.0.0.1 at 2011-05-26 01:22:29 +0700
+  Processing by WebextrasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7XlbTZmVRNjxDpuHMwOupoJA1wbhKIyFmY33aZpRKv0=", "webextra"=>{"title"=>"2", "summary"=>"2"}, "commit"=>"Create Webextra"}
+  [1m[35mStaff Load (0.4ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  describe `webextras`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `webextras` (`title`, `summary`, `check_mail`, `videourl`, `story_id`, `staff_id`, `created_at`, `updated_at`) VALUES ('2', '2', 0, NULL, 3, 2, '2011-05-25 18:22:30', '2011-05-25 18:22:30')[0m
+  [1m[35mSQL (68.9ms)[0m  COMMIT
+  [1m[36mAREL (76.3ms)[0m  [1mDELETE FROM `webextras` WHERE `webextras`.`id` = 1[0m
+Rendered text template (0.0ms)
+Completed 200 OK in 284ms (Views: 32.3ms | ActiveRecord: 147.0ms)
+
+
+Started POST "/webextras" for 127.0.0.1 at 2011-05-26 01:22:42 +0700
+  Processing by WebextrasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7XlbTZmVRNjxDpuHMwOupoJA1wbhKIyFmY33aZpRKv0=", "webextra"=>{"title"=>"2", "summary"=>"2"}, "video"=>#<ActionDispatch::Http::UploadedFile:0xb3d880c @original_filename="bt-excluir.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"video\"; filename=\"bt-excluir.gif\"\r\nContent-Type: image/gif\r\n", @tempfile=#<File:/tmp/RackMultipart20110526-5251-2a0bhh>>, "commit"=>"Create Webextra"}
+  [1m[35mStaff Load (0.7ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (userid = 'nguyenhuynhutsimple@gmail.com' ) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  describe `webextras`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `webextras` (`title`, `summary`, `check_mail`, `videourl`, `story_id`, `staff_id`, `created_at`, `updated_at`) VALUES ('2', '2', 0, NULL, 3, 2, '2011-05-25 18:22:42', '2011-05-25 18:22:42')[0m
+  [1m[35mSQL (74.6ms)[0m  COMMIT
+DEPRECATION WARNING: Object#returning has been deprecated in favor of Object#tap. (called from block in create at /home/huynhut/story/app/controllers/webextras_controller.rb:84)
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.7ms)[0m  UPDATE `webextras` SET `videourl` = 'http://s3.amazonaws.com/en_shootsheet_test/2_1306347762.gif', `updated_at` = '2011-05-25 18:22:44' WHERE `webextras`.`id` = 2
+  [1m[36mSQL (128.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/webextras/2
+Completed 302 Found in 2094ms
+
+
+Started GET "/webextras/2" for 127.0.0.1 at 2011-05-26 01:22:44 +0700
+  Processing by WebextrasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mWebextra Load (0.4ms)[0m  SELECT `webextras`.* FROM `webextras` WHERE `webextras`.`id` = 2 LIMIT 1
+Rendered webextras/show.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 51ms (Views: 36.4ms | ActiveRecord: 207.4ms)
+  [1m[36mWebextra Load (0.5ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE (check_mail = 0)[0m
+  [1m[35mStaff Load (0.5ms)[0m  SELECT `staffs`.* FROM `staffs` WHERE (is_assignment_editor = 1)
+  [1m[36mStaff Load (0.6ms)[0m  [1mSELECT `staffs`.* FROM `staffs` WHERE `staffs`.`id` = 2 LIMIT 1[0m
+Rendered user_mailer/send_webextra.html.erb (0.8ms)
+
+Sent mail to nhut2020@yahoo.com (6499ms)
+Date: Thu, 26 May 2011 01:23:09 +0700
+From: benbo.nguyen@gmail.com
+To: nhut2020@yahoo.com
+Message-ID: <4ddd490db6964_148359a9e6283585@huynhut-Inspiron-N5010.mail>
+Subject: Webextra
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+
+    <p>
+      My Username : nguyenhuynhutsimple@gmail.com
+
+    </p>
+    <p>
+      <b>Title:</b>
+      2
+    </p>
+
+    <p>
+      <b>Summary:</b>
+      2
+    </p>
+    <p>
+      Best Regards
+    </p 
+      <p>
+        Huy Nhut -
+      </p>
+  </body>
+</html>
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.5ms)[0m  [1mUPDATE `webextras` SET `check_mail` = 1, `updated_at` = '2011-05-25 18:23:16' WHERE `webextras`.`id` = 2[0m
+  [1m[35mSQL (99.5ms)[0m  COMMIT
+  [1m[36mWebextra Load (0.6ms)[0m  [1mSELECT `webextras`.* FROM `webextras` WHERE (check_mail = 0)[0m

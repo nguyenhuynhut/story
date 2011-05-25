@@ -81,12 +81,13 @@ class ShootsController < ApplicationController
   def create
     @shoot = Shoot.new(params[:shoot])
     @shoot.story_id = session[:story_id]
-    @shoot.check = false
+    @shoot.check_mail = false
     if session[:userid] != nil and session[:userid] != ''
       @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])
       if  params[:shoot][:senior_approval] == '1'
         @shoot.approver = @valid_staff
       end
+        @shoot.staff = @valid_staff
     end
     respond_to do |format|
       if @shoot.save
@@ -108,8 +109,9 @@ class ShootsController < ApplicationController
       if params[:shoot][:senior_approval] == '1'
         @shoot.approver = @valid_staff
       end
+      @shoot.staff = @valid_staff
     end
-    params[:shoot][:check] = false
+    params[:shoot][:check_mail] = false
     respond_to do |format|
       if @shoot.update_attributes(params[:shoot])
         format.html { redirect_to(@shoot, :notice => 'Shoot was successfully updated.') }

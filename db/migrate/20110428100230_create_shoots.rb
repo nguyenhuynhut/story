@@ -8,11 +8,12 @@ class CreateShoots < ActiveRecord::Migration
       t.boolean :assigned
       t.text :notes
       t.text :preshow_tease
-      t.boolean :check
+      t.boolean :check_mail
 
       t.references :cameraperson
       t.references :approver
       t.references :story
+       t.references :staff
       t.timestamps
     end
   end

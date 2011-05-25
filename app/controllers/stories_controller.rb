@@ -122,7 +122,7 @@ class StoriesController < ApplicationController
       @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])
     end
     @story.approved = session[:approved]
-    @story.check = false
+    @story.check_mail = false
     @story.staff_id = @valid_staff.id
     respond_to do |format|
       if @story.save
@@ -146,7 +146,7 @@ class StoriesController < ApplicationController
     if session[:userid] != nil and session[:userid] != ''
       @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])
     end
-    params[:story][:check] = false
+    params[:story][:check_mail] = false
     @story.staff_id = @valid_staff.id
     respond_to do |format|
       if @story.update_attributes(params[:story])

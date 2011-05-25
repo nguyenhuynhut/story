@@ -1,0 +1,31 @@
+
+My Username : <%= html_escape(@staff.userid) %>
+
+Deadline:
+<%= html_escape(@pitch.deadline) %>
+
+Name:
+<%= html_escape(@pitch.name) %>
+
+Outline:
+<%= html_escape(@pitch.outline) %>
+
+Graphics collateral:
+<%= html_escape(@pitch.graphics_collateral) %>
+
+Script:
+
+<%= html_escape(@pitch.script)%>
+
+
+
+Approved:
+<%= @pitch.approved %>
+
+Best Regards
+
+<% if @staff.first_name  %>
+
+  <%= html_escape(@staff.first_name + ' ' + @staff.last_name) %>
+
+<% end %>

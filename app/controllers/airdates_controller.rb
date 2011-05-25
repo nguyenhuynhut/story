@@ -2,6 +2,7 @@ class AirdatesController < ApplicationController
   # GET /airdates
   # GET /airdates.xml
   before_filter :from_story_show
+  before_filter :permission , :only => [:edit , :destroy]
   def index
     @story = Story.find_by_id(session[:story_id])
     if @story == nil
@@ -97,6 +98,17 @@ class AirdatesController < ApplicationController
 
       flash[:error] = "You don't have access to this section."
       redirect_to :controller => 'stories' ,:action => 'index'
+    end
+  end
+  def permission
+    if session[:userid] == nil or session[:userid] == ''
+
+      flash[:notice] = "You don't have access to this section."
+      redirect_to '/'
+    end
+    if session[:userid] != nil and Staff.find_by_userid(session[:userid]).is_senior_producer == nil and Staff.find_by_userid(session[:userid]).is_assignment_editor == nil and Staff.find_by_userid(session[:userid]).is_producer == nil
+      flash[:notice] = "You don't have access to this section."
+      redirect_to '/'
     end
   end
 end

@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
-
+<p>
+  <b>Avatar:</b>
+  <%= image_tag @character.avatar ? @character.avatar : 'logo.jpg', :size => "60x60" %>
+</p>
 <p>
   <b>Salutation:</b>
   <%= html_escape(@character.salutation) %>
@@ -69,7 +72,18 @@
   <b>Rep address:</b>
   <%= html_escape(@character.rep_address) %>
 </p>
-
+<p>
+  <b>Rep phone:</b>
+  <%= html_escape(@character.rep_phone) %>
+</p>
+<p>
+  <b>Rep email:</b>
+  <%= html_escape(@character.rep_email) %>
+</p>
+<p>
+  <b>Notes:</b>
+  <%= html_escape(@character.notes) %>
+</p>
 <% if @valid_staff %>
   <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
     <%= link_to 'Edit', edit_character_path(@character) %> |

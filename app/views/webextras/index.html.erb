@@ -4,12 +4,13 @@
   <%= f.text_field :title, :value => params[:webextra] ? params[:webextra][:title] : '' %>
   <%= f.label :summary  %>
   <%= f.text_field :summary, :value => params[:webextra] ? params[:webextra][:summary] : '' %>
-<%= render "search_results" %>
-  Display <%= f.select(:record_number, [[10,10], [20, 20], [50, 50], [100, 100]] , :selected => params[:webextra] ? params[:webextra][:record_number] : 10) %> records
   <br />
 
 
     <%= submit_tag("Search",  :class => 'pagination ajax' ) %>
+  <%= render "search_results" %>
+  Display <%= f.select(:record_number, [[10,10], [20, 20], [50, 50], [100, 100]] , :selected => params[:webextra] ? params[:webextra][:record_number] : 10) %> records
+
   <br />
 
   <%= link_to 'New Webextra', new_webextra_path %>

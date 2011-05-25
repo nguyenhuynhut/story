@@ -15,4 +15,19 @@ class UserMailer < ActionMailer::Base
     @message = message
     mail(:to => recipient, :subject => subject)
   end
+  def send_pitch(subject, pitch, staff, email ,sent_at = Time.now)
+    @pitch = pitch
+    @staff = staff
+    mail(:to => email, :subject => subject)
+  end
+  def send_shoot(subject, shoot, approver, email ,sent_at = Time.now)
+    @shoot = shoot
+    @staff = approver
+    mail(:to => email, :subject => subject)
+  end
+  def send_webextra(subject, webextra, staff, email ,sent_at = Time.now)
+    @webextra = webextra
+    @staff = staff
+    mail(:to => email, :subject => subject)
+  end
 end

@@ -1,7 +1,8 @@
 class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.xml
-  sortable_attributes :name , :outline ,:graphics_collateral ,:script
+  sortable_attributes :name , :outline ,:graphics_collateral ,:script, :deadline
+  before_filter :permission , :only => [:edit , :destroy]
   def index
     if params[:story]
       if params[:story][:approved] == '1'
@@ -57,7 +58,8 @@ class StoriesController < ApplicationController
     else
       conditions[:approved] = false
     end
-    @stories = Story.where("approved = :approved" + query_string, conditions).find(:all ,:order => sort_order).paginate :page => params[:page],:per_page => params[:story] ? params[:story][:record_number] : 10
+    conditions[:today] = Date.today()
+    @stories = Story.where("approved = :approved and deadline >= :today" + query_string, conditions).find(:all ,:order => sort_order).paginate :page => params[:page],:per_page => params[:story] ? params[:story][:record_number] : 10
 
     respond_to do |format|
       format.html # index.html.erb
@@ -120,6 +122,8 @@ class StoriesController < ApplicationController
       @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])
     end
     @story.approved = session[:approved]
+    @story.check = false
+    @story.staff_id = @valid_staff.id
     respond_to do |format|
       if @story.save
         if session[:approved]
@@ -142,6 +146,8 @@ class StoriesController < ApplicationController
     if session[:userid] != nil and session[:userid] != ''
       @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])
     end
+    params[:story][:check] = false
+    @story.staff_id = @valid_staff.id
     respond_to do |format|
       if @story.update_attributes(params[:story])
         if session[:approved]
@@ -166,6 +172,18 @@ class StoriesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(stories_url) }
       format.xml  { head :ok }
+    end
+  end
+    def permission
+    if session[:userid] == nil or session[:userid] == ''
+
+      flash[:notice] = "You don't have access to this section."
+      redirect_to '/'
+    end
+    logger.info session[:userid]
+    if session[:userid] != nil and Staff.find_by_userid(session[:userid]).is_senior_producer == nil and Staff.find_by_userid(session[:userid]).is_assignment_editor == nil and Staff.find_by_userid(session[:userid]).is_producer == nil
+      flash[:notice] = "You don't have access to this section."
+      redirect_to '/'
     end
   end
 end

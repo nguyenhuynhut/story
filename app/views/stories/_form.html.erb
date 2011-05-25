@@ -10,7 +10,16 @@
       </ul>
     </div>
   <% end %>
-
+<% if session[:approved] == false %>
+  <div class="field">
+    <%= f.label :approved %><br />
+    <%= f.check_box :approved %>
+  </div>
+<% end %>
+  <div class="field">
+    <%= f.label :deadline %><br />
+    <%= f.date_select :deadline %>
+  </div>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>

@@ -8,6 +8,11 @@
   </p>
 <% end %>
 <p>
+  <b>Deadline:</b>
+  <%= html_escape(@story.deadline) %>
+</p>
+
+<p>
   <b>Name:</b>
   <%= html_escape(@story.name) %>
 </p>
@@ -115,6 +120,7 @@
   <h1>Listing characters</h1>
   <table>
     <tr>
+           <th>Avatar</th>
       <th>Salutation</th>
       <th>First name</th>
       <th>Last name</th>
@@ -144,6 +150,7 @@
 
     <% @characters.each do |character| %>
       <tr>
+               <td>  <%= image_tag character ? (character.avatar ? character.avatar : 'logo.jpg')  : 'logo.jpg', :size => "60x60" %></td>
         <td><%= html_escape(character.salutation) %></td>
         <td><%= html_escape(character.first_name) %></td>
         <td><%= html_escape(character.last_name) %></td>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+
+    <p>
+      My Username : <%= html_escape(@staff.userid) %>
+
+    </p>
+    <p>
+      <b>Date:</b>
+      <%= @shoot.date %>
+    </p>
+
+    <p>
+      <b>Crew requirements:</b>
+      <%= html_escape(@shoot.crew_requirements) %>
+    </p>
+
+    <p>
+      <b>Location:</b>
+      <%= html_escape(@shoot.location) %>
+    </p>
+    <p>
+      <b>Cameraperson:</b>
+      <%= @shoot.cameraperson ? @shoot.cameraperson.userid : "" %>
+    </p>
+    <p>
+      <b>Senior approval:</b>
+      <%= @shoot.senior_approval %>
+    </p>
+
+    <p>
+      <b>Assigned:</b>
+      <%= @shoot.assigned %>
+    </p>
+
+    <p>
+      <b>Notes:</b>
+      <%= html_escape(@shoot.notes) %>
+    </p>
+
+    <p>
+      <b>Preshow tease:</b>
+      <%= html_escape(@shoot.preshow_tease) %>
+    </p>
+    <p>
+      Best Regards
+    </p 
+    <% if @staff.first_name  %>
+      <p>
+        <%= html_escape(@staff.first_name + ' ' + @staff.last_name) %>
+      </p>
+    <% end %>
+  </body>
+</html>

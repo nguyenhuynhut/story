@@ -10,6 +10,8 @@ class Staff < ActiveRecord::Base
   before_save :hash_password
   has_many :shoots ,:dependent => :destroy
   has_many :stories ,:dependent => :destroy
+  has_many :stories , :dependent => :destroy
+  has_many :webextra , :dependent => :destroy
   def hash_password
     if password_changed?
       self.password = Digest::SHA1.hexdigest(password)

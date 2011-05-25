@@ -42,12 +42,12 @@
       </td>
     </tr>
   </table>
+  <%= submit_tag("Search") %>
   <%= render "search_results" %>
   <br />
   Display <%= f.select(:record_number, [[10,10], [20, 20], [50, 50], [100, 100]] , :selected => params[:staff] ? params[:staff][:record_number] : 10) %> records
 
-  <br />
-  <%= submit_tag("Search") %>
+
   <br/>
   <%= link_to 'New Staff', new_staff_path %>
 <% end %>

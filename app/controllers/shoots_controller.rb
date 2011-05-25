@@ -3,6 +3,7 @@ class ShootsController < ApplicationController
   # GET /shoots.xml
   before_filter :from_story_show
   sortable_attributes :date , :crew_requirements  ,:location
+  before_filter :permission , :only => [:edit , :destroy]
   def index
     @story = Story.find_by_id(session[:story_id])
     if @story == nil
@@ -80,6 +81,7 @@ class ShootsController < ApplicationController
   def create
     @shoot = Shoot.new(params[:shoot])
     @shoot.story_id = session[:story_id]
+    @shoot.check = false
     if session[:userid] != nil and session[:userid] != ''
       @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])
       if  params[:shoot][:senior_approval] == '1'
@@ -107,6 +109,7 @@ class ShootsController < ApplicationController
         @shoot.approver = @valid_staff
       end
     end
+    params[:shoot][:check] = false
     respond_to do |format|
       if @shoot.update_attributes(params[:shoot])
         format.html { redirect_to(@shoot, :notice => 'Shoot was successfully updated.') }
@@ -127,6 +130,18 @@ class ShootsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(shoots_url) }
       format.xml  { head :ok }
+    end
+  end
+      def permission
+    if session[:userid] == nil or session[:userid] == ''
+
+      flash[:notice] = "You don't have access to this section."
+      redirect_to '/'
+    end
+    logger.info session[:userid]
+    if session[:userid] != nil and Staff.find_by_userid(session[:userid]).is_senior_producer == nil and Staff.find_by_userid(session[:userid]).is_assignment_editor == nil and Staff.find_by_userid(session[:userid]).is_producer == nil
+      flash[:notice] = "You don't have access to this section."
+      redirect_to '/'
     end
   end
   def from_story_show

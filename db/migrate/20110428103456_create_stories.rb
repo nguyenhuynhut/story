@@ -5,6 +5,8 @@ class CreateStories < ActiveRecord::Migration
       t.text :outline
       t.text :graphics_collateral
       t.string :script
+      t.date :deadline
+      t.boolean :check
       t.boolean :approved
       t.references :producer
       t.references :correspondent

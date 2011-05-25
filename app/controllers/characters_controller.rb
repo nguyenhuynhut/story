@@ -3,6 +3,7 @@ class CharactersController < ApplicationController
   # GET /characters.xml
   before_filter :from_story_show
   sortable_attributes :salutation ,:firstname ,:lastname ,:address, :city, :state, :zip, :representative
+  before_filter :permission , :only => [:edit , :destroy]
   def index
     @story = Story.find_by_id(session[:story_id])
     if @story == nil
@@ -96,6 +97,9 @@ class CharactersController < ApplicationController
     @character.story_id = session[:story_id]
     respond_to do |format|
       if @character.save
+                if params[:avatar] then
+          @character.save_avatar(params[:avatar])
+        end
         format.html { redirect_to(@character, :notice => 'Character was successfully created.') }
         format.xml  { render :xml => @character, :status => :created, :location => @character }
       else
@@ -112,6 +116,9 @@ class CharactersController < ApplicationController
 
     respond_to do |format|
       if @character.update_attributes(params[:character])
+                        if params[:avatar] then
+          @character.save_avatar(params[:avatar])
+        end
         format.html { redirect_to(@character, :notice => 'Character was successfully updated.') }
         format.xml  { head :ok }
       else
@@ -139,6 +146,18 @@ class CharactersController < ApplicationController
 
       flash[:error] = "You don't have access to this section."
       redirect_to :controller => 'stories' ,:action => 'index'
+    end
+  end
+  def permission
+    if session[:userid] == nil or session[:userid] == ''
+
+      flash[:notice] = "You don't have access to this section."
+      redirect_to '/'
+    end
+    logger.info session[:userid]
+    if session[:userid] != nil and Staff.find_by_userid(session[:userid]).is_senior_producer == nil and Staff.find_by_userid(session[:userid]).is_assignment_editor == nil and Staff.find_by_userid(session[:userid]).is_producer == nil
+      flash[:notice] = "You don't have access to this section."
+      redirect_to '/'
     end
   end
 end

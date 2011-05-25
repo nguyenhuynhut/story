@@ -38,7 +38,10 @@ module StorySystem
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
-    aws
+    AWS::S3::Base.establish_connection!(
+      :access_key_id     => '0X25C7SPASB9M541VVG2',
+      :secret_access_key => 'lJFgE1kf871Rig59hak6RRnQ1VKH+EKk3j2mMEBt'
+    )
     
     BUCKET = 'en_shootsheet_test'
   end

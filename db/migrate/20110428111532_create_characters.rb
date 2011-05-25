@@ -13,6 +13,10 @@ class CreateCharacters < ActiveRecord::Migration
       t.string :phone_3
       t.string :email_1
       t.string :email_2
+      t.text :notes
+      t.string :avatar
+      t.string :rep_phone
+      t.string :rep_email
       t.string :representative
       t.string :rep_address
       t.references :story

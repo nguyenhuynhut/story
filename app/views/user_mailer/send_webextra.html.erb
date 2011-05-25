@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+
+    <p>
+      My Username : <%= html_escape(@staff.userid) %>
+
+    </p>
+    <p>
+      <b>Title:</b>
+      <%= @webextra.title %>
+    </p>
+
+    <p>
+      <b>Summary:</b>
+      <%= @webextra.summary %>
+    </p>
+    <p>
+      Best Regards
+    </p 
+    <% if @staff.first_name  %>
+      <p>
+        <%= html_escape(@staff.first_name + ' ' + @staff.last_name) %>
+      </p>
+    <% end %>
+  </body>
+</html>

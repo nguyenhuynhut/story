@@ -10,7 +10,7 @@ gem 'mini_magick'
 gem 'will_paginate'
 gem 'gdata'
 gem 'aws-s3', :require => 'aws/s3'
-
+gem "rufus-scheduler"
 # Use unicorn as the web server
 # gem 'unicorn'
 

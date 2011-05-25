@@ -3,6 +3,7 @@ class CreateWebextras < ActiveRecord::Migration
     create_table :webextras do |t|
       t.string :title
       t.text :summary
+      t.boolean :check
       t.string :videourl
       t.references :story
       t.timestamps

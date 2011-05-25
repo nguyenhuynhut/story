@@ -1,6 +1,7 @@
 <div id="results">
  <table>
     <tr>
+            <th>Avatar</th>
       <%= sortable_table_header :name => "Salutation",   :sort => "salutation" ,:class => 'pagination ajax' %>
 
       <%= sortable_table_header :name => "First name",   :sort => "first_name" ,:class => 'pagination ajax' %>
@@ -17,6 +18,8 @@
       <th>Email 2</th>
       <%= sortable_table_header :name => "Representative",   :sort => "representative" %>
       <th>Rep address</th>
+            <th>Rep phone</th>
+                  <th>Rep email</th>
       <th></th>
       <% if @valid_staff %>
         <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
@@ -30,6 +33,7 @@
 
     <% @characters.each do |character| %>
       <tr>
+                <td>  <%= image_tag character ? (character.avatar ? character.avatar : 'logo.jpg')  : 'logo.jpg', :size => "60x60" %></td>
         <td><%= html_escape(character.salutation) %></td>
         <td><%= html_escape(character.first_name) %></td>
         <td><%= html_escape(character.last_name) %></td>
@@ -44,6 +48,8 @@
         <td><%= html_escape(character.email_2) %></td>
         <td><%= html_escape(character.representative) %></td>
         <td><%= html_escape(character.rep_address) %></td>
+           <td><%= html_escape(character.rep_phone) %></td>
+              <td><%= html_escape(character.rep_email) %></td>
         <td><%= link_to 'Show', character %></td>
         <% if @valid_staff %>
           <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>

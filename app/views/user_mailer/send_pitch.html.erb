@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+
+    <p>
+      My Username : <%= html_escape(@staff.userid) %>
+
+    </p>
+<p>
+  <b>Deadline:</b>
+  <%= html_escape(@pitch.deadline) %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= html_escape(@pitch.name) %>
+</p>
+
+<p>
+  <b>Outline:</b>
+  <%= html_escape(@pitch.outline) %>
+</p>
+
+<p>
+  <b>Graphics collateral:</b>
+  <%= html_escape(@pitch.graphics_collateral) %>
+</p>
+
+<p>
+  <b>Script:</b>
+  <a href="<%= html_escape(@pitch.script)%>" >
+    <%= html_escape(@pitch.script)%>
+  </a>
+</p>
+
+<p>
+  <b>Approved:</b>
+  <%= @pitch.approved %>
+</p>
+    <p>
+      Best Regards
+    </p 
+    <% if @staff.first_name  %>
+      <p>
+        <%= html_escape(@staff.first_name + ' ' + @staff.last_name) %>
+      </p>
+    <% end %>
+  </body>
+</html>

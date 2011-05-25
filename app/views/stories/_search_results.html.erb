@@ -1,6 +1,7 @@
 <div id="results">
 <table>
     <tr>
+            <%= sortable_table_header :name => "Deadline",   :sort => "deadline" ,:class => 'pagination ajax' %>
       <%= sortable_table_header :name => "Name",   :sort => "name" ,:class => 'pagination ajax' %>
       <%= sortable_table_header :name => "Outline",   :sort => "outline" ,:class => 'pagination ajax' %>
       <%= sortable_table_header :name => "Graphics collateral",   :sort => "graphics_collateral" ,:class => 'pagination ajax' %>
@@ -21,6 +22,7 @@
 
     <% @stories.each do |story| %>
       <tr>
+           <td><%= html_escape(story.deadline) %></td>
         <td><%= html_escape(story.name) %></td>
         <td><%= html_escape(story.outline) %></td>
         <td><%= html_escape(story.graphics_collateral) %></td>

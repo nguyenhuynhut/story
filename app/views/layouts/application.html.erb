@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-<meta name="google-site-verification" content="2PUsRIlaHYi9lLdnAFMw9N86MgUY2-UZy2-wVSMvq1w" />
+    <meta name="google-site-verification" content="2PUsRIlaHYi9lLdnAFMw9N86MgUY2-UZy2-wVSMvq1w" />
     <title>Story</title>
     <%= stylesheet_link_tag :all %>
     <%= javascript_include_tag :defaults %>
@@ -10,8 +10,146 @@
     <%= csrf_meta_tag %>
     <%= stylesheet_link_tag 'scaffold', 'sortable' %>
   </head>
-  <body>
-    <%= link_to 'Home', home_index_path %>
+
+
+  <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <!-- Save for Web Slices (menu_cutups.psd) -->
+    <table id="Table_01" width="962" height="111" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="7">
+
+          <%= image_tag("menu_cutups_01.png") %></td>
+        <td rowspan="4">
+              <% if session[:userid] == nil or Staff.find_by_userid(session[:userid]) == nil %>
+                    <%= image_tag("btn_shoots.png") %>
+
+<% else %>
+                         <%= link_to image_tag("btn_shoots.png"), shoots_path, :style => "color:white" %>
+
+                  <% end %>
+        </td>
+        <td rowspan="9">
+          <%= image_tag("menu_cutups_03.png") %>
+        </td>
+        <td>
+          <%= image_tag("spacer.gif") %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          <%= image_tag("menu_cutups_04.png") %>
+        </td>
+
+        <td rowspan="7">
+          <%= image_tag("connector.png") %>
+        </td>
+        <td>
+          <%= image_tag("spacer.gif") %>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="7">
+          <%= image_tag("menu_cutups_06.png") %>
+			\</td>
+        <td rowspan="5">
+          <%= link_to image_tag("logo.png"), root_path, :style => "color:white" %>
+        </td>
+        <td colspan="4">
+          <%= image_tag("menu_cutups_08.png") %>
+        </td>
+        <td>
+          <%= image_tag("spacer.gif") %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <%= image_tag("menu_cutups_09.png") %>
+        </td>
+
+        <td rowspan="3">
+          <%= image_tag("btn_approval.png") %>
+        </td>
+        <td rowspan="3">
+           <% if session[:userid] == nil or Staff.find_by_userid(session[:userid]) == nil %>
+                    <%= image_tag("btn_story.png") %>
+	
+<% else %>
+                         <%= link_to image_tag("btn_story.png"), stories_path(:story =>{:approved => 1}), :style => "color:white" %>
+		
+                  <% end %>
+        </td>
+        <td>
+          <%= image_tag("spacer.gif") %>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          <%= image_tag("menu_cutups_12.png") %>
+        </td>
+        <td rowspan="2">
+          <% if session[:userid] == nil or Staff.find_by_userid(session[:userid]) == nil %>
+                    <%= image_tag("btn_pitch.png") %>
+			&nbsp;
+<% else %>
+                         <%= link_to image_tag("btn_pitch.png"), stories_path, :style => "color:white" %>
+			&nbsp; 
+                  <% end %>
+        </td>
+        <td>
+                       <% if session[:userid] == nil or Staff.find_by_userid(session[:userid]) == nil %>
+                    <%= image_tag("btn_characters.png") %>
+
+<% else %>
+                         <%= link_to image_tag("btn_characters.png"), characters_path, :style => "color:white" %>
+
+                  <% end %>
+        </td>
+        <td>
+          <%= image_tag("spacer.gif") %>
+        </td>
+      </tr>
+      <tr>
+
+        <td rowspan="4">
+                             <% if session[:userid] == nil or Staff.find_by_userid(session[:userid]) == nil %>
+                    <%= image_tag("btn_webextras.png") %>
+
+<% else %>
+                         <%= link_to image_tag("btn_webextras.png"), webextras_path, :style => "color:white" %>
+
+                  <% end %>
+        </td>
+        <td>
+          <%= image_tag("spacer.gif") %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" rowspan="3">
+          <%= image_tag("menu_cutups_16.png") %>
+        </td>
+        <td>
+          <%= image_tag("spacer.gif") %>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+          <%= image_tag("menu_cutups_17.png") %>
+        </td>
+        <td>
+          <%= image_tag("spacer.gif") %>
+        </td>
+      </tr>
+      <tr>
+
+        <td>
+          <%= image_tag("menu_cutups_18.png") %>
+        </td>
+        <td>
+          <%= image_tag("spacer.gif") %>
+        </td>
+      </tr>
+    </table>
+
     <%= yield %>
 
   </body>

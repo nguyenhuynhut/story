@@ -14,141 +14,341 @@
 
   <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
     <!-- Save for Web Slices (menu_cutups.psd) -->
-    <table id="Table_01" width="962" height="111" border="0" cellpadding="0" cellspacing="0">
-      <tr>
-        <td colspan="7">
 
-          <%= image_tag("menu_cutups_01.png") %></td>
-        <td rowspan="4">
-              <% if session[:userid] == nil or Staff.find_by_userid(session[:userid]) == nil %>
-                    <%= image_tag("btn_shoots.png") %>
+    <table id="Table_01"  class="td_no" width="962" height="112" border="0" cellpadding="0" cellspacing="0" >
+      <tr class="td_no">
+        <td colspan="17" class="td_no">
+          <%= image_tag("menu_cutups_01.png" ,:size => "699x8") %>
+        </td>
+        <td rowspan="5" class="td_no">
 
-<% else %>
-                         <%= link_to image_tag("btn_shoots.png"), shoots_path, :style => "color:white" %>
-
-                  <% end %>
-        </td>
-        <td rowspan="9">
-          <%= image_tag("menu_cutups_03.png") %>
-        </td>
-        <td>
-          <%= image_tag("spacer.gif") %>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="6">
-          <%= image_tag("menu_cutups_04.png") %>
-        </td>
-
-        <td rowspan="7">
-          <%= image_tag("connector.png") %>
-        </td>
-        <td>
-          <%= image_tag("spacer.gif") %>
-        </td>
-      </tr>
-      <tr>
-        <td rowspan="7">
-          <%= image_tag("menu_cutups_06.png") %>
-			\</td>
-        <td rowspan="5">
-          <%= link_to image_tag("logo.png"), root_path, :style => "color:white" %>
-        </td>
-        <td colspan="4">
-          <%= image_tag("menu_cutups_08.png") %>
-        </td>
-        <td>
-          <%= image_tag("spacer.gif") %>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <%= image_tag("menu_cutups_09.png") %>
-        </td>
-
-        <td rowspan="3">
-          <%= image_tag("btn_approval.png") %>
-        </td>
-        <td rowspan="3">
-           <% if session[:userid] == nil or Staff.find_by_userid(session[:userid]) == nil %>
-                    <%= image_tag("btn_story.png") %>
-	
-<% else %>
-                         <%= link_to image_tag("btn_story.png"), stories_path(:story =>{:approved => 1}), :style => "color:white" %>
-		
-                  <% end %>
-        </td>
-        <td>
-          <%= image_tag("spacer.gif") %>
-        </td>
-      </tr>
-      <tr>
-        <td rowspan="5">
-          <%= image_tag("menu_cutups_12.png") %>
-        </td>
-        <td rowspan="2">
           <% if session[:userid] == nil or Staff.find_by_userid(session[:userid]) == nil %>
-                    <%= image_tag("btn_pitch.png") %>
-			&nbsp;
-<% else %>
-                         <%= link_to image_tag("btn_pitch.png"), stories_path, :style => "color:white" %>
-			&nbsp; 
-                  <% end %>
-        </td>
-        <td>
-                       <% if session[:userid] == nil or Staff.find_by_userid(session[:userid]) == nil %>
-                    <%= image_tag("btn_characters.png") %>
 
-<% else %>
-                         <%= link_to image_tag("btn_characters.png"), characters_path, :style => "color:white" %>
 
-                  <% end %>
+          <% else %>
+            <%= link_to image_tag("btn_shoots.png",  :size => "134x38"), shoots_path, :style => "color:white" %>
+
+          <% end %>
         </td>
-        <td>
-          <%= image_tag("spacer.gif") %>
+        <td colspan="6" class="td_no">
+          <%= image_tag("menu_cutups_03.png" , :size => "128x8") %>
+        </td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif", :size => "1x8") %>
+        </td>
+      </tr>
+      <tr class="td_no">
+        <td colspan="16" rowspan="2" class="td_no">
+          <%= image_tag("menu_cutups_04.png", :size => "620x24") %>
+        </td>
+
+        <td rowspan="11" class="td_no">
+
+          <% if session[:userid] == nil or Staff.find_by_userid(session[:userid]) == nil %>
+
+
+          <% else %>
+            <%= image_tag("connector.png", :size => "79x98") %>
+
+          <% end %>
+        </td>
+        <td width="33" height="18" class="td_label">
+          <% if session[:story_id] != nil and Story.find_by_id(session[:story_id]) != nil %>
+            <%=  link_to "list", shoots_path ,:style => "color:blue" %><% end %> </td>
+        <td rowspan="13" class="td_no">
+          <%= image_tag("menu_cutups_07.png", :size => "11x103") %>
+        </td>
+        <td width="33" height="18" class="td_label">      <% if session[:story_id] != nil and Story.find_by_id(session[:story_id]) != nil %>  <%=  link_to "search", shoots_path ,:style => "color:blue" %><% end %> </td>
+        <td width="10" height="103" rowspan="13" class="td_no">
+          <%= image_tag("spacer.gif", :size => "10x103") %>
+        </td>
+
+        <td width="33" height="18" class="td_label">      <% if session[:story_id] != nil and Story.find_by_id(session[:story_id]) != nil %><%=  link_to "new", new_shoot_path ,:style => "color:blue" %><% end %> </td>
+        <td rowspan="13" class="td_no">
+          <%= image_tag("menu_cutups_11.png", :size => "8x103") %>
+        </td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif", :size => "1x18") %>
+        </td>
+      </tr>
+      <tr class="td_no">
+        <td rowspan="4" class="td_no">
+          <%= image_tag("menu_cutups_12.png", :size => "33x21") %>
+        </td>
+        <td rowspan="4" class="td_no">
+          <%= image_tag("menu_cutups_12.png", :size => "33x21") %>
+        </td>
+        <td rowspan="4" class="td_no">
+          <%= image_tag("menu_cutups_12.png", :size => "33x21") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif", :size => "1x6") %>
         </td>
       </tr>
       <tr>
 
-        <td rowspan="4">
-                             <% if session[:userid] == nil or Staff.find_by_userid(session[:userid]) == nil %>
-                    <%= image_tag("btn_webextras.png") %>
-
-<% else %>
-                         <%= link_to image_tag("btn_webextras.png"), webextras_path, :style => "color:white" %>
-
-                  <% end %>
+        <td rowspan="11" class="td_no">
+          <%= image_tag("menu_cutups_15.png", :size => "1x79") %>
         </td>
-        <td>
-          <%= image_tag("spacer.gif") %>
+        <td rowspan="8" class="td_no">
+
+          <%= link_to image_tag("logo.png", :size => "210x66"), root_path, :style => "color:white" %>
+        </td>
+        <td colspan="14" class="td_no">
+          <%= image_tag("menu_cutups_17.png", :size => "409x5") %>
+        </td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif", :size => "1x5") %>
+			></td>
+      </tr>
+
+      <tr class="td_no">
+        <td colspan="7" class="td_no">
+          <%= image_tag("menu_cutups_18.png", :size => "188x1") %>
+        </td>
+        <td rowspan="5" class="td_no">
+
+          <% if session[:userid] == nil or Staff.find_by_userid(session[:userid]) == nil %>
+
+
+          <% else %>
+            <%= image_tag("btn_approval.png", :size => "90x43") %>
+
+          <% end %>
+        </td>
+        <td colspan="6" rowspan="5" class="td_no">
+
+          <% if session[:userid] == nil or Staff.find_by_userid(session[:userid]) == nil %>
+
+
+          <% else %>
+            <%= link_to image_tag("btn_story.png", :size => "131x43"), stories_path(:story =>{:approved => 1}), :style => "color:white" %>
+
+          <% end %>
+        </td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif", :size => "1x1") %>
+        </td>
+
+      </tr>
+      <tr class="td_no">
+        <td rowspan="9" class="td_no">
+          <%= image_tag("menu_cutups_21.png", :size => "56x73") %>
+        </td>
+        <td colspan="6" rowspan="4" class="td_no">
+
+          <% if session[:userid] == nil or Staff.find_by_userid(session[:userid]) == nil %>
+
+          <% else %>
+            <%= link_to image_tag("btn_pitch.png", :size => "132x42"), stories_path, :style => "color:white" %>
+            &nbsp;
+          <% end %>
+
+        </td>
+        <td rowspan="3" class="td_no">
+
+          <% if session[:userid] == nil or Staff.find_by_userid(session[:userid]) == nil %>
+
+
+          <% else %>
+            <%= link_to image_tag("btn_characters.png", :size => "134x38"), characters_path, :style => "color:white" %>
+
+          <% end %>
+        </td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif", :size => "1x9") %>
+        </td>
+      </tr>
+      <tr class="td_no">
+        <td width="33" height="18" class="td_label">
+          <% if session[:story_id] != nil and Story.find_by_id(session[:story_id]) != nil %>   <%=  link_to "list", characters_path ,:style => "color:blue" %><% end %> </td>
+        <td width="33" height="18" class="td_label">      <% if session[:story_id] != nil and Story.find_by_id(session[:story_id]) != nil %> <%=  link_to "search", characters_path ,:style => "color:blue" %><% end %> </td>
+        <td width="33" height="18" class="td_label">      <% if session[:story_id] != nil and Story.find_by_id(session[:story_id]) != nil %><%=  link_to "new", new_character_path ,:style => "color:blue" %><% end %> </td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif", :size => "1x18") %>
+        </td>
+      </tr>
+      <tr class="td_no">
+        <td rowspan="3" class="td_no">
+          <%= image_tag("menu_cutups_27.png", :size => "33x24") %>
+        </td>
+        <td rowspan="3" class="td_no">
+          <%= image_tag("menu_cutups_28.png", :size => "33x24") %>
+        </td>
+        <td rowspan="3" class="td_no">
+          <%= image_tag("menu_cutups_29.png", :size => "33x24") %>
+        </td>
+
+        <td class="td_no">
+          <%= image_tag("spacer.gif", :size => "1x11") %>
         </td>
       </tr>
       <tr>
-        <td colspan="3" rowspan="3">
-          <%= image_tag("menu_cutups_16.png") %>
-        </td>
-        <td>
-          <%= image_tag("spacer.gif") %>
-        </td>
-      </tr>
-      <tr>
-        <td rowspan="2">
-          <%= image_tag("menu_cutups_17.png") %>
-        </td>
-        <td>
-          <%= image_tag("spacer.gif") %>
-        </td>
-      </tr>
-      <tr>
+        <td rowspan="6" class="td_no">
 
-        <td>
-          <%= image_tag("menu_cutups_18.png") %>
+
+          <% if session[:userid] == nil or Staff.find_by_userid(session[:userid]) == nil %>
+
+
+          <% else %>
+            <%= link_to image_tag("btn_webextras.png", :size => "134x35"), webextras_path, :style => "color:white" %>
+
+          <% end %>
         </td>
-        <td>
-          <%= image_tag("spacer.gif") %>
+        <td class="td_no">
+          <%= image_tag("spacer.gif", :size => "1x4") %>
         </td>
+      </tr>
+
+      <tr class="td_no">
+        <td width="33" height="18" rowspan="2" class="td_label">
+          <% if session[:userid] != nil and Staff.find_by_userid(session[:userid]) != nil %>
+            <%=  link_to "all", stories_path ,:style => "color:blue" %> <% end  %> </td>
+        <td width="12" height="31" rowspan="5" class="td_no">
+          <%= image_tag("spacer.gif", :size => "12x31") %>
+        </td>
+        <td width="33" height="18" rowspan="2" class="td_label">
+          <% if session[:userid] != nil and Staff.find_by_userid(session[:userid]) != nil %>
+            <%=  link_to "search", stories_path ,:style => "color:blue" %>  <% end %> </td>
+        <td width="15" height="31" rowspan="5">
+          <%= image_tag("spacer.gif", :size => "15x31") %>
+        </td>
+        <td width="29" height="18" rowspan="2" class="td_label">
+          <% if session[:userid] != nil and Staff.find_by_userid(session[:userid]) != nil %>
+            <%=  link_to "new", new_story_path ,:style => "color:blue" %>  <% end %> </td>
+
+        <td width="100" height="31" colspan="2" rowspan="5" class="td_no">
+          <%= image_tag("spacer.gif", :size => "100x31") %></td>
+        <td width="33" height="18" rowspan="2" class="td_label">
+
+          <% if session[:userid] != nil and Staff.find_by_userid(session[:userid]) != nil %>
+
+            <%=  link_to "all", stories_path(:story =>{:approved => 1}) ,:style => "color:blue" %> <% end %>
+        </td>
+        <td rowspan="5" class="td_no">
+          <%= image_tag("menu_cutups_38.png" ,:size => "9x31") %></td>
+        <td width="33" height="18" rowspan="2" class="td_label">
+          <% if session[:userid] != nil and Staff.find_by_userid(session[:userid]) != nil %>
+
+            <%=  link_to "search", stories_path(:story =>{:approved => 1}) ,:style => "color:blue" %> <% end %> </td>
+        <td width="11" height="31" rowspan="5" class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "11x31") %></td>
+
+        <td width="33" height="18" rowspan="2" class="td_label">
+          <% if session[:userid] != nil and Staff.find_by_userid(session[:userid]) != nil %>
+            <%=  link_to "new",new_story_path(:story =>{:approved => 1}) ,:style => "color:blue" %>
+          <% end %> </td>
+        <td width="12" height="31" rowspan="5" class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "12x31") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "1x9") %></td>
+      </tr>
+      <tr class="td_no">
+        <td width="33" height="18" rowspan="3" class="td_label">
+          <% if session[:story_id] != nil and Story.find_by_id(session[:story_id]) != nil %>   <%=  link_to "list", webextras_path ,:style => "color:blue" %> <% end %> </td>
+
+        <td width="33" height="18" rowspan="3" class="td_label">
+          <% if session[:story_id] != nil and Story.find_by_id(session[:story_id]) != nil %>
+            <%=  link_to "search", webextras_path ,:style => "color:blue" %>  <% end %> </td>
+        <td width="33" height="18" rowspan="3" class="td_label">      <% if session[:story_id] != nil and Story.find_by_id(session[:story_id]) != nil %><%=  link_to "new", new_webextra_path ,:style => "color:blue" %><% end %> </td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "1x9") %></td>
+      </tr>
+      <tr class="td_no">
+        <td rowspan="3" class="td_no">
+          <%= image_tag("menu_cutups_46.png" ,:size => "210x13") %></td>
+
+        <td rowspan="3" class="td_no">
+          <%= image_tag("menu_cutups_47.png" ,:size => "33x13") %></td>
+        <td rowspan="3" class="td_no">
+          <%= image_tag("menu_cutups_48.png" ,:size => "33x13") %>	</td>
+        <td rowspan="3" class="td_no">
+          <%= image_tag("menu_cutups_49.png" ,:size => "29x13") %></td>
+        <td rowspan="3" class="td_no">
+          <%= image_tag("menu_cutups_50.png" ,:size => "33x13") %></td>
+        <td rowspan="3" class="td_no">
+
+          <%= image_tag("menu_cutups_51.png" ,:size => "33x13") %></td>
+        <td rowspan="3" class="td_no">
+          <%= image_tag("menu_cutups_52.png" ,:size => "33x13") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "1x8") %></td>
+      </tr>
+      <tr class="td_no">
+        <td width="79" height="5" rowspan="2" class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "79x5") %>	</td>
+
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "1x1") %></td>
+      </tr>
+      <tr class="td_no">
+        <td class="td_no">
+          <%= image_tag("menu_cutups_54.png" ,:size => "33x4") %></td>
+        <td class="td_no">
+          <%= image_tag("menu_cutups_55.png" ,:size => "33x4") %></td>
+        <td class="td_no">
+
+          <%= image_tag("menu_cutups_56.png" ,:size => "33x4") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "1x4") %></td>
+      </tr>
+      <tr class="td_no">
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "1x1") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "210x1") %></td>
+
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "56x1") %><</td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "33x1") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "12x1") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "33x1") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "15x1") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "29x1") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "10x1") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "90x1") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "33x1") %>	</td>
+
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "9x1") %>	</td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "33x1") %>	</td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "11x1") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "33x1") %></td>
+        <td class="td_no">
+
+          <%= image_tag("spacer.gif" ,:size => "12x1") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "79x1") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "134x1") %>	</td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "33x1") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "11x1") %></td>
+
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "33x1") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "10x1") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "33x1") %></td>
+        <td class="td_no">
+          <%= image_tag("spacer.gif" ,:size => "8x1") %>	</td>
+        <td class="td_no"></td>
+
       </tr>
     </table>
+
 
     <%= yield %>
 

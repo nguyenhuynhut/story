@@ -5,14 +5,33 @@ body, p, ol, ul, td {
   font-size:   13px;
   line-height: 18px;
 }
-
+table.td_no {
+      font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   0px;
+  line-height: 0px;
+}
+td.td_no {
+         font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   0px;
+  line-height: 0px;
+}
+td.td_label {
+         font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+tr.td_no {
+             font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   0px;
+  line-height: 0px;
+}
 pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
 }
 
-a { color: #000; }
+a { color:blue; }
 a:visited { color: #666; }
 a:hover { color: #fff; background-color:#000; }
 

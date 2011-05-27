@@ -95,7 +95,15 @@ class StoriesController < ApplicationController
   # GET /stories/new
   # GET /stories/new.xml
   def new
-
+    if params[:story]
+      if params[:story][:approved] == '1'
+        session[:approved] = true
+      else
+        session[:approved] = false
+      end
+    else
+      session[:approved] = false
+    end
     @story = Story.new
     if session[:userid] != nil and session[:userid] != ''
       @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])

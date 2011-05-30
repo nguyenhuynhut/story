@@ -23,7 +23,19 @@
     <%= f.label 'Video' %><br />
         <%= file_field_tag "video" %><br />
   </div>
+  <div class="field">
+<div id="spinner" class="spinner" style="display:none;">
+
+        <%= image_tag("ajax-loader.gif", :alt => 'loading') %>
+</div>
+  </div>
+<script>
+  function openSpinner() {
+     $('spinner').show();
+  }
+</script>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit(:onclick => "openSpinner();") %>
   </div>
 <% end %>

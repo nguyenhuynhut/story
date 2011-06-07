@@ -1,6 +1,13 @@
 class ShootsController < ApplicationController
   # GET /shoots
   # GET /shoots.xml
+  uses_tiny_mce :options => {
+    :theme => 'advanced',
+    :theme_advanced_resizing => true,
+    :theme_advanced_resize_horizontal => false,
+    :plugins => %w{ table fullscreen }
+  }
+
   before_filter :from_story_show
   sortable_attributes :date , :crew_requirements  ,:location
   before_filter :permission , :only => [:edit , :destroy]
@@ -87,7 +94,7 @@ class ShootsController < ApplicationController
       if  params[:shoot][:senior_approval] == '1'
         @shoot.approver = @valid_staff
       end
-        @shoot.staff = @valid_staff
+      @shoot.staff = @valid_staff
     end
     respond_to do |format|
       if @shoot.save
@@ -134,7 +141,7 @@ class ShootsController < ApplicationController
       format.xml  { head :ok }
     end
   end
-      def permission
+  def permission
     if session[:userid] == nil or session[:userid] == ''
 
       flash[:notice] = "You don't have access to this section."

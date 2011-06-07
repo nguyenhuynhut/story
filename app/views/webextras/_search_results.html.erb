@@ -18,7 +18,7 @@
     <% @webextras.each do |webextra| %>
       <tr>
         <td><%= webextra.title %></td>
-        <td><%= webextra.summary %></td>
+        <td><%= raw webextra.summary %></td>
         <td><%= link_to 'Show', webextra %></td>
         <% if @valid_staff %>
           <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>

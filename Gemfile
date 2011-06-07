@@ -11,6 +11,8 @@ gem 'will_paginate'
 gem 'gdata'
 gem 'aws-s3', :require => 'aws/s3'
 gem "rufus-scheduler"
+gem 'tiny_mce'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

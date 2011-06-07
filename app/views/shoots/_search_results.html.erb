@@ -34,8 +34,8 @@
     <% @shoots.each do |shoot| %>
       <tr>
         <td><%= shoot.date %></td>
-        <td><%= html_escape(shoot.crew_requirements) %></td>
-        <td><%= html_escape(shoot.location) %></td>
+        <td><%= raw shoot.crew_requirements %></td>
+        <td><%= raw shoot.location %></td>
         <td> <%= shoot.cameraperson ? html_escape(shoot.cameraperson.userid) : "" %> </td>
         <% if @valid_staff %>
           <% if @valid_staff.is_senior_producer == true %>
@@ -47,8 +47,8 @@
             <td><%= shoot.assigned %></td>
           <% end %>
         <% end %>
-        <td><%= html_escape(shoot.notes) %></td>
-        <td><%= html_escape(shoot.preshow_tease) %></td>
+        <td><%= raw shoot.notes %></td>
+        <td><%= raw shoot.preshow_tease %></td>
         <td><%= link_to 'Show', shoot %></td>
         <% if @valid_staff %>
           <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>

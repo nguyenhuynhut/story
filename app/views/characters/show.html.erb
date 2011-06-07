@@ -82,7 +82,7 @@
 </p>
 <p>
   <b>Notes:</b>
-  <%= html_escape(@character.notes) %>
+  <%= raw @character.notes %>
 </p>
 <% if @valid_staff %>
   <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>

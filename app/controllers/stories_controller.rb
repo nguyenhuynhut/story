@@ -1,6 +1,13 @@
 class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.xml
+  uses_tiny_mce :options => {
+    :theme => 'advanced',
+    :theme_advanced_resizing => true,
+    :theme_advanced_resize_horizontal => false,
+    :plugins => %w{ table fullscreen }
+  }
+
   sortable_attributes :name , :outline ,:graphics_collateral ,:script, :deadline
   before_filter :permission , :only => [:edit , :destroy]
   def index
@@ -182,7 +189,7 @@ class StoriesController < ApplicationController
       format.xml  { head :ok }
     end
   end
-    def permission
+  def permission
     if session[:userid] == nil or session[:userid] == ''
 
       flash[:notice] = "You don't have access to this section."

@@ -1,6 +1,13 @@
 class CharactersController < ApplicationController
   # GET /characters
   # GET /characters.xml
+  uses_tiny_mce :options => {
+    :theme => 'advanced',
+    :theme_advanced_resizing => true,
+    :theme_advanced_resize_horizontal => false,
+    :plugins => %w{ table fullscreen }
+  }
+
   before_filter :from_story_show
   sortable_attributes :salutation ,:firstname ,:lastname ,:address, :city, :state, :zip, :representative
   before_filter :permission , :only => [:edit , :destroy]
@@ -97,7 +104,7 @@ class CharactersController < ApplicationController
     @character.story_id = session[:story_id]
     respond_to do |format|
       if @character.save
-                if params[:avatar] then
+        if params[:avatar] then
           @character.save_avatar(params[:avatar])
         end
         format.html { redirect_to(@character, :notice => 'Character was successfully created.') }
@@ -116,7 +123,7 @@ class CharactersController < ApplicationController
 
     respond_to do |format|
       if @character.update_attributes(params[:character])
-                        if params[:avatar] then
+        if params[:avatar] then
           @character.save_avatar(params[:avatar])
         end
         format.html { redirect_to(@character, :notice => 'Character was successfully updated.') }

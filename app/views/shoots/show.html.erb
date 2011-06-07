@@ -7,12 +7,12 @@
 
 <p>
   <b>Crew requirements:</b>
-  <%= html_escape(@shoot.crew_requirements) %>
+  <%= raw @shoot.crew_requirements %>
 </p>
 
 <p>
   <b>Location:</b>
-  <%= html_escape(@shoot.location) %>
+  <%= raw @shoot.location %>
 </p>
 <p>
   <b>Cameraperson:</b>
@@ -36,12 +36,12 @@
 <% end %>
 <p>
   <b>Notes:</b>
-  <%= html_escape(@shoot.notes) %>
+  <%= raw @shoot.notes %>
 </p>
 
 <p>
   <b>Preshow tease:</b>
-  <%= html_escape(@shoot.preshow_tease) %>
+  <%= raw @shoot.preshow_tease %>
 </p>
 
 <% if @valid_staff %>

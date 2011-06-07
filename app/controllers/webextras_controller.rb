@@ -1,6 +1,13 @@
 class WebextrasController < ApplicationController
   # GET /webextras
   # GET /webextras.xml
+  uses_tiny_mce :options => {
+    :theme => 'advanced',
+    :theme_advanced_resizing => true,
+    :theme_advanced_resize_horizontal => false,
+    :plugins => %w{ table fullscreen }
+  }
+
   before_filter :from_story_show, :permission , :only => [:edit , :destroy]
   sortable_attributes :title , :summary
   def index
@@ -73,7 +80,7 @@ class WebextrasController < ApplicationController
     if session[:userid] != nil and session[:userid] != ''
       @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])
     end
-      @webextra.staff_id = @valid_staff.id
+    @webextra.staff_id = @valid_staff.id
     respond_to do |format|
       if @webextra.save
         begin
@@ -110,7 +117,7 @@ class WebextrasController < ApplicationController
     if session[:userid] != nil and session[:userid] != ''
       @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])
     end
-      @webextra.staff_id = @valid_staff.id
+    @webextra.staff_id = @valid_staff.id
     respond_to do |format|
       if @webextra.update_attributes(params[:webextra])
         begin
@@ -158,7 +165,7 @@ class WebextrasController < ApplicationController
       redirect_to :controller => 'stories' ,:action => 'index'
     end
   end
-      def permission
+  def permission
     if session[:userid] == nil or session[:userid] == ''
 
       flash[:notice] = "You don't have access to this section."

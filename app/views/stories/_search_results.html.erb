@@ -24,8 +24,8 @@
       <tr>
            <td><%= html_escape(story.deadline) %></td>
         <td><%= html_escape(story.name) %></td>
-        <td><%= html_escape(story.outline) %></td>
-        <td><%= html_escape(story.graphics_collateral) %></td>
+        <td><%= raw story.outline %></td>
+        <td><%= raw story.graphics_collateral %></td>
         <td><%= html_escape(story.script) %></td>
         <td><%= story.producer ? story.producer.userid : ''%></td>
         <td><%= story.correspondent ? story.correspondent.userid : '' %></td>

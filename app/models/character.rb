@@ -1,7 +1,11 @@
+
+require 'acts-as-taggable-on'
 class Character < ActiveRecord::Base
   validates :salutation  ,:first_name ,:last_name ,:address ,:state ,:city ,:zip , :presence => true
   validates_format_of :email_1 ,:email_2 ,:rep_email , :allow_nil => true, :allow_blank => true, :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i, :message => "must be valid"
   cattr_reader :per_page
+  acts_as_taggable
+
   @@per_page = 10
   def save_avatar(fileio)
     # ENSURE WE HAVE A FILE AND IT IS THE CORRECT CONTENT TYPE

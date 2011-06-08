@@ -1,0 +1,22 @@
+<h1>Tags</h1>
+<%= form_for :character, :remote => true, :html => { :method => :get} do |f| %>
+  <table>
+    <tr>
+      <td>
+        <%= f.label "Type to find comma-separated tags:" %>
+      </td>
+      <td>
+        <%= f.text_field :tag_list, :value => params[:character] ? params[:character][:tag_list] : '' %>
+      </td>
+
+    </tr>
+  </table>
+  <%= submit_tag("Search") %>
+  <%= render "search_results" %>
+  Display <%= f.select(:record_number, [[10,10], [20, 20], [50, 50], [100, 100]] , :selected => params[:character] ? params[:character][:record_number] : 10) %> records
+
+  <br/>
+
+  <%= link_to 'New Character', new_character_path %>
+  <%= link_to 'Back', stories_path(:story =>{:approved => 1}) %>
+<% end %>

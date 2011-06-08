@@ -1,12 +1,9 @@
 StorySystem::Application.routes.draw do
 
-  resources :characters
 
   resources :webextras
 
   resources :airdates
-
-  resources :stories
 
   resources :shoots
 
@@ -14,11 +11,15 @@ StorySystem::Application.routes.draw do
   get "staffs/logout"
   get "staffs/forgot"
   get "home/index"
+  get "characters/tag_list"
+  get "stories/tag_list"
   get "staffs/contact_us"
   get "staffs/contact_staff"
   get "home/sign_in_google"
   get "home/complete_sign_in_google"
   resources :staffs
+  resources :stories
+  resources :characters
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -37,6 +37,10 @@
     <%= f.text_field :script %>
   </div>
   <div class="field">
+    <%= f.label :tags %><br />
+    <%= f.text_field :tag_list %>
+  </div>
+  <div class="field">
     <%= f.label :producer %><br />
 
     <%= f.select(:producer_id, Staff.find(:all, :order => 'userid asc').collect {|c| [c.userid, c.id ] }) %>

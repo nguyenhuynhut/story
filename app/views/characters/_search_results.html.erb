@@ -20,6 +20,7 @@
       <th>Rep address</th>
             <th>Rep phone</th>
                   <th>Rep email</th>
+                  <th>Tags</th>
       <th></th>
       <% if @valid_staff %>
         <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
@@ -30,7 +31,7 @@
         <th></th>
       <% end %>
     </tr>
-
+   <% if @characters %>
     <% @characters.each do |character| %>
       <tr>
                 <td>  <%= image_tag character ? (character.avatar ? character.avatar : 'logo.jpg')  : 'logo.jpg', :size => "60x60" %></td>
@@ -50,6 +51,7 @@
         <td><%= html_escape(character.rep_address) %></td>
            <td><%= html_escape(character.rep_phone) %></td>
               <td><%= html_escape(character.rep_email) %></td>
+                            <td><%= html_escape(character.tag_list) %></td>
         <td><%= link_to 'Show', character %></td>
         <% if @valid_staff %>
           <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
@@ -61,6 +63,7 @@
         <% end %>
       </tr>
     <% end %>
+     <% end %>
   </table>
     <%= will_paginate @characters, :class => 'pagination ajax' %>
   </div>

@@ -85,7 +85,6 @@ class CharactersController < ApplicationController
   # GET /characters/new.xml
   def new
     @character = Character.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @character }
@@ -165,6 +164,36 @@ class CharactersController < ApplicationController
     if session[:userid] != nil and Staff.find_by_userid(session[:userid]).is_senior_producer == nil and Staff.find_by_userid(session[:userid]).is_assignment_editor == nil and Staff.find_by_userid(session[:userid]).is_producer == nil
       flash[:notice] = "You don't have access to this section."
       redirect_to '/'
+    end
+  end
+  def tag_list
+    @story = Story.find_by_id(session[:story_id])
+    if @story == nil
+      redirect_to :controller => 'stories' ,:action => 'index'
+      return
+    end
+    if session[:userid] != nil and session[:userid] != ''
+      @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])
+    end
+    conditions = {}
+    conditions[:story_id] = @story.id
+    @characters = Character.where("story_id = :story_id", conditions).find(:all ,:order => sort_order).paginate :page => params[:page],:per_page => params[:character] ? params[:character][:record_number] : 10
+    if params[:character]
+      if params[:character][:tag_list] != nil and params[:character][:tag_list] != ''
+
+        tag_list = params[:character][:tag_list].split(',')
+        @characters = Character.where("story_id = :story_id", conditions).tagged_with(tag_list,  :any => true).find(:all ,:order => sort_order).paginate :page => params[:page],:per_page => params[:character] ? params[:character][:record_number] : 10
+      end
+    end
+    respond_to do |format|
+      format.html # index.html.erb
+      format.js {
+        render :update do |page|
+          # 'page.replace' will replace full "results" block...works for this example
+          # 'page.replace_html' will replace "results" inner html...useful elsewhere
+          page.replace 'results', :partial => 'search_results'
+        end
+      }
     end
   end
 end

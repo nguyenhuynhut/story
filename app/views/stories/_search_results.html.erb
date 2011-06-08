@@ -6,6 +6,7 @@
       <%= sortable_table_header :name => "Outline",   :sort => "outline" ,:class => 'pagination ajax' %>
       <%= sortable_table_header :name => "Graphics collateral",   :sort => "graphics_collateral" ,:class => 'pagination ajax' %>
       <%= sortable_table_header :name => "Script",   :sort => "script" ,:class => 'pagination ajax' %>
+        <th>Tags</th>
       <th>Producer</th>
       <th>Correspondent</th>
       <th>Editor</th>
@@ -27,6 +28,7 @@
         <td><%= raw story.outline %></td>
         <td><%= raw story.graphics_collateral %></td>
         <td><%= html_escape(story.script) %></td>
+              <td><%= html_escape(story.tag_list) %></td>
         <td><%= story.producer ? story.producer.userid : ''%></td>
         <td><%= story.correspondent ? story.correspondent.userid : '' %></td>
         <td><%= story.editor ? story.editor.userid  : '' %></td>

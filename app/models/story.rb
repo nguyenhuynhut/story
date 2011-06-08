@@ -1,4 +1,5 @@
 class Story < ActiveRecord::Base
+  acts_as_taggable
   validates :name ,:outline ,:graphics_collateral ,:presence => true
   validates_length_of :name, :script, :maximum => 255
   belongs_to :producer ,:class_name => "Staff"

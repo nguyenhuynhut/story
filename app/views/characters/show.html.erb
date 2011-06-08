@@ -84,6 +84,12 @@
   <b>Notes:</b>
   <%= raw @character.notes %>
 </p>
+<% unless @character.tag_list.empty? %>
+	<p class="tags">
+  	<b>Tags:</b>
+  	<%= @character.tag_list %>
+	</p>
+<% end %>
 <% if @valid_staff %>
   <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
     <%= link_to 'Edit', edit_character_path(@character) %> |

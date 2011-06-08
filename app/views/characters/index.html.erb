@@ -60,4 +60,5 @@
 
   <%= link_to 'New Character', new_character_path %>
   <%= link_to 'Back', stories_path(:story =>{:approved => 1}) %>
+  <%= link_to 'Tags', :controller => "characters", :action => "tag_list" %>
 <% end %>

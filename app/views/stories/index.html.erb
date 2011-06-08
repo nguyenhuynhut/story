@@ -49,7 +49,10 @@
   <br/>
   <% if params[:story] and params[:story][:approved] == '1' %>
   <%= link_to 'New Story', new_story_path(:story =>{:approved => 1}) %>
+     <%= link_to 'Tags', :controller => "stories", :action => "tag_list" %>
+
   <% else %>
     <%= link_to 'New Pitch', new_story_path %>
+  
   <% end %>
 <% end %>

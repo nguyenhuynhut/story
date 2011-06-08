@@ -1,0 +1,26 @@
+
+  <h1>Tags</h1>
+
+<%= form_for :story, :remote => true, :html => { :method => :get} do |f| %>
+  <%= f.hidden_field :approved , :value =>params[:story] ? params[:story][:approved] : '0'  %>
+  <table>
+    <tr>
+      <td>
+           <%= f.label "Type to find comma-separated tags:" %>
+      </td>
+      <td>
+        <%= f.text_field :tag_list, :value => params[:story] ? params[:story][:tag_list] : '' %>
+      </td>
+    </tr>
+  </table>
+  <%= submit_tag("Search") %>
+  <%= render "search_results" %>
+  Display <%= f.select(:record_number, [[10,10], [20, 20], [50, 50], [100, 100]] , :selected => params[:story] ? params[:story][:record_number] : 10) %> records
+
+  <br/>
+  <% if params[:story] and params[:story][:approved] == '1' %>
+  <%= link_to 'New Story', new_story_path(:story =>{:approved => 1}) %>
+  <% else %>
+    <%= link_to 'New Pitch', new_story_path %>
+  <% end %>
+<% end %>

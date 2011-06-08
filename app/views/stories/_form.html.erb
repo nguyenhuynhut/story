@@ -17,6 +17,10 @@
   </div>
 <% end %>
   <div class="field">
+    <%= f.label :archived %><br />
+    <%= f.check_box :archived %>
+  </div>
+  <div class="field">
     <%= f.label :deadline %><br />
     <%= f.date_select :deadline %>
   </div>

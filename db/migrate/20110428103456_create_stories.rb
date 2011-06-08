@@ -8,6 +8,7 @@ class CreateStories < ActiveRecord::Migration
       t.date :deadline
       t.boolean :check_mail
       t.boolean :approved
+      t.boolean :archived
       t.references :producer
       t.references :correspondent
            t.references :staff

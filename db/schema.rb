@@ -85,6 +85,7 @@ ActiveRecord::Schema.define(:version => 20110608064313) do
     t.date     "deadline"
     t.boolean  "check_mail"
     t.boolean  "approved"
+    t.boolean  "archived"
     t.integer  "producer_id"
     t.integer  "correspondent_id"
     t.integer  "staff_id"

@@ -22,7 +22,7 @@
     </tr>
 
     <% @stories.each do |story| %>
-      <tr>
+      <tr bgcolor="yellow">
            <td><%= html_escape(story.deadline) %></td>
         <td><%= html_escape(story.name) %></td>
         <td><%= raw story.outline %></td>

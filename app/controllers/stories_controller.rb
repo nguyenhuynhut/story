@@ -55,6 +55,8 @@ class StoriesController < ApplicationController
         conditions[:editor_id] = params[:story][:editor_id]
       end
     end
+    logger.info 'params'
+    logger.info params
     if params[:story]
 
       if params[:story][:approved] == '1'
@@ -62,11 +64,18 @@ class StoriesController < ApplicationController
       else
         conditions[:approved] = false
       end
+      if params[:story][:archived] == '1'
+        conditions[:archived] = true
+      else
+        conditions[:archived] = false
+      end
     else
+      conditions[:archived] = false
       conditions[:approved] = false
     end
+
     conditions[:today] = Date.today()
-    @stories = Story.where("approved = :approved and deadline >= :today" + query_string, conditions).find(:all ,:order => sort_order).paginate :page => params[:page],:per_page => params[:story] ? params[:story][:record_number] : 10
+    @stories = Story.where("approved = :approved and deadline >= :today and archived = :archived" + query_string, conditions).find(:all ,:order => sort_order).paginate :page => params[:page],:per_page => params[:story] ? params[:story][:record_number] : 10
 
     respond_to do |format|
       format.html # index.html.erb

@@ -1,0 +1,16 @@
+<div id="documents" class="popup" style="display:none">
+
+  <h2>Your Google Documents</h2>
+  <% if  session[:documents] %>
+    <% session[:documents].each do |document| %>
+  <p><%= link_to  document[:title], "javascript:void(0)", :onclick => "setScript('" + document[:url] + "' );" %>  </p>
+    <% end %>
+  <% end %>
+
+</div>
+  <script>
+function setScript(url) {
+  $("story_script").setValue(url);
+}
+  </script>
+<%= javascript_tag "new Popup('documents','documents_link')" %>

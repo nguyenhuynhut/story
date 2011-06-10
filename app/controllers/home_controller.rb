@@ -20,7 +20,7 @@ class HomeController < ApplicationController
     next_param = "http://" + request.host_with_port + "/home/complete_sign_in_google"
     logger.info next_param
     logger.info 'ta'
-    scope_param =  'http://www.google.com/m8/feeds/contacts/default/full?max-results=0'
+    scope_param =  'https://www.google.com/m8/feeds/contacts/default/full?max-results=0%20https://docs.google.com/feeds/documents/private/full'
 
     secure_param = "0"
     session_param = "1"
@@ -36,13 +36,35 @@ class HomeController < ApplicationController
     client.authsub_token = session[:token] if session[:token]
     #logger.info client.auth_handler.info
     # redirect_to '/'
-    logger.info feed = client.get('http://www.google.com/m8/feeds/contacts/default/full?max-results=0').to_xml
+feed = client.get('https://docs.google.com/feeds/documents/private/full').to_xml
+session[:documents] = []
+feed.elements.each('entry') do |entry|
+  puts 'title: ' + entry.elements['title'].text
+  puts 'type: ' + entry.elements['category'].attribute('label').value
+  puts 'updated: ' + entry.elements['updated'].text
+  puts 'id: ' + entry.elements['id'].text
+  document = {:title => entry.elements['title'].text}
+  # Extract the href value from each <atom:link>
+  links = {}
+  url = ''
+  entry.elements.each('link') do |link|
+    url = link.attribute('href').value
+    break;
+  end
+  puts links.to_s
+  document = {:title => entry.elements['title'].text, :url => url }
+  session[:documents] << document
+end
+puts session[:documents]
+   feed = client.get('https://www.google.com/m8/feeds/contacts/default/full?max-results=0').to_xml
 
 
-    logger.info feed.elements['title'].text
-    logger.info feed.elements['author'].elements['name'].text
-    logger.info feed.elements['author'].elements['email'].text
+    feed.elements['title'].text
+ feed.elements['author'].elements['name'].text
+   feed.elements['author'].elements['email'].text
     if feed and  params[:token]
+
+
       if feed.elements['author'] and feed.elements['author'].elements['email'].text
         @staff_email = Staff.find_by_email(feed.elements['author'].elements['email'].text)
         @staff_userid = Staff.find_by_userid(feed.elements['author'].elements['email'].text)

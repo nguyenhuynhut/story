@@ -1,3 +1,4 @@
+
 class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.xml

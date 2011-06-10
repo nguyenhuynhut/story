@@ -44,6 +44,7 @@ doc\:clobber_plugins=
 doc\:clobber_rails=
 doc\:guides=
 doc\:plugins=
+doc\:plugins\:acts-as-taggable-on=
 doc\:plugins\:recaptcha=
 doc\:plugins\:sortable_table=
 doc\:rails=

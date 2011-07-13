@@ -4,7 +4,10 @@
   <b>Date:</b>
   <%= @shoot.date %>
 </p>
-
+<p>
+  <b>Name:</b>
+  <%= @shoot.name %>
+</p>
 <p>
   <b>Crew requirements:</b>
   <%= raw @shoot.crew_requirements %>
@@ -16,7 +19,7 @@
 </p>
 <p>
   <b>Cameraperson:</b>
-  <%= @shoot.cameraperson ? @shoot.cameraperson.userid : "" %>
+  <%= @shoot.cameraperson ? html_escape(@shoot.cameraperson.first_name + ' ' + @shoot.cameraperson.last_name) : "" %>
 </p>
 <% if @valid_staff %>
   <% if @valid_staff.is_senior_producer == true %>

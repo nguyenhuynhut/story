@@ -12,6 +12,7 @@ StorySystem::Application.routes.draw do
   get "staffs/forgot"
   get "home/index"
   get "characters/tag_list"
+  get "stories/clone"
   get "stories/tag_list"
   get "staffs/contact_us"
   get "staffs/contact_staff"

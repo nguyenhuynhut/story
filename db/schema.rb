@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(:version => 20110610061104) do
     t.text     "notes"
     t.text     "preshow_tease"
     t.boolean  "check_mail"
+    t.string   "name"
     t.integer  "cameraperson_id"
     t.integer  "approver_id"
     t.integer  "story_id"
@@ -93,6 +94,8 @@ ActiveRecord::Schema.define(:version => 20110610061104) do
     t.text     "graphics_collateral"
     t.string   "script"
     t.date     "deadline"
+    t.string   "video"
+    t.string   "fork_id"
     t.boolean  "check_mail"
     t.boolean  "approved"
     t.boolean  "archived"
@@ -123,6 +126,7 @@ ActiveRecord::Schema.define(:version => 20110610061104) do
 
   create_table "webextras", :force => true do |t|
     t.string   "title"
+    t.string   "name"
     t.text     "summary"
     t.boolean  "check_mail"
     t.string   "videourl"

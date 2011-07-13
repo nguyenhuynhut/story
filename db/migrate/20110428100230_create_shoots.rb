@@ -9,7 +9,7 @@ class CreateShoots < ActiveRecord::Migration
       t.text :notes
       t.text :preshow_tease
       t.boolean :check_mail
-
+      t.string :name
       t.references :cameraperson
       t.references :approver
       t.references :story

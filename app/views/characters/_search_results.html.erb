@@ -1,26 +1,11 @@
 <div id="results">
- <table>
+  <table>
     <tr>
-            <th>Avatar</th>
-      <%= sortable_table_header :name => "Salutation",   :sort => "salutation" ,:class => 'pagination ajax' %>
 
       <%= sortable_table_header :name => "First name",   :sort => "first_name" ,:class => 'pagination ajax' %>
       <%= sortable_table_header :name => "Last name",   :sort => "last_name" ,:class => 'pagination ajax' %>
-
-      <%= sortable_table_header :name => "Address",   :sort => "address" ,:class => 'pagination ajax' %>
-      <%= sortable_table_header :name => "City",   :sort => "city" ,:class => 'pagination ajax' %>
-      <%= sortable_table_header :name => "State",   :sort => "state" ,:class => 'pagination ajax' %>
-      <%= sortable_table_header :name => "Zip",   :sort => "zip" ,:class => 'pagination ajax' %>
       <th>Phone 1</th>
-      <th>Phone 2</th>
-      <th>Phone 3</th>
-      <th>Email 1</th>
-      <th>Email 2</th>
-      <%= sortable_table_header :name => "Representative",   :sort => "representative" %>
-      <th>Rep address</th>
-            <th>Rep phone</th>
-                  <th>Rep email</th>
-                  <th>Tags</th>
+
       <th></th>
       <% if @valid_staff %>
         <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
@@ -31,39 +16,25 @@
         <th></th>
       <% end %>
     </tr>
-   <% if @characters %>
-    <% @characters.each do |character| %>
-      <tr>
-                <td>  <%= image_tag character ? (character.avatar ? character.avatar : 'logo.jpg')  : 'logo.jpg', :size => "60x60" %></td>
-        <td><%= html_escape(character.salutation) %></td>
-        <td><%= html_escape(character.first_name) %></td>
-        <td><%= html_escape(character.last_name) %></td>
-        <td><%= html_escape(character.address) %></td>
-        <td><%= html_escape(character.city) %></td>
-        <td><%= html_escape(character.state) %></td>
-        <td><%= html_escape(character.zip) %></td>
-        <td><%= html_escape(character.phone_1) %></td>
-        <td><%= html_escape(character.phone_2) %></td>
-        <td><%= html_escape(character.phone_3) %></td>
-        <td><%= html_escape(character.email_1) %></td>
-        <td><%= html_escape(character.email_2) %></td>
-        <td><%= html_escape(character.representative) %></td>
-        <td><%= html_escape(character.rep_address) %></td>
-           <td><%= html_escape(character.rep_phone) %></td>
-              <td><%= html_escape(character.rep_email) %></td>
-                            <td><%= html_escape(character.tag_list) %></td>
-        <td><%= link_to 'Show', character %></td>
-        <% if @valid_staff %>
-          <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
-            <td><%= link_to 'Edit', edit_character_path(character) %></td>
+    <% if @characters %>
+      <% @characters.each do |character| %>
+        <tr>
+
+          <td><%= html_escape(character.first_name) %></td>
+          <td><%= html_escape(character.last_name) %></td>
+          <td><%= html_escape(character.phone_1) %></td>
+          <td><%= link_to 'Show', character %></td>
+          <% if @valid_staff %>
+            <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
+              <td><%= link_to 'Edit', edit_character_path(character) %></td>
+            <% end %>
           <% end %>
-        <% end %>
-        <% if session[:userid] != nil and Staff.find_by_userid(session[:userid]).userid == 'admin' %>
-          <td><%= link_to 'Destroy', character, :confirm => 'Are you sure?', :method => :delete %></td>
-        <% end %>
-      </tr>
+          <% if session[:userid] != nil and Staff.find_by_userid(session[:userid]).userid == 'admin' %>
+            <td><%= link_to 'Destroy', character, :confirm => 'Are you sure?', :method => :delete %></td>
+          <% end %>
+        </tr>
+      <% end %>
     <% end %>
-     <% end %>
   </table>
-    <%= will_paginate @characters, :class => 'pagination ajax' %>
-  </div>
+  <%= will_paginate @characters, :class => 'pagination ajax' %>
+</div>

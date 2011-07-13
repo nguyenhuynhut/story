@@ -4,17 +4,16 @@ class WebextrasController < ApplicationController
   uses_tiny_mce :options => {
     :theme => 'advanced',
     :theme_advanced_resizing => true,
+    :theme_advanced_buttons2 => "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
     :theme_advanced_resize_horizontal => false,
     :plugins => %w{ table fullscreen }
   }
 
   before_filter :from_story_show, :permission , :only => [:edit , :destroy]
-  sortable_attributes :title , :summary
+  sortable_attributes :title , :summary, :name
   def index
-    @story = Story.find_by_id(session[:story_id])
-    if @story == nil
-      redirect_to :controller => 'stories' ,:action => 'index'
-      return
+    if session[:userid] != nil and session[:userid] != ''
+      @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])
     end
     query_string = ""
     conditions = {}
@@ -27,9 +26,21 @@ class WebextrasController < ApplicationController
         query_string = query_string + " AND UPPER(summary) LIKE :summary"
         conditions[:summary] = "%" + params[:webextra][:summary].strip.upcase + "%"
       end
+      if params[:webextra][:name] != nil and params[:webextra][:name] != ''
+        query_string = query_string + " AND UPPER(name) LIKE :name"
+        conditions[:name] = "%" + params[:webextra][:name].strip.upcase + "%"
+      end
+      if params[:webextra][:story_id] != nil and params[:webextra][:story_id] != ''
+        query_string = query_string + " AND story_id = :story_id"
+        conditions[:story_id] = params[:webextra][:story_id]
+      end
+    else
+      if Story.find_by_id(session[:story_id])
+        query_string = query_string + " AND story_id = :story_id"
+        conditions[:story_id] = session[:story_id]
+      end
     end
-    conditions[:story_id] = @story.id
-    @webextras = Webextra.where("story_id = :story_id" + query_string, conditions).find(:all ,:order => sort_order).paginate :page => params[:page],:per_page => params[:webextra] ? params[:webextra][:record_number] : 10
+    @webextras = Webextra.where("created_at IS NOT NULL" + query_string, conditions).find(:all ,:order => sort_order).paginate :page => params[:page],:per_page => params[:webextra] ? params[:webextra][:record_number] : 10
 
 
     respond_to do |format|
@@ -75,7 +86,6 @@ class WebextrasController < ApplicationController
   # POST /webextras.xml
   def create
     @webextra = Webextra.new(params[:webextra])
-    @webextra.story_id = session[:story_id]
     @webextra.check_mail = false
     if session[:userid] != nil and session[:userid] != ''
       @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])
@@ -90,10 +100,6 @@ class WebextrasController < ApplicationController
             AWS::S3::S3Object.store(sanitize_filename(file_name + extension), params[:video].read, BUCKET, :access => :public_read)
             @webextra.update_attribute('videourl' ,AWS::S3::S3Object.url_for(file_name + extension, BUCKET, :authenticated => false))
 
-          else
-            @webextra.delete
-            render :text => "Couldn't complete the upload"
-            return
           end
         rescue
           @webextra.delete
@@ -120,22 +126,14 @@ class WebextrasController < ApplicationController
     @webextra.staff_id = @valid_staff.id
     respond_to do |format|
       if @webextra.update_attributes(params[:webextra])
-        begin
-          if params[:video] and params[:video].original_filename
-            extension = File.extname(params[:video].original_filename)
-            file_name = @webextra.id.to_s + '_' + Time.now.to_i.to_s
-            AWS::S3::S3Object.store(sanitize_filename(file_name + extension), params[:video].read, BUCKET, :access => :public_read)
-            @webextra.update_attribute('videourl' ,AWS::S3::S3Object.url_for(file_name + extension, BUCKET, :authenticated => false))
 
-          else
-
-            render :text => "Couldn't complete the upload"
-            return
-          end
-        rescue
-          render :text => "Couldn't complete the upload"
-          return
+        if params[:video] and params[:video].original_filename
+          extension = File.extname(params[:video].original_filename)
+          file_name = @webextra.id.to_s + '_' + Time.now.to_i.to_s
+          AWS::S3::S3Object.store(sanitize_filename(file_name + extension), params[:video].read, BUCKET, :access => :public_read)
+          @webextra.update_attribute('videourl' ,AWS::S3::S3Object.url_for(file_name + extension, BUCKET, :authenticated => false))
         end
+
         format.html { redirect_to(@webextra, :notice => 'Webextra was successfully updated.') }
         format.xml  { head :ok }
       else

@@ -2,6 +2,7 @@
   <table>
     <tr>
       <%= sortable_table_header :name => "Title",   :sort => "title" ,:class => 'pagination ajax' %>
+      <%= sortable_table_header :name => "Name",   :sort => "name" ,:class => 'pagination ajax' %>
       <%= sortable_table_header :name => "Summary",   :sort => "summary" ,:class => 'pagination ajax' %>
       <th> </th>
       <% if @valid_staff %>
@@ -18,6 +19,7 @@
     <% @webextras.each do |webextra| %>
       <tr>
         <td><%= webextra.title %></td>
+        <td><%= html_escape(webextra.name) %></td>
         <td><%= raw webextra.summary %></td>
         <td><%= link_to 'Show', webextra %></td>
         <% if @valid_staff %>
@@ -31,6 +33,6 @@
       </tr>
     <% end %>
   </table>
-    <%= will_paginate @webextras, :class => 'pagination ajax' %>
+  <%= will_paginate @webextras, :class => 'pagination ajax' %>
 
-  </div>
+</div>

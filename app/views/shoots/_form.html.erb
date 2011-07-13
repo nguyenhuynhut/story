@@ -16,6 +16,14 @@
     <%= f.date_select :date %>
   </div>
   <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+    <div class="field">
+    <%= f.label :story_id %><br />
+    <%= f.select(:story_id, Story.find(:all, :conditions => [" archived = ?", false],:order => 'name asc').collect {|c| [c.name , c.id ] }, :include_blank => true) %>
+    </div>
+  <div class="field">
     <%= f.label :crew_requirements %><br />
     <%= f.text_area :crew_requirements, :class => "mceEditor"  %>
   </div>
@@ -42,7 +50,7 @@
   <div class="field">
     <%= f.label :cameraperson %><br />
 
-    <%= f.select(:cameraperson_id, Staff.find(:all, :order => 'userid asc').collect {|c| [c.userid, c.id ] }) %>
+    <%= f.select(:cameraperson_id, Staff.find(:all, :order => 'first_name asc, last_name asc').collect {|c| [c.first_name + ' ' + c.last_name, c.id ] }) %>
 
   </div>
   <div class="field">

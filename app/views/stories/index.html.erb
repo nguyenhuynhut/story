@@ -13,34 +13,14 @@
       <td>
         <%= f.text_field :name, :value => params[:story] ? params[:story][:name] : '' %>
       </td>
-      <td>
-        <%= f.label :outline %>
-      </td>
-      <td>
-        <%= f.text_field :outline, :value => params[:story] ? params[:story][:outline] : '' %>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <%= f.label :graphics_collateral %>
-      </td>
-      <td>
-        <%= f.text_field :graphics_collateral, :value => params[:story] ? params[:story][:graphics_collateral] : '' %>
-      </td>
-      <td>
-        <%= f.label :script %>
-      </td>
-      <td>
-        <%= f.text_field :script, :value => params[:story] ? params[:story][:script] : '' %>
-      </td>
     </tr>
   </table>
   <%= f.label :producer %>
-  <%= f.select(:producer_id, Staff.find(:all, :order => 'userid asc').collect {|c| [c.userid, c.id ] },  :selected  => params[:story] ? params[:story][:producer_id] : '', :include_blank => true) %>
+  <%= f.select(:producer_id, Staff.find(:all, :order => 'first_name asc, last_name asc').collect {|c| [c.first_name + ' ' + c.last_name, c.id ] },  :selected  => params[:story] ? params[:story][:producer_id] : '', :include_blank => true) %>
   <%= f.label :correspondent %>
-  <%= f.select(:correspondent_id, Staff.find(:all, :order => 'userid asc').collect {|c| [c.userid, c.id ] },  :selected  => params[:story] ? params[:story][:correspondent_id] : '', :include_blank => true) %>
+  <%= f.select(:correspondent_id, Staff.find(:all, :order => 'first_name asc, last_name asc').collect {|c| [c.first_name + ' ' + c.last_name, c.id ] },  :selected  => params[:story] ? params[:story][:correspondent_id] : '', :include_blank => true) %>
   <%= f.label :editor %>
-  <%= f.select(:editor_id, Staff.find(:all, :order => 'userid asc').collect {|c| [c.userid, c.id ] },  :selected  => params[:story] ? params[:story][:editor_id] : '', :include_blank => true) %>
+  <%= f.select(:editor_id, Staff.find(:all, :order => 'first_name asc, last_name asc').collect {|c| [c.first_name + ' ' + c.last_name, c.id ] },  :selected  => params[:story] ? params[:story][:editor_id] : '', :include_blank => true) %>
   <%= f.label "Show Archived" %>
   <%= f.check_box :archived, :value => params[:story] ? params[:story][:archived] : false %>
   <br />
@@ -50,11 +30,11 @@
 
   <br/>
   <% if params[:story] and params[:story][:approved] == '1' %>
-  <%= link_to 'New Story', new_story_path(:story =>{:approved => 1}) %>
-     <%= link_to 'Tags', :controller => "stories", :action => "tag_list" %>
+    <%= link_to 'New Story', new_story_path(:story =>{:approved => 1}) %>
+    <%= link_to 'Tags', :controller => "stories", :action => "tag_list" %>
 
   <% else %>
     <%= link_to 'New Pitch', new_story_path %>
-  
+
   <% end %>
 <% end %>

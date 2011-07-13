@@ -1,7 +1,8 @@
 <div id="results">
- <table>
+  <table>
     <tr>
       <%= sortable_table_header :name => "Date",   :sort => "date" ,:class => 'pagination ajax' %>
+      <%= sortable_table_header :name => "Name",   :sort => "name" ,:class => 'pagination ajax' %>
       <%= sortable_table_header :name => "Crew requirements",   :sort => "crew_requirements" ,:class => 'pagination ajax' %>
       <%= sortable_table_header :name => "Location",   :sort => "location" ,:class => 'pagination ajax' %>
       <th>Camera Person</th>
@@ -34,9 +35,10 @@
     <% @shoots.each do |shoot| %>
       <tr>
         <td><%= shoot.date %></td>
+        <td><%= html_escape(shoot.name) %></td>
         <td><%= raw shoot.crew_requirements %></td>
         <td><%= raw shoot.location %></td>
-        <td> <%= shoot.cameraperson ? html_escape(shoot.cameraperson.userid) : "" %> </td>
+        <td> <%= shoot.cameraperson ? html_escape(shoot.cameraperson.first_name + ' ' + shoot.cameraperson.last_name) : "" %> </td>
         <% if @valid_staff %>
           <% if @valid_staff.is_senior_producer == true %>
             <td><%= shoot.senior_approval %></td>
@@ -63,5 +65,5 @@
       </tr>
     <% end %>
   </table>
-    <%= will_paginate  @shoots, :class => 'pagination ajax' %>
-  </div>
+  <%= will_paginate  @shoots, :class => 'pagination ajax' %>
+</div>

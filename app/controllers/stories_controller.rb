@@ -5,12 +5,13 @@ class StoriesController < ApplicationController
   uses_tiny_mce :options => {
     :theme => 'advanced',
     :theme_advanced_resizing => true,
+    :theme_advanced_buttons2 => "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
     :theme_advanced_resize_horizontal => false,
     :plugins => %w{ table fullscreen }
   }
 
-  sortable_attributes :name , :outline ,:graphics_collateral ,:script, :deadline
-  before_filter :permission , :only => [:edit , :destroy]
+  sortable_attributes :name , :deadline
+  before_filter :permission , :only => [:edit , :destroy, :clone]
   def index
     if params[:story]
       if params[:story][:approved] == '1'
@@ -31,18 +32,7 @@ class StoriesController < ApplicationController
         query_string = query_string + " AND UPPER(name) LIKE :name"
         conditions[:name] = "%" + params[:story][:name].strip.upcase + "%"
       end
-      if params[:story][:outline] != nil and params[:story][:outline] != ''
-        query_string = query_string + " AND UPPER(outline) LIKE :outline"
-        conditions[:outline] = "%" + params[:story][:outline].strip.upcase + "%"
-      end
-      if params[:story][:graphics_collateral] != nil and params[:story][:graphics_collateral] != ''
-        query_string = query_string + " AND UPPER(graphics_collateral) LIKE :graphics_collateral"
-        conditions[:graphics_collateral] = "%" + params[:story][:graphics_collateral].strip.upcase + "%"
-      end
-      if params[:story][:script] != nil and params[:story][:script] != ''
-        query_string = query_string + " AND UPPER(script) LIKE :script"
-        conditions[:script] = "%" + params[:story][:script].strip.upcase + "%"
-      end
+     
       if params[:story][:producer_id] != nil and params[:story][:producer_id] != ''
         query_string = query_string + " AND producer_id = :producer_id"
         conditions[:producer_id] = params[:story][:producer_id]
@@ -56,8 +46,6 @@ class StoriesController < ApplicationController
         conditions[:editor_id] = params[:story][:editor_id]
       end
     end
-    logger.info 'params'
-    logger.info params
     if params[:story]
 
       if params[:story][:approved] == '1'
@@ -240,6 +228,16 @@ class StoriesController < ApplicationController
         end
       }
 
+    end
+  end
+    def clone
+    @story = Story.find(params[:id])
+    @clone = Story.new(@story.attributes)
+    @clone.save
+
+    respond_to do |format|
+      format.html { redirect_to(stories_path(:story =>{:approved => 1})) }
+      format.xml  { head :ok }
     end
   end
 end

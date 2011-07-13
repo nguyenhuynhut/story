@@ -1,12 +1,40 @@
 <h1>Listing shoots</h1>
 <%= form_for :shoot, :remote => true, :html => { :method => :get} do |f| %>
-  <%= f.label :crew_requirements  %>
-  <%= f.text_field :crew_requirements, :value => params[:shoot] ? params[:shoot][:crew_requirements] : '' %>
-  <%= f.label :location  %>
-  <%= f.text_field :location, :value => params[:shoot] ? params[:shoot][:location] : '' %>
-  <%= f.label :cameraperson %>
-  <%= f.select(:cameraperson_id, Staff.find(:all, :order => 'userid asc').collect {|c| [c.userid, c.id ] },  :selected  => params[:shoot] ? params[:shoot][:cameraperson_id] : '', :include_blank => true) %>
-  
+  <table>
+    <tr>
+      <td>
+        <%= f.label :name  %>
+      </td><td>
+        <%= f.text_field :name, :value => params[:shoot] ? params[:shoot][:name] : '' %>
+      </td><td>
+        <%= f.label :crew_requirements  %>
+      </td><td>
+        <%= f.text_field :crew_requirements, :value => params[:shoot] ? params[:shoot][:crew_requirements] : '' %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :location  %>
+      </td><td>
+        <%= f.text_field :location, :value => params[:shoot] ? params[:shoot][:location] : '' %>
+      </td><td>
+        <%= f.label :cameraperson %>
+      </td><td>
+        <%= f.select(:cameraperson_id, Staff.find(:all, :order => 'first_name asc, last_name asc').collect {|c| [c.first_name + ' ' + c.last_name, c.id ] },  :selected  => params[:shoot] ? params[:shoot][:cameraperson_id] : '', :include_blank => true) %>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        <%= f.label :story  %>
+      </td><td>
+       <%= f.select(:story_id, Story.find(:all, :conditions => [" archived = ?", false],:order => 'name asc').collect {|c| [c.name , c.id ] },  :selected  => params[:shoot] ? params[:shoot][:story_id] : (Story.find_by_id(session[:story_id]) ? Story.find_by_id(session[:story_id]).id : ''), :include_blank => true) %>
+      </td><td>
+
+      </td><td>
+
+      </td>
+    </tr>
+  </table>
   <br />
   <%= submit_tag("Search") %>
   <%= render "search_results" %>

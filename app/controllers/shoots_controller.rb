@@ -4,19 +4,17 @@ class ShootsController < ApplicationController
   uses_tiny_mce :options => {
     :theme => 'advanced',
     :theme_advanced_resizing => true,
+    :theme_advanced_buttons2 => "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
     :theme_advanced_resize_horizontal => false,
     :plugins => %w{ table fullscreen }
   }
 
   before_filter :from_story_show
-  sortable_attributes :date , :crew_requirements  ,:location
+  sortable_attributes :date , :crew_requirements  ,:location, :name
   before_filter :permission , :only => [:edit , :destroy]
   def index
-    @story = Story.find_by_id(session[:story_id])
-    if @story == nil
-      redirect_to :controller => 'stories' ,:action => 'index'
-      return
-    end
+
+
     if session[:userid] != nil and session[:userid] != ''
       @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])
     end
@@ -35,10 +33,22 @@ class ShootsController < ApplicationController
         query_string = query_string + " AND cameraperson_id = :cameraperson_id"
         conditions[:cameraperson_id] = params[:shoot][:cameraperson_id]
       end
+      if params[:shoot][:story_id] != nil and params[:shoot][:story_id] != ''
+        query_string = query_string + " AND story_id = :story_id"
+        conditions[:story_id] = params[:shoot][:story_id]
+      end
+      if params[:shoot][:name] != nil and params[:shoot][:name] != ''
+        query_string = query_string + " AND UPPER(name) LIKE :name"
+        conditions[:name] = "%" + params[:shoot][:name].strip.upcase + "%"
+      end
+    else
+      if Story.find_by_id(session[:story_id])
+        query_string = query_string + " AND story_id = :story_id"
+        conditions[:story_id] = session[:story_id]
+      end
     end
-    conditions[:story_id] = @story.id
-    logger.info params[:shoot]
-    @shoots = Shoot.where("story_id = :story_id" + query_string, conditions).find(:all ,:order => sort_order).paginate :page => params[:page],:per_page => params[:shoot] ? params[:shoot][:record_number] : 10
+
+    @shoots = Shoot.where("created_at IS NOT NULL" + query_string, conditions).find(:all ,:order => sort_order).paginate :page => params[:page],:per_page => params[:shoot] ? params[:shoot][:record_number] : 10
     respond_to do |format|
       format.html # index.html.erb
       format.js {
@@ -87,7 +97,6 @@ class ShootsController < ApplicationController
   # POST /shoots.xml
   def create
     @shoot = Shoot.new(params[:shoot])
-    @shoot.story_id = session[:story_id]
     @shoot.check_mail = false
     if session[:userid] != nil and session[:userid] != ''
       @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])

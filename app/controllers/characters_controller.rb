@@ -5,28 +5,21 @@ class CharactersController < ApplicationController
     :theme => 'advanced',
     :theme_advanced_resizing => true,
     :theme_advanced_resize_horizontal => false,
+    :theme_advanced_buttons2 => "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
     :plugins => %w{ table fullscreen }
   }
 
   before_filter :from_story_show
-  sortable_attributes :salutation ,:firstname ,:lastname ,:address, :city, :state, :zip, :representative
+  sortable_attributes :first_name ,:last_name
   before_filter :permission , :only => [:edit , :destroy]
   def index
-    @story = Story.find_by_id(session[:story_id])
-    if @story == nil
-      redirect_to :controller => 'stories' ,:action => 'index'
-      return
-    end
+
     if session[:userid] != nil and session[:userid] != ''
       @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])
     end
     query_string = ""
     conditions = {}
     if params[:character]
-      if params[:character][:salutation] != nil and params[:character][:salutation] != ''
-        query_string = query_string + " AND UPPER(salutation) LIKE :salutation"
-        conditions[:salutation] = "%" + params[:character][:salutation].strip.upcase + "%"
-      end
       if params[:character][:first_name] != nil and params[:character][:first_name] != ''
         query_string = query_string + " AND UPPER(first_name) LIKE :first_name"
         conditions[:first_name] = "%" + params[:character][:first_name].strip.upcase + "%"
@@ -35,25 +28,18 @@ class CharactersController < ApplicationController
         query_string = query_string + " AND UPPER(last_name) LIKE :last_name"
         conditions[:last_name] = "%" + params[:character][:last_name].strip.upcase + "%"
       end
-      if params[:character][:address] != nil and params[:character][:address] != ''
-        query_string = query_string + " AND UPPER(address) LIKE :address"
-        conditions[:address] = "%" + params[:character][:address].strip.upcase + "%"
+      if params[:character][:story_id] != nil and params[:character][:story_id] != ''
+        query_string = query_string + " AND story_id = :story_id"
+        conditions[:story_id] = params[:character][:story_id]
       end
-      if params[:character][:city] != nil and params[:character][:city] != ''
-        query_string = query_string + " AND UPPER(city) LIKE :city"
-        conditions[:city] = "%" + params[:character][:city].strip.upcase + "%"
-      end
-      if params[:character][:state] != nil and params[:character][:state] != ''
-        query_string = query_string + " AND UPPER(state) LIKE :state"
-        conditions[:state] = "%" + params[:character][:state].strip.upcase + "%"
-      end
-      if params[:character][:zip] != nil and params[:character][:zip] != ''
-        query_string = query_string + " AND UPPER(zip) LIKE :zip"
-        conditions[:zip] = "%" + params[:character][:zip].strip.upcase + "%"
+    else
+      if Story.find_by_id(session[:story_id])
+        query_string = query_string + " AND story_id = :story_id"
+        conditions[:story_id] = session[:story_id]
       end
     end
-    conditions[:story_id] = @story.id
-    @characters = Character.where("story_id = :story_id" + query_string, conditions).find(:all ,:order => sort_order).paginate :page => params[:page],:per_page => params[:character] ? params[:character][:record_number] : 10
+
+    @characters = Character.where("created_at IS NOT NULL" + query_string, conditions).find(:all ,:order => sort_order).paginate :page => params[:page],:per_page => params[:character] ? params[:character][:record_number] : 10
 
 
     respond_to do |format|
@@ -100,7 +86,6 @@ class CharactersController < ApplicationController
   # POST /characters.xml
   def create
     @character = Character.new(params[:character])
-    @character.story_id = session[:story_id]
     respond_to do |format|
       if @character.save
         if params[:avatar] then

@@ -17,6 +17,14 @@
   <b>Name:</b>
   <%= html_escape(@story.name) %>
 </p>
+<p>
+  <b>Fork Id:</b>
+  <%= html_escape(@story.fork_id) %>
+</p>
+<p>
+  <b>Video:</b>
+  <%= html_escape(@story.video) %>
+</p>
 
 <p>
   <b>Outline:</b>
@@ -43,6 +51,18 @@
 <p>
   <b>Approved:</b>
   <%= @story.approved %>
+</p>
+<p>
+  <b>Producer:</b>
+  <%= @story.producer ? @story.producer.first_name + ' ' + @story.producer.last_name : '' %>
+</p>
+<p>
+  <b>Correspondent:</b>
+  <%=  @story.correspondent ? @story.correspondent.first_name + ' ' + @story.correspondent.last_name : ''%>
+</p>
+<p>
+  <b>Editor:</b>
+  <%=  @story.editor ? @story.editor.first_name + ' ' + @story.editor.last_name : '' %>
 </p>
 <% if @story.approved == true %>
 
@@ -90,8 +110,8 @@
     <% @shoots.each do |shoot| %>
       <tr>
         <td><%= shoot.date %></td>
-        <td><%= html_escape(shoot.crew_requirements) %></td>
-        <td><%= html_escape(shoot.location) %></td>
+        <td><%= raw shoot.crew_requirements %></td>
+        <td><%= raw shoot.location %></td>
         <td> <%= shoot.cameraperson ? shoot.cameraperson.userid : "" %> </td>
         <% if @valid_staff %>
           <% if @valid_staff.is_senior_producer == true %>
@@ -103,8 +123,8 @@
             <td><%= shoot.assigned %></td>
           <% end %>
         <% end %>
-        <td><%= html_escape(shoot.notes) %></td>
-        <td><%= html_escape(shoot.preshow_tease) %></td>
+        <td><%= raw shoot.notes %></td>
+        <td><%= raw shoot.preshow_tease %></td>
         <td><%= link_to 'Show', shoot %></td>
         <% if @valid_staff %>
           <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>
@@ -208,7 +228,7 @@
     <% @webextras.each do |webextra| %>
       <tr>
         <td><%= html_escape(webextra.title) %></td>
-        <td><%= html_escape(webextra.summary) %></td>
+        <td><%= raw webextra.summary %></td>
         <td><%= link_to 'Show', webextra %></td>
         <% if @valid_staff %>
           <% if @valid_staff.is_senior_producer == true or @valid_staff.is_assignment_editor  == true or @valid_staff.is_producer == true %>

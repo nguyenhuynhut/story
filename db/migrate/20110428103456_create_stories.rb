@@ -6,6 +6,8 @@ class CreateStories < ActiveRecord::Migration
       t.text :graphics_collateral
       t.string :script
       t.date :deadline
+      t.string :video
+      t.string :fork_id
       t.boolean :check_mail
       t.boolean :approved
       t.boolean :archived

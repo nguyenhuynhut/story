@@ -4,9 +4,9 @@
       <h2><%= pluralize(@character.errors.count, "error") %> prohibited this character from being saved:</h2>
 
       <ul>
-      <% @character.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @character.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -17,6 +17,10 @@
     Avatar<br />
     <%= file_field_tag 'avatar' %>
   </p>
+  <div class="field">
+    <%= f.label :story_id %><br />
+    <%= f.select(:story_id, Story.find(:all, :conditions => [" archived = ?", false],:order => 'name asc').collect {|c| [c.name , c.id ] }, :include_blank => true) %>
+  </div>
   <div class="field">
     <%= f.label :salutation %><br />
     <%= f.text_field :salutation %>

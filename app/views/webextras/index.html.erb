@@ -1,13 +1,30 @@
 <h1>Listing webextras</h1>
 <%= form_for :webextra,:remote => true, :html => { :method => :get} do |f| %>
-  <%= f.label :title  %>
-  <%= f.text_field :title, :value => params[:webextra] ? params[:webextra][:title] : '' %>
-  <%= f.label :summary  %>
-  <%= f.text_field :summary, :value => params[:webextra] ? params[:webextra][:summary] : '' %>
+  <table>
+    <tr><td>
+        <%= f.label :title  %>
+      </td><td>
+        <%= f.text_field :title, :value => params[:webextra] ? params[:webextra][:title] : '' %>
+      </td><td>
+        <%= f.label :name  %>
+      </td><td>
+        <%= f.text_field :name, :value => params[:webextra] ? params[:webextra][:name] : '' %>
+      </td></tr>
+    <tr><td>
+        <%= f.label :summary  %>
+      </td><td>
+        <%= f.text_field :summary, :value => params[:webextra] ? params[:webextra][:summary] : '' %>
+      </td><td>
+        <%= f.label :story  %>
+      </td><td>
+        <%= f.select(:story_id, Story.find(:all, :conditions => [" archived = ?", false],:order => 'name asc').collect {|c| [c.name , c.id ] },  :selected  => params[:shoot] ? params[:shoot][:story_id] : (Story.find_by_id(session[:story_id]) ? Story.find_by_id(session[:story_id]).id : ''), :include_blank => true) %>
+      </td>
+    </tr>
+  </table>
   <br />
 
 
-    <%= submit_tag("Search",  :class => 'pagination ajax' ) %>
+  <%= submit_tag("Search",  :class => 'pagination ajax' ) %>
   <%= render "search_results" %>
   Display <%= f.select(:record_number, [[10,10], [20, 20], [50, 50], [100, 100]] , :selected => params[:webextra] ? params[:webextra][:record_number] : 10) %> records
 

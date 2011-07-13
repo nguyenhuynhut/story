@@ -2,12 +2,7 @@
 <%= form_for :character, :remote => true, :html => { :method => :get} do |f| %>
   <table>
     <tr>
-      <td>
-        <%= f.label :salutation %>
-      </td>
-      <td>
-        <%= f.text_field :salutation, :value => params[:character] ? params[:character][:salutation] : '' %>
-      </td>
+
       <td>
         <%= f.label :first_name %>
       </td>
@@ -20,40 +15,15 @@
       <td>
         <%= f.text_field :last_name, :value => params[:character] ? params[:character][:last_name] : '' %>
       </td>
-
-    </tr>
-    <tr>
       <td>
-        <%= f.label :address %>
+        <%= f.label :story  %>
+      </td><td>
+       <%= f.select(:story_id, Story.find(:all, :conditions => [" archived = ?", false],:order => 'name asc').collect {|c| [c.name , c.id ] },  :selected  => params[:shoot] ? params[:shoot][:story_id] : (Story.find_by_id(session[:story_id]) ? Story.find_by_id(session[:story_id]).id : ''), :include_blank => true) %>
       </td>
-      <td>
-        <%= f.text_field :address, :value => params[:character] ? params[:character][:address] : '' %>
-      </td>
-      <td>
-        <%= f.label :city %>
-      </td>
-      <td>
-        <%= f.text_field :city, :value => params[:character] ? params[:character][:city] : '' %>
-      </td>
-      <td>
-        <%= f.label :state %>
-      </td>
-      <td>
-        <%= f.text_field :state, :value => params[:character] ? params[:character][:state] : '' %>
-      </td>
-
-    </tr>
-    <tr>
-      <td>  <%= f.label :zip %></td>
-      <td>   <%= f.text_field :zip, :value => params[:character] ? params[:character][:zip] : '' %></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
     </tr>
   </table>
   <%= submit_tag("Search") %>
- <%= render "search_results" %>
+  <%= render "search_results" %>
   Display <%= f.select(:record_number, [[10,10], [20, 20], [50, 50], [100, 100]] , :selected => params[:character] ? params[:character][:record_number] : 10) %> records
 
   <br/>

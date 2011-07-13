@@ -1,5 +1,5 @@
 class Webextra < ActiveRecord::Base
-  validates :title  ,:presence => true
+  validates :title, :name  ,:presence => true
   belongs_to :stories
   belongs_to :staff
     def Webextra.send_webextra

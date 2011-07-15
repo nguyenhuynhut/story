@@ -21,6 +21,10 @@ StorySystem::Application.routes.draw do
   resources :staffs
   resources :stories
   resources :characters
+  resources :shoots do
+  get :autocomplete_story_name, :on => :collection
+end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

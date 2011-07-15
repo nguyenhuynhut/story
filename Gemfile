@@ -13,6 +13,7 @@ gem 'aws-s3', :require => 'aws/s3'
 gem "rufus-scheduler"
 gem 'tiny_mce'
 gem 'acts-as-taggable-on'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

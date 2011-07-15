@@ -9,7 +9,6 @@ class StoriesController < ApplicationController
     :theme_advanced_resize_horizontal => false,
     :plugins => %w{ table fullscreen }
   }
-
   sortable_attributes :name , :deadline
   before_filter :permission , :only => [:edit , :destroy, :clone]
   def index

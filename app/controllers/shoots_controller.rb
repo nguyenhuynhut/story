@@ -8,10 +8,16 @@ class ShootsController < ApplicationController
     :theme_advanced_resize_horizontal => false,
     :plugins => %w{ table fullscreen }
   }
+  auto_complete_for :story, :name
+
 
   before_filter :from_story_show
   sortable_attributes :date , :crew_requirements  ,:location, :name
   before_filter :permission , :only => [:edit , :destroy]
+  def auto_complete_for_story_name
+    @stories = Story.find(:all , :conditions => ["name like (?) and archived = ?", "%" + params[:story][:name].to_s + "%", false],:order => 'name asc')
+    render :partial => 'story'
+  end
   def index
 
 
@@ -20,6 +26,15 @@ class ShootsController < ApplicationController
     end
     query_string = ""
     conditions = {}
+    if params[:story]
+      if params[:story][:name] != nil and params[:story][:name].strip != ''
+        story = Story.find_by_name(params[:story][:name].strip)
+        if story
+          query_string = query_string + " AND  story_id = :story_id"
+          conditions[:story_id] = story.id
+        end
+      end
+    end
     if params[:shoot]
       if params[:shoot][:crew_requirements] != nil and params[:shoot][:crew_requirements] != ''
         query_string = query_string + " AND UPPER(crew_requirements) LIKE :crew_requirements"
@@ -33,10 +48,7 @@ class ShootsController < ApplicationController
         query_string = query_string + " AND cameraperson_id = :cameraperson_id"
         conditions[:cameraperson_id] = params[:shoot][:cameraperson_id]
       end
-      if params[:shoot][:story_id] != nil and params[:shoot][:story_id] != ''
-        query_string = query_string + " AND story_id = :story_id"
-        conditions[:story_id] = params[:shoot][:story_id]
-      end
+
       if params[:shoot][:name] != nil and params[:shoot][:name] != ''
         query_string = query_string + " AND UPPER(name) LIKE :name"
         conditions[:name] = "%" + params[:shoot][:name].strip.upcase + "%"
@@ -105,6 +117,15 @@ class ShootsController < ApplicationController
       end
       @shoot.staff = @valid_staff
     end
+    if params[:story]
+      if params[:story][:name] != nil and params[:story][:name].strip != ''
+        story = Story.find_by_name(params[:story][:name].strip)
+        if story
+
+          @shoot.story_id = story.id
+        end
+      end
+    end
     respond_to do |format|
       if @shoot.save
         format.html { redirect_to(@shoot, :notice => 'Shoot was successfully created.') }
@@ -128,6 +149,17 @@ class ShootsController < ApplicationController
       @shoot.staff = @valid_staff
     end
     params[:shoot][:check_mail] = false
+    if params[:story]
+      if params[:story][:name] != nil and params[:story][:name].strip != ''
+        story = Story.find_by_name(params[:story][:name].strip)
+        if story
+
+          @shoot.story_id = story.id
+        end
+      else
+        @shoot.story_id = nil
+      end
+    end
     respond_to do |format|
       if @shoot.update_attributes(params[:shoot])
         format.html { redirect_to(@shoot, :notice => 'Shoot was successfully updated.') }

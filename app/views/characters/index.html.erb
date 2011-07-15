@@ -18,7 +18,7 @@
       <td>
         <%= f.label :story  %>
       </td><td>
-       <%= f.select(:story_id, Story.find(:all, :conditions => [" archived = ?", false],:order => 'name asc').collect {|c| [c.name , c.id ] },  :selected  => params[:shoot] ? params[:shoot][:story_id] : (Story.find_by_id(session[:story_id]) ? Story.find_by_id(session[:story_id]).id : ''), :include_blank => true) %>
+        <%= text_field_with_auto_complete :story, :name ,:value => params[:story] ? params[:story][:name] : (Story.find_by_id(session[:story_id]) ? Story.find_by_id(session[:story_id]).name : '') %>
       </td>
     </tr>
   </table>

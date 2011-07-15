@@ -8,10 +8,14 @@ class CharactersController < ApplicationController
     :theme_advanced_buttons2 => "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
     :plugins => %w{ table fullscreen }
   }
-
+  auto_complete_for :story, :name
   before_filter :from_story_show
   sortable_attributes :first_name ,:last_name
   before_filter :permission , :only => [:edit , :destroy]
+  def auto_complete_for_story_name
+    @stories = Story.find(:all , :conditions => ["name like (?) and archived = ?", "%" + params[:story][:name].to_s + "%", false],:order => 'name asc')
+    render :partial => 'shoots/story'
+  end
   def index
 
     if session[:userid] != nil and session[:userid] != ''
@@ -19,6 +23,15 @@ class CharactersController < ApplicationController
     end
     query_string = ""
     conditions = {}
+    if params[:story]
+      if params[:story][:name] != nil and params[:story][:name].strip != ''
+        story = Story.find_by_name(params[:story][:name].strip)
+        if story
+          query_string = query_string + " AND  story_id = :story_id"
+          conditions[:story_id] = story.id
+        end
+      end
+    end
     if params[:character]
       if params[:character][:first_name] != nil and params[:character][:first_name] != ''
         query_string = query_string + " AND UPPER(first_name) LIKE :first_name"
@@ -27,10 +40,6 @@ class CharactersController < ApplicationController
       if params[:character][:last_name] != nil and params[:character][:last_name] != ''
         query_string = query_string + " AND UPPER(last_name) LIKE :last_name"
         conditions[:last_name] = "%" + params[:character][:last_name].strip.upcase + "%"
-      end
-      if params[:character][:story_id] != nil and params[:character][:story_id] != ''
-        query_string = query_string + " AND story_id = :story_id"
-        conditions[:story_id] = params[:character][:story_id]
       end
     else
       if Story.find_by_id(session[:story_id])
@@ -86,6 +95,15 @@ class CharactersController < ApplicationController
   # POST /characters.xml
   def create
     @character = Character.new(params[:character])
+    if params[:story]
+      if params[:story][:name] != nil and params[:story][:name].strip != ''
+        story = Story.find_by_name(params[:story][:name].strip)
+        if story
+
+          @character.story_id = story.id
+        end
+      end
+    end
     respond_to do |format|
       if @character.save
         if params[:avatar] then
@@ -104,7 +122,17 @@ class CharactersController < ApplicationController
   # PUT /characters/1.xml
   def update
     @character = Character.find(params[:id])
+    if params[:story]
+      if params[:story][:name] != nil and params[:story][:name].strip != ''
+        story = Story.find_by_name(params[:story][:name].strip)
+        if story
 
+          @character.story_id = story.id
+        end
+      else
+        @character.story_id = nil
+      end
+    end
     respond_to do |format|
       if @character.update_attributes(params[:character])
         if params[:avatar] then

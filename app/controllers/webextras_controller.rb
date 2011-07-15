@@ -8,7 +8,11 @@ class WebextrasController < ApplicationController
     :theme_advanced_resize_horizontal => false,
     :plugins => %w{ table fullscreen }
   }
-
+  auto_complete_for :story, :name
+  def auto_complete_for_story_name
+    @stories = Story.find(:all , :conditions => ["name like (?) and archived = ?", "%" + params[:story][:name].to_s + "%", false],:order => 'name asc')
+    render :partial => 'shoots/story'
+  end
   before_filter :from_story_show, :permission , :only => [:edit , :destroy]
   sortable_attributes :title , :summary, :name
   def index
@@ -17,6 +21,15 @@ class WebextrasController < ApplicationController
     end
     query_string = ""
     conditions = {}
+    if params[:story]
+      if params[:story][:name] != nil and params[:story][:name].strip != ''
+        story = Story.find_by_name(params[:story][:name].strip)
+        if story
+          query_string = query_string + " AND  story_id = :story_id"
+          conditions[:story_id] = story.id
+        end
+      end
+    end
     if params[:webextra]
       if params[:webextra][:title] != nil and params[:webextra][:title] != ''
         query_string = query_string + " AND UPPER(title) LIKE :title"
@@ -29,10 +42,6 @@ class WebextrasController < ApplicationController
       if params[:webextra][:name] != nil and params[:webextra][:name] != ''
         query_string = query_string + " AND UPPER(name) LIKE :name"
         conditions[:name] = "%" + params[:webextra][:name].strip.upcase + "%"
-      end
-      if params[:webextra][:story_id] != nil and params[:webextra][:story_id] != ''
-        query_string = query_string + " AND story_id = :story_id"
-        conditions[:story_id] = params[:webextra][:story_id]
       end
     else
       if Story.find_by_id(session[:story_id])
@@ -91,6 +100,15 @@ class WebextrasController < ApplicationController
       @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])
     end
     @webextra.staff_id = @valid_staff.id
+    if params[:story]
+      if params[:story][:name] != nil and params[:story][:name].strip != ''
+        story = Story.find_by_name(params[:story][:name].strip)
+        if story
+
+          @webextra.story_id = story.id
+        end
+      end
+    end
     respond_to do |format|
       if @webextra.save
         begin
@@ -124,6 +142,17 @@ class WebextrasController < ApplicationController
       @valid_staff = Staff.find(:first, :conditions => ["userid = ? ", session[:userid]])
     end
     @webextra.staff_id = @valid_staff.id
+    if params[:story]
+      if params[:story][:name] != nil and params[:story][:name].strip != ''
+        story = Story.find_by_name(params[:story][:name].strip)
+        if story
+
+          @webextra.story_id = story.id
+        end
+      else
+        @webextra.story_id = nil
+      end
+    end
     respond_to do |format|
       if @webextra.update_attributes(params[:webextra])
 

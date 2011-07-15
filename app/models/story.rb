@@ -1,6 +1,7 @@
 class Story < ActiveRecord::Base
   acts_as_taggable
   validates :name ,:outline ,:graphics_collateral ,:presence => true
+  validates_uniqueness_of :name
   validates_length_of :name, :script, :maximum => 255
   belongs_to :producer ,:class_name => "Staff"
   belongs_to :correspondent ,:class_name => "Staff"
@@ -28,3 +29,4 @@ class Story < ActiveRecord::Base
     end
   end
 end
+

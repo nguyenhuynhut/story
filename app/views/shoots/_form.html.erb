@@ -21,8 +21,8 @@
   </div>
     <div class="field">
     <%= f.label :story_id %><br />
-    <%= f.select(:story_id, Story.find(:all, :conditions => [" archived = ?", false],:order => 'name asc').collect {|c| [c.name , c.id ] }, :include_blank => true) %>
-    </div>
+   <%= text_field_with_auto_complete :story, :name ,:value => @shoot ? (@shoot.story  ? @shoot.story.name : '') : (params[:story] ? params[:story][:name] : (Story.find_by_id(session[:story_id]) ? Story.find_by_id(session[:story_id]).name : '')) %>
+       </div>
   <div class="field">
     <%= f.label :crew_requirements %><br />
     <%= f.text_area :crew_requirements, :class => "mceEditor"  %>
